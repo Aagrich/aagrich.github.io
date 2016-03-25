@@ -77,16 +77,16 @@ font-weight: 600;
 .photo {
   clear: both;
   width: 100%;
-  padding: 234px 0 0 0;
+  padding: 11% 0 12% 0;
   border-top: 1px solid #128aa7;
   border-bottom: 1px solid #128aa7;
   background-image: url(../img/photo.jpg);
-  background-size: 100%;
+  background-size: cover;
 }
 .panel {
   position: relative;
   display: block;
-  width: 95%;
+  width: auto;
   padding-left: 5%;
   border-top: 1px solid grey;
   background-image: url(../img/panel.png);
@@ -119,12 +119,12 @@ font-weight: 600;
 .panel li {
   display: inline-block;
   width: auto;
-  padding-right: 5%;
+  margin-right: 5%;
 }
 .panel li a {
   display: block;
   text-indent: 5px;
-  width: auto;
+  width: 100%;
   color: white;
   font-size: 14px;
   line-height: 32px;
