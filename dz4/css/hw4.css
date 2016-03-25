@@ -6,9 +6,9 @@ body {
 .wraper {
   margin: 40px 13% 15px 13%;
   background-color: white;
-  -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow:    0px 8px 12px 0px rgba(0, 0, 0, 0.9);
-  box-shadow:         0px 8px 12px 0px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow:    0px 8px 12px 0px rgba(0, 0, 0, 0.8);
+  box-shadow:         0px 8px 12px 0px rgba(0, 0, 0, 0.8);
 }
 p,div,a,li {
   font-family: arial, sans-serif;
@@ -47,7 +47,7 @@ header {
    line-height: 20px;
 }
 .contacts:first-line {
-  font-weight: 600;
+font-weight: 600;
 }
 .countries {
   width: 50%;
@@ -76,7 +76,8 @@ header {
 }
 .photo {
   clear: both;
-  padding: 11% 0 11% 0;
+  width: 100%;
+  padding: 234px 0 0 0;
   border-top: 1px solid #128aa7;
   border-bottom: 1px solid #128aa7;
   background-image: url(../img/photo.jpg);
@@ -85,13 +86,14 @@ header {
 .panel {
   position: relative;
   display: block;
-  width: 100%;
+  width: 95%;
+  padding-left: 5%;
   border-top: 1px solid grey;
   background-image: url(../img/panel.png);
   background-size: cover;
-  -webkit-box-shadow: 2px 3px 25px 0px rgba(0,0,0,1);
-  -moz-box-shadow: 2px 3px 25px 0px rgba(0,0,0,1);
-  box-shadow: 2px 3px 25px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 2px 0px 25px 0px rgba(0,0,0,1);
+  -moz-box-shadow:    2px 0px 25px 0px rgba(0,0,0,1);
+  box-shadow:         2px 0px 25px 0px rgba(0,0,0,1);
 }
 .submenu {
   display: none;
@@ -117,11 +119,12 @@ header {
 .panel li {
   display: inline-block;
   width: auto;
+  padding-right: 5%;
 }
 .panel li a {
   display: block;
-  text-indent: 50px;
-  width: 100%;
+  text-indent: 5px;
+  width: auto;
   color: white;
   font-size: 14px;
   line-height: 32px;
