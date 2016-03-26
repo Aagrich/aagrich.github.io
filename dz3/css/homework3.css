@@ -1,3 +1,6 @@
+div, a,p,li {
+  font-family: 'Open Sans', sans-serif;
+}
 body {
   background-color: #f9f9f9;
 }
@@ -9,9 +12,6 @@ body {
   -moz-box-shadow: 0px 14px 4px 0px rgba(219, 219, 219, 1);
   box-shadow: 0px 14px 4px 0px rgba(219, 219, 219, 1);
   width: auto;
-}
-p,div,ul,li,a {
-  font-family: 'Open Sans', sans-serif;
 }
 
 /*------------- HEADER ------------- */
@@ -72,7 +72,7 @@ header > ul li a:hover {
   display: inline-block;
   line-height: 40px;
   border: 1px solid #c8c8c8;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   text-indent: 15px;
   color: grey;
