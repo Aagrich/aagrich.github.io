@@ -4,14 +4,14 @@ body {
   background-repeat: repeat-x;
   }
 .wraper {
-  margin: 40px 13% 15px 13%;
+  margin: 39px 13% 15px 13%;
   background-color: white;
   -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.8);
   -moz-box-shadow:    0px 8px 12px 0px rgba(0, 0, 0, 0.8);
   box-shadow:         0px 8px 12px 0px rgba(0, 0, 0, 0.8);
 }
-p,div,a,li {
-  font-family: arial, sans-serif;
+p,div,a,li,footer {
+  font-family: "open sans", sans-serif;
 }
 
 /*-------------H E A D E R -----------------*/
@@ -91,9 +91,9 @@ font-weight: 600;
   border-top: 1px solid grey;
   background-image: url(../img/panel.png);
   background-size: cover;
-  -webkit-box-shadow: 2px 0px 25px 0px rgba(0,0,0,1);
-  -moz-box-shadow:    2px 0px 25px 0px rgba(0,0,0,1);
-  box-shadow:         2px 0px 25px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 0px 3px 4px -2px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow:    0px 3px 4px -2px rgba(0, 0, 0, 0.8);
+  box-shadow:         0px 3px 4px -2px rgba(0, 0, 0, 0.8);
 }
 .submenu {
   display: none;
@@ -178,6 +178,7 @@ font-weight: 600;
 }
 .h1 {
   font-size: 18px;
+  font-weight: 600;
   line-height: 24px;
   padding: 5px 15px 5px 15px;
   text-align: center;
