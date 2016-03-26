@@ -1,8 +1,7 @@
 .first {
-  background-color: #085291;
-  border-bottom:1px solid #4f9ed6;
+  background-image: url(../img/hbg.png);
   width: 100%;
-  height: 40px;
+  height: 36px;
   margin: 0 auto;
 }
 .first > ul {
@@ -59,79 +58,44 @@
   padding: 15% 25% 15% 25%;
 }
 .wraper header {
+  width: 560px;
   text-align: center;
   line-height: 60px;
   font-size: 24px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  margin: 5px auto;
+  margin: 2px auto;
   height: 60px;
 }
 .regbox {
+  width: 560px;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   padding-top: 20px;
 }
-.regbox button {
+.fbbutton {
   display: block;
-  padding: 15px;
-  margin: 20px auto;
-  height: auto;
-  width: 50%;
-  border: 1px solid white;
-  background: blue;
-  background: linear-gradient( top, #3a5598 0%, #354e8e 50%, #2d447a 100%);
-  background: -ms-linear-gradient( top, #3a5598 0%, #354e8e 50%, #2d447a 100%);
-  background: -webkit-linear-gradient( top, #3a5598 0%, #354e8e 50%, #2d447a 100%);
-  background: -o-linear-gradient( top, #3a5598 0%, #354e8e 50%, #2d447a 100%);
-  background: -moz-linear-gradient( top, #3a5598 0%, #354e8e 50%, #2d447a 100%);
-}
-
-.regbox button p {
-  text-indent: 10px;
-  display: inline;
-  color: white;
-}
-.regbox button .faceicon {
-  display: inline-block;
-  padding-right: 20px;
-  margin-right: 20px;
-  font-size: 20px;
-  border-right: 1px solid blue;
+  margin: 14px auto;
+  padding: 3% 25%; 
+  background-image: url(../img/fbbutton.png);
+  background-size: cover;
 }
 .regbox p {
+  display: block;
   text-align: center;
   color: white;
-}
-.regbox label {
-  display: block;
-  margin: 0 auto;
-  color: white;
-
+  padding-bottom: 14px;
 }
 .line {
-  padding: 5px;
-  margin: 1px auto;
+  padding: 10px;
+  margin: 14px auto;
   color: grey;
-}
-.regbox p .line:before {
-  content: "";
-  height: 2px;
-  width: 100px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid black;
-}
-.regbox p .line:after {
-  content: "";
-  width: auto;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid black;
 }
 .reginput input {
   display: block;
-  margin: 10px auto;
-  width: 50%;
-  height: 40px;
+  margin: 14px auto;
+  width: 49%;
+  height: 34px;
   background-color: black;
   border: 1px solid black;
   border-bottom: 1px solid grey;
@@ -148,9 +112,16 @@
   -moz-box-shadow: 0px 0px 12px 3px rgba(104,155,204,1);
   box-shadow: 0px 0px 12px 3px rgba(104,155,204,1);
 }
-form .subbutton {
-  margin: 10px auto;
-  width: 30%;
+.checkmark {
+  display: block;
+  margin: 14px auto;
+  width: 49%;
+  color: white;
+}
+.subbutton {
+  display: block;
+  margin: 14px auto;
+  width: 29%;
   height: 40px;
   padding: 15px;
   background: blue;
@@ -159,10 +130,8 @@ form .subbutton {
   background: -webkit-linear-gradient(top, #67c6e6 0%, #398bcc 50%, #2f7bc5 100%);
   background: -o-linear-gradient(top, #67c6e6 0%, #398bcc 50%, #2f7bc5 100%);
   background: -ms-linear-gradient(top, #67c6e6 0%, #398bcc 50%, #2f7bc5 100%);
-  border: 1px solid lightblue;
-  text-indent: 15px;
   font-size: 14px;
   line-height: 15px;
-  color: #ccc;
+  color: white;
   text-align:center;
 }
