@@ -92,24 +92,29 @@ div, p, input, button, header {
   background-size: 100%;
   border: 0;
 }
-.line {
+.regbox .line {
   padding: 10px;
+  font-size: 15px;
   margin: 14px auto;
-  color: lightgrey;
+  color: #999999;
 }
 .line:before {
   content: "";
-  border:1px solid black;
+  border-top:1px solid #666666;
+  border-bottom: 1px solid black;
   padding-left: 124px;
   line-height: 0px;
   font-size: 0px;
+  vertical-align: middle;
 }
 .line:after {
   content: "";
-  border:1px solid black;
+  border-top:1px solid #666666;
+  border-bottom: 1px solid black;
   padding-left: 124px;
   line-height: 0px;
   font-size: 0px;
+  vertical-align: middle;
 }
 .reginput input {
   display: block;
