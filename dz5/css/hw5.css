@@ -1,5 +1,5 @@
 div, p, input, button, header {
-  font-family: "open sans", sans-serif;
+  font-family: tahoma, sans-serif;
 }
 
 
@@ -15,7 +15,7 @@ div, p, input, button, header {
   margin-right: 2px;
   padding-right: 20px;
   float: right;
-  width: 25%;
+  width: 26%;
 }
 .first > ul li {
     display: inline-block;
@@ -86,12 +86,7 @@ div, p, input, button, header {
   padding: 3% 25%; 
   background-image: url(../img/fbbutton.png);
   background-size: cover;
-}
-.regbox p {
-  display: block;
-  text-align: center;
-  color: white;
-  padding-bottom: 14px;
+  border: 0;
 }
 .line {
   padding: 10px;
@@ -122,6 +117,7 @@ div, p, input, button, header {
 .checkmark {
   display: block;
   margin: 0 auto;
+  font-size: 14px;
   width: 49%;
   color: lightgrey;
 }
@@ -144,4 +140,12 @@ div, p, input, button, header {
   line-height: 15px;
   color: white;
   text-align:center;
+}
+
+.regbox p {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  padding-bottom: 14px;
 }
