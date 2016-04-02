@@ -83,15 +83,30 @@ div, p, input, button, header {
 .fbbutton {
   display: block;
   margin: 14px auto;
-  padding: 3% 25%; 
+  padding: 17px 25%; 
+  background-color: rgba( 0, 0, 0, 0);
   background-image: url(../img/fbbutton.png);
-  background-size: cover;
+  background-size: 100%;
   border: 0;
 }
 .line {
   padding: 10px;
   margin: 14px auto;
   color: lightgrey;
+}
+.line:before {
+  content: "";
+  border:1px solid black;
+  padding-left: 124px;
+  line-height: 0px;
+  font-size: 0px;
+}
+.line:after {
+  content: "";
+  border:1px solid black;
+  padding-left: 124px;
+  line-height: 0px;
+  font-size: 0px;
 }
 .reginput input {
   display: block;
