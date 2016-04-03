@@ -47,3 +47,16 @@ section {
 footer {
      clear: both;
 }
+.picbrand {
+     margin: 0 auto;
+     text-align: center;
+}
+.buttom {
+     width: 100%;
+}
+.buttom ul li{
+    display: inline-block; 
+}
+.buttom div {
+     margin: 0 auto;
+}
