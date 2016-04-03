@@ -1,0 +1,49 @@
+.wraper {
+     margin: 10px auto;
+     width: 908px;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+header p {
+     float: left;
+}
+.minimenu {
+     float: right;
+}
+.wheel p {
+     margin: 10px auto;
+}
+.menu {
+     background-color: black;
+}
+.menu ul {
+     margin-right: 275px;
+}
+.menu ul li{
+     display: inline-block;
+}
+.menu ul li a {
+     display: block;
+     text-decoration: none;
+     color: lightgrey;
+}
+.menu p {
+     float: right;
+}
+section {
+     clear: both;
+}
+.catalog {
+     float: left;
+     width: 180px;
+}
+.brand {
+     float: right;
+     width: 180px;
+}
+footer {
+     clear: both;
+}
