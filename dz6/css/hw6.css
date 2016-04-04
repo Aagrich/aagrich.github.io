@@ -32,6 +32,7 @@ header p {
 }
 .menu p {
      float: right;
+     color: white;
 }
 section {
      clear: both;
@@ -45,17 +46,20 @@ section {
      width: 180px;
 }
 .content {
-     margin: 0 194px 0 188px;
+     margin: 0 180px 0 180px;
+     padding: 0 14px 0 8px;
+     background-color: #e3e6e7;
 }
 .goods {
      display: inline-block;
      margin: 14px;
+     text-align: center;
 }
 .goods__img {
      background-color: white;
      width: 136px;
-     height: 126px;
      text-align: center;
+     padding-top: 3px;
 }
 footer {
      clear: both;
