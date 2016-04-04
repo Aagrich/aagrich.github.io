@@ -44,6 +44,19 @@ section {
      float: right;
      width: 180px;
 }
+.content {
+     margin: 0 194px 0 188px;
+}
+.goods {
+     display: inline-block;
+     margin: 14px;
+}
+.goods__img {
+     background-color: white;
+     width: 136px;
+     height: 126px;
+     text-align: center;
+}
 footer {
      clear: both;
 }
