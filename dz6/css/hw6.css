@@ -45,6 +45,24 @@ section {
      float: right;
      width: 180px;
 }
+.aside_punct_circle {
+     border:1px solid black;
+     border-radius: 8px;
+}
+.aside_punct_circle:before {
+     content: "";
+     line-height: 0px;
+     padding: 0 10px;
+     border:5px solid black;
+     border-radius: 14px;
+}
+.aside_list_circle li:before {
+     content: "";
+     line-height: 0px;
+     padding: 0 5px;
+     border:2px solid black;
+     border-radius: 10px;
+}
 .content {
      margin: 0 180px 0 180px;
      padding: 0 14px 0 8px;
