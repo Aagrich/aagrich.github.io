@@ -7,8 +7,22 @@
   clear: both;
   display: block;
 }
-header p {
+.contacts {
      float: left;
+     width: 255px;
+}
+.contacts:before {
+      content: "";
+     padding: 4px 12px;
+     border:1px solid black;
+     border-radius: 14px;
+     background-color: black;
+     background-image: url(../img/phone2.png);
+     background-repeat: no-repeat;
+     background-position: center;
+}
+.logbox {
+     margin: 0 50px 0 265px;
 }
 .minimenu {
      float: right;
@@ -45,6 +59,20 @@ section {
      float: right;
      width: 180px;
 }
+.aside_head {
+     border:1px solid black;
+     border-radius: 12px;
+}
+.aside_head p:before {
+     content: "";
+     padding: 4px 12px;
+     border:1px solid black;
+     border-radius: 14px;
+     background-color: black;
+     background-image: url(../img/list.png);
+     background-repeat: no-repeat;
+     background-position: center;
+}
 .aside_punct_circle {
      border:1px solid black;
      border-radius: 8px;
@@ -57,9 +85,10 @@ section {
      border-radius: 14px;
 }
 .aside_list_circle li:before {
+     display: inline-block;
      content: "";
      line-height: 0px;
-     padding: 0 5px;
+     padding: 5px 5px;
      border:2px solid black;
      border-radius: 10px;
 }
@@ -87,11 +116,16 @@ footer {
      text-align: center;
 }
 .buttom {
+     display: inline-block;
+     text-align: center;
      width: 100%;
+     background-color: grey;
+     padding-bottom: 53px;
 }
 .buttom ul li{
     display: inline-block; 
 }
 .buttom div {
+
      margin: 0 auto;
 }
