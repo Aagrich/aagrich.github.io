@@ -19,4 +19,4 @@ function pow( a, b) {
 }
 pow(a, b);
 
-alert(arr[b-1]);
+alert("Результатом "+ a + " в " + b + " степени будет " + arr[b-1]);
