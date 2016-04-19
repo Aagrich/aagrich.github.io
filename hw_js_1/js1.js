@@ -2,11 +2,11 @@ var a;
 var b;
 var arr;
 
-a = +prompt('Введите число', '');
-b = +prompt('Введите степень', '');
+a = Math.abs(+prompt('Введите число', ''));
+b = Math.abs(+prompt('Введите степень', ''));
 arr = [a];
 
-function pow( a, b) {
+function calculate( a, b) {
  for (var i = 1; i < b; i++) {
   
   var x;
@@ -17,6 +17,21 @@ function pow( a, b) {
    arr.push(c);
   }
 }
-pow(a, b);
+ function pow() {
+  if ( b > 1) {
+     calculate( a , b );
+  }
+  if ( b === 1) {
+     arr.push(a);
+  }
+  if ( b < 1 & b > 0) {
+     arr.push(1/arr[b-1]);  //fix it later! (watch webinar)
+  }
+  //  if ( b === 0 || b === undefined || b === NaN) {
+  //    arr.push('0');
+  // }                       -  Dond forget!
+ }
+ 
+ pow();
 
 console.log("Результатом ", a , " в " , b , " степени будет " , arr[b-1]);
