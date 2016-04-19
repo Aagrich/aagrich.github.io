@@ -1,9 +1,11 @@
 var numbersOfUsers;
 var listOfUsers;
 var x;
-numbersOfUsers = 1;
+
+numbersOfUsers = 3;
 x = numbersOfUsers;
-listOfUsers = [];
+listOfUsers = ["Wrong name"];
+
 
 
 function addUsers(x) {
@@ -16,16 +18,17 @@ function addUsers(x) {
 }
 function lookForUser() {
           var userName;
+          var listLength;
           userName = prompt("Введите имя пользователя для входа", "");
-  
-          if (userName === listOfUsers[i]) {
-               alert("Welcome!");
+          listLength = listOfUsers.length;
+          if (listOfUsers.indexOf(userName)) {
+          return "Wellcome!";
           }
-          else {
-               alert("Wrong name!")
-          }
+          else
+          return "Dennided!";
      }
 
-addUsers(x);
-console.log(listOfUsers);
-lookForUser();
+
+// addUsers(x);
+// console.log(listOfUsers);
+// alert(lookForUser());
