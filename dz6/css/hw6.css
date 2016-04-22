@@ -12,14 +12,17 @@
      width: 255px;
 }
 .contacts:before {
-      content: "";
-     padding: 4px 12px;
-     border:1px solid black;
+     display: inline-block;
+     content: url(../img/phone2.png);
+     line-height: 0;
+     padding: 1px 3px;
      border-radius: 14px;
-     background-color: black;
-     background-image: url(../img/phone2.png);
-     background-repeat: no-repeat;
-     background-position: center;
+     background-color: blue;
+     background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+     background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+     background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+     background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .logbox {
      margin: 0 50px 0 265px;
@@ -64,14 +67,17 @@ section {
      border-radius: 12px;
 }
 .aside_head p:before {
-     content: "";
-     padding: 4px 12px;
-     border:1px solid black;
-     border-radius: 14px;
-     background-color: black;
-     background-image: url(../img/list.png);
-     background-repeat: no-repeat;
-     background-position: center;
+  display: inline-block;
+  content: url(../img/list.png);
+  line-height: 0;
+  padding: 2px 4px;
+  border-radius: 14px;
+  background-color: blue;
+  background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .aside_punct_circle {
      border:1px solid black;
@@ -79,7 +85,7 @@ section {
 }
 .aside_punct_circle:before {
      content: "";
-     line-height: 0px;
+     line-height: 0;
      padding: 0 10px;
      border:5px solid black;
      border-radius: 14px;
@@ -87,7 +93,7 @@ section {
 .aside_list_circle li:before {
      display: inline-block;
      content: "";
-     line-height: 0px;
+     line-height: 0;
      padding: 5px 5px;
      border:2px solid black;
      border-radius: 10px;
@@ -123,7 +129,7 @@ footer {
      padding-bottom: 53px;
 }
 .buttom ul li{
-    display: inline-block; 
+    display: inline-block;
 }
 .buttom div {
 
