@@ -99,17 +99,40 @@
 }
 .menu {
      background-color: black;
+     padding: 5px;
+     border-radius: 5px;
+     border: 1px solid #2c345a;
+     background-color: blue;
+     background: linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+     background: -moz-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+     background: -webkit-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+     background: -o-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+     background: -ms-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
 }
 .menu ul {
      margin-right: 275px;
+     margin-left: 100px;
+     width: 100%;
 }
 .menu ul li{
      display: inline-block;
 }
 .menu ul li a {
      display: block;
+     padding: 7px 10px;
+     width: auto;
      text-decoration: none;
      color: lightgrey;
+
+}
+.menu ul li a:hover {
+  border-radius: 13px;
+  background-color: blue;
+  background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .menu p {
      float: right;
