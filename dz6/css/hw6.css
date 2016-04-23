@@ -191,6 +191,12 @@ section {
   background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
   background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
+.menu_list {
+  margin: 10px 40px 10px 15px;
+}
+.menu_list li {
+  margin: 5px 0;
+}
 .aside_punct_circle {
      border:1px solid grey;
      border-radius: 12px;
@@ -217,6 +223,9 @@ section {
 }
 .aside_list_circle li{
   text-align: right;
+}
+.aside_list_circle li a{
+  text-decoration: none;
 }
 .content {
      margin: 0 200px 0 200px;
