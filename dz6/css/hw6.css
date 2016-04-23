@@ -32,9 +32,8 @@
 .logbox {
      margin: 0 25px 0 244px;
      padding-top: 5px;
-     width: 554px;
+     width: 563px;
      height: 23px;
-     text-align: center;
      border-radius: 5px;
      background-color: blue;
      background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
@@ -46,15 +45,54 @@
 .logbox:before {
   display:block;
   float: left;
+  margin-left: -10px;
   content: url(../img/face.png);
 }
 .logbox input {
-  margin: 0 3px 0 3px;
-  width: 130px;
+  margin-left: 5px;
+  vertical-align: middle;
+  width: 120px;
   height: 12px;
+}
+.enter_link {
+  margin-left: 4px;
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+.reg_link {
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+.reg_link::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  height: 12px;
+  border-left: 1px solid white;
+  margin: 0 7px 0 5px;
+}
+.fog_pass_link {
+  text-decoration: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  float: right;
+  color: grey;
+  border-bottom: 1px solid grey;
 }
 .minimenu {
      float: right;
+     border: 1px solid grey;
+     border-radius: 11px;
+     padding: 2px;
+     margin: 3px 15px 3px 0;
+     width: 66px;
+     text-align: center;
+     vertical-align: middle;
+}
+.minimenu a {
+  margin: 2px;
 }
 .wheel p {
      margin: 10px auto;
