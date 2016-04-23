@@ -99,6 +99,7 @@
 }
 .menu {
      background-color: black;
+     margin-top: -7px;
      padding: 5px;
      border-radius: 5px;
      border: 1px solid #2c345a;
@@ -128,15 +129,22 @@
 .menu ul li a:hover {
   border-radius: 13px;
   background-color: blue;
-  background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-  background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-  background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-  background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-  background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+  background: linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+  background: -moz-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+  background: -webkit-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+  background: -o-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+  background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
 }
 .menu p {
+  margin: 5px;
      float: right;
      color: white;
+}
+.menu p::before {
+  display:block;
+  float: left;
+  margin: 0 5px 0 -10px;
+  content: url(../img/basket.png);
 }
 section {
      clear: both;
