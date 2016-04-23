@@ -7,6 +7,9 @@
   clear: both;
   display: block;
 }
+header {
+  margin-bottom: 15px;
+}
 .contacts {
      float: left;
      line-height: 20px;
@@ -98,7 +101,6 @@
      margin: 10px auto;
 }
 .menu {
-     background-color: black;
      margin-top: -7px;
      padding: 5px;
      border-radius: 5px;
@@ -138,34 +140,49 @@
 .menu p {
   margin: 5px;
      float: right;
-     color: white;
 }
-.menu p::before {
+.menu__goods::before {
   display:block;
   float: left;
   margin: 0 5px 0 -10px;
   content: url(../img/basket.png);
 }
+.menu__goods {
+  color:white;
+}
+.goods__sum {
+  color: #0d5a8f;
+}
+.goods__num {
+  color: #0d5a8f;
+}
+.goods__text_sum {
+  color:white;
+}
+
+
 section {
      clear: both;
 }
 .catalog {
      float: left;
-     width: 180px;
+     width: 200px;
 }
 .brand {
      float: right;
-     width: 180px;
+     width: 200px;
 }
 .aside_head {
-     border:1px solid black;
+     margin: 10px 5px;
+     border:1px solid grey;
      border-radius: 12px;
+     padding: 2px;
 }
-.aside_head p:before {
+.aside_head:before {
   display: inline-block;
   content: url(../img/list.png);
   line-height: 0;
-  padding: 2px 4px;
+  padding: 3px 5px;
   border-radius: 14px;
   background-color: blue;
   background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
@@ -175,32 +192,40 @@ section {
   background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .aside_punct_circle {
-     border:1px solid black;
-     border-radius: 8px;
+     border:1px solid grey;
+     border-radius: 12px;
+     padding: 5px 2px;
 }
-.aside_punct_circle:before {
+.aside_punct_circle::before {
+     display: block;
+     float: left;
+     margin: -4px 4px 0 0;
      content: "";
-     line-height: 0;
-     padding: 0 10px;
-     border:5px solid black;
+     font-size: 0;
+     padding:7px;
+     border:5px solid #114165;
      border-radius: 14px;
+     vertical-align: top;
 }
 .aside_list_circle li:before {
      display: inline-block;
      content: "";
      line-height: 0;
-     padding: 5px 5px;
-     border:2px solid black;
+     padding: 2px;
+     border:2px solid #114165;
      border-radius: 10px;
 }
+.aside_list_circle li{
+  text-align: right;
+}
 .content {
-     margin: 0 180px 0 180px;
-     padding: 0 14px 0 8px;
+     margin: 0 200px 0 200px;
+     text-align: center;
      background-color: #e3e6e7;
 }
 .goods {
      display: inline-block;
-     margin: 14px;
+     margin: 12px;
      text-align: center;
 }
 .goods__img {
@@ -209,6 +234,8 @@ section {
      text-align: center;
      padding-top: 3px;
 }
+
+
 footer {
      clear: both;
 }
