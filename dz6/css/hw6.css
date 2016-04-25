@@ -19,7 +19,7 @@ header {
      line-height: 20px;
      padding-top: 5px;
      margin-left: 5px;
-     width: 255px;
+     width: 265px;
 }
 .contacts::before {
      display: block;
@@ -37,9 +37,10 @@ header {
      background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .logbox {
-     margin: 0 25px 0 244px;
+     margin: 0 25px 0 290px;
      padding-top: 5px;
-     width: 563px;
+     padding-left: 14px;
+     width: 510px;
      height: 23px;
      border-radius: 5px;
      background-color: blue;
@@ -63,12 +64,14 @@ header {
 }
 .enter_link {
   margin-left: 4px;
+  font-size: 10px;
   text-decoration: none;
   color: white;
   vertical-align: middle;
 }
 .reg_link {
   text-decoration: none;
+  font-size: 10px;
   color: white;
   vertical-align: middle;
 }
@@ -76,13 +79,14 @@ header {
   content: "";
   display: inline-block;
   vertical-align: bottom;
-  height: 12px;
+  height: 10px;
   border-left: 1px solid white;
   margin: 0 7px 0 5px;
 }
 .fog_pass_link {
   text-decoration: none;
   margin-right: 10px;
+  font-size: 10px;
   vertical-align: middle;
   float: right;
   color: grey;
@@ -106,7 +110,7 @@ header {
 }
 .menu {
      margin-top: -7px;
-     padding: 5px;
+     padding: 4px;
      border-radius: 5px;
      border: 1px solid #2c345a;
      background-color: blue;
@@ -126,7 +130,7 @@ header {
 }
 .menu ul li a {
      display: block;
-     padding: 7px 10px;
+     padding: 5px 7px;
      width: auto;
      text-decoration: none;
      color: lightgrey;
