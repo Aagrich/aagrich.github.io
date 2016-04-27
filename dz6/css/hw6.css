@@ -199,14 +199,15 @@ section {
     background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
-.menu_list {
-    margin: 10px 40px 10px 15px;
+.aside_menu_list {
+    margin: 10px 28px 10px 15px;
 }
-.menu_list li {
+.aside_menu_list li {
     margin: 5px 0;
 }
 .aside_punct {
     border:1px solid grey;
+width: 140px;
     border-radius: 12px;
     padding: 5px 2px;
 }
@@ -232,19 +233,20 @@ section {
     border-radius: 10px;
 }
 .aside_list li{
-    width: auto;
+    margin: 6px 0 6px 0;
+    height: 16px;
     text-align: right;
 }
 .aside_list li a{
-    margin: 2px 0 2px 0;
+    margin-right: 12px;
+    font-size: 13px;
     color: #465961;
     text-decoration: none;
 }
 .aside_list li a:hover {
     display: inline-block;
-    width: auto;
+    margin: 2px 0px 2px 0;
     color: #0c3256;
-    font-size: 16px;
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
