@@ -1,6 +1,7 @@
 div, p, input, button, header, footer, aside, section {
     font-family: tahoma, sans-serif;
-    font-size: 14px;}
+    font-size: 14px;
+}
 
 .wraper {
     margin: 10px auto;
@@ -134,7 +135,6 @@ header {
     width: auto;
     text-decoration: none;
     color: lightgrey;
-
 }
 .menu ul li a:hover {
     border-radius: 13px;
@@ -303,10 +303,7 @@ section {
 .goods__price {
     font-weight: bold;
     color: #114165;
-    
 }
-
-
 footer {
     clear: both;
 }
@@ -325,6 +322,5 @@ footer {
     display: inline-block;
 }
 .buttom div {
-
     margin: 0 auto;
 }
