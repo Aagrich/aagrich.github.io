@@ -1,279 +1,290 @@
 div, p, input, button, header, footer, aside, section {
-     font-family: tahoma, sans-serif;
-}
+    font-family: tahoma, sans-serif;
+    font-size: 14px;}
 
 .wraper {
-     margin: 10px auto;
-     width: 908px;
+    margin: 10px auto;
+    width: 908px;
 }
 .clearfix:after {
-     content: "";
-     clear: both;
-     display: block;
+    content: "";
+    clear: both;
+    display: block;
 }
 header {
-     margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 .contacts {
-     float: left;
-     line-height: 20px;
-     padding-top: 5px;
-     margin-left: 5px;
-     width: 265px;
+    float: left;
+    line-height: 20px;
+    padding-top: 5px;
+    margin-left: 5px;
+    width: 265px;
 }
 .contacts::before {
-     display: block;
-     float: left;
-     margin-right: 5px;
-     content: url(../img/phone2.png);
-     line-height: 0;
-     padding: 1px 3px;
-     border-radius: 14px;
-     background-color: blue;
-     background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    display: block;
+    float: left;
+    margin-right: 5px;
+    content: url(../img/phone2.png);
+    line-height: 0;
+    padding: 1px 3px;
+    border-radius: 14px;
+    background-color: blue;
+    background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .logbox {
-     margin: 0 25px 0 290px;
-     padding-top: 5px;
-     padding-left: 14px;
-     width: 510px;
-     height: 23px;
-     border-radius: 5px;
-     background-color: blue;
-     background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    margin: 0 25px 0 290px;
+    padding-top: 5px;
+    padding-left: 14px;
+    width: 510px;
+    height: 23px;
+    border-radius: 5px;
+    background-color: blue;
+    background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .logbox:before {
-     display:block;
-     float: left;
-     margin-left: -10px;
-     content: url(../img/face.png);
+    display:block;
+    float: left;
+    margin-left: -10px;
+    content: url(../img/face.png);
 }
 .logbox input {
-     margin-left: 5px;
-     vertical-align: middle;
-     width: 120px;
-     height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 120px;
+    height: 12px;
 }
 .enter_link {
-     margin-left: 4px;
-     font-size: 10px;
-     text-decoration: none;
-     color: white;
-     vertical-align: middle;
+    margin-left: 4px;
+    font-size: 10px;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
 }
 .reg_link {
-     text-decoration: none;
-     font-size: 10px;
-     color: white;
-     vertical-align: middle;
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+    vertical-align: middle;
 }
 .reg_link::before {
-     content: "";
-     display: inline-block;
-     vertical-align: bottom;
-     height: 10px;
-     border-left: 1px solid white;
-     margin: 0 7px 0 5px;
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    height: 10px;
+    border-left: 1px solid white;
+    margin: 0 7px 0 5px;
 }
 .fog_pass_link {
-     text-decoration: none;
-     margin-right: 10px;
-     font-size: 10px;
-     vertical-align: middle;
-     float: right;
-     color: grey;
-     border-bottom: 1px solid grey;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 10px;
+    vertical-align: middle;
+    float: right;
+    color: grey;
+    border-bottom: 1px solid grey;
 }
 .minimenu {
-     float: right;
-     border: 1px solid grey;
-     border-radius: 11px;
-     padding: 2px;
-     margin: 3px 15px 3px 0;
-     width: 66px;
-     text-align: center;
-     vertical-align: middle;
+    float: right;
+    border: 1px solid grey;
+    border-radius: 11px;
+    padding: 2px;
+    margin: 3px 15px 3px 0;
+    width: 66px;
+    text-align: center;
+    vertical-align: middle;
 }
 .minimenu a {
-     margin: 2px;
+    margin: 2px;
 }
 .wheel p {
-     margin: 10px auto;
+    margin: 10px auto;
 }
 .menu {
-     margin-top: -7px;
-     padding: 4px;
-     border-radius: 5px;
-     border: 1px solid #2c345a;
-     background-color: blue;
-     background: linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
-     background: -moz-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
-     background: -webkit-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
-     background: -o-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
-     background: -ms-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+    margin-top: -7px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #2c345a;
+    background-color: blue;
+    background: linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+    background: -moz-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+    background: -webkit-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+    background: -o-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+    background: -ms-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
 }
 .menu ul {
-     margin-right: 275px;
-     margin-left: 100px;
-     width: 100%;
+    margin-right: 275px;
+    margin-left: 100px;
+    width: 100%;
 }
 .menu ul li{
-     display: inline-block;
+    display: inline-block;
 }
 .menu ul li a {
-     display: block;
-     padding: 5px 7px;
-     width: auto;
-     text-decoration: none;
-     color: lightgrey;
+    display: block;
+    padding: 5px 7px;
+    width: auto;
+    text-decoration: none;
+    color: lightgrey;
 
 }
 .menu ul li a:hover {
-     border-radius: 13px;
-     background-color: blue;
-     background: linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
-     background: -moz-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
-     background: -webkit-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
-     background: -o-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
-     background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+    border-radius: 13px;
+    background-color: blue;
+    background: linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+    background: -moz-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+    background: -webkit-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+    background: -o-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+    background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
 }
 .menu p {
      margin: 5px;
      float: right;
 }
 .menu__goods::before {
-     display:block;
-     float: left;
-     margin: 0 5px 0 -10px;
-     content: url(../img/basket.png);
+    display:block;
+    float: left;
+    margin: 0 5px 0 -10px;
+    content: url(../img/basket.png);
 }
 .menu__goods {
-     color:white;
+    color:white;
 }
 .goods__sum {
-     color: #0d5a8f;
+    color: #0d5a8f;
 }
 .goods__num {
-     color: #0d5a8f;
+    color: #0d5a8f;
 }
 .goods__text_sum {
-     color:white;
+    color:white;
 }
 
 
 section {
-     clear: both;
+    clear: both;
 }
 .catalog {
-     float: left;
-     width: 200px;
+    float: left;
+    width: 200px;
 }
 .brand {
-     float: right;
-     width: 200px;
+    float: right;
+    width: 200px;
 }
 .aside_head {
-     margin: 10px 5px;
-     border:1px solid grey;
-     border-radius: 12px;
-     padding: 2px;
+    margin: 10px 5px;
+    border:1px solid grey;
+    border-radius: 12px;
+    padding: 2px;
 }
 .aside_head:before {
-     display: inline-block;
-     content: url(../img/list.png);
-     line-height: 0;
-     padding: 3px 5px;
-     border-radius: 14px;
-     background-color: blue;
-     background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
-     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    display: inline-block;
+    content: url(../img/list.png);
+    line-height: 0;
+    padding: 3px 5px;
+    border-radius: 14px;
+    background-color: blue;
+    background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -moz-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .menu_list {
-     margin: 10px 40px 10px 15px;
+    margin: 10px 40px 10px 15px;
 }
 .menu_list li {
-     margin: 5px 0;
+    margin: 5px 0;
 }
 .aside_punct {
-     border:1px solid grey;
-     border-radius: 12px;
-     padding: 5px 2px;
+    border:1px solid grey;
+    border-radius: 12px;
+    padding: 5px 2px;
 }
 .aside_punct:before {
-     display: block;
-     float: left;
-     margin: -4px 4px 0 0;
-     content: "";
-     font-size: 0;
-     padding:7px;
-     border:5px solid #114165;
-     border-radius: 14px;
-     vertical-align: top;
+    display: block;
+    float: left;
+    margin: -4px 4px 0 0;
+    content: "";
+    font-size: 0;
+    padding:6px;
+    border:5px solid #114165;
+    border-radius: 14px;
+    vertical-align: top;
 }
 .aside_list li:before {
-     display: inline-block;
-     vertical-align: top;
-     margin: 4px 2px 0 0;
-     content: "";
-     line-height: 0;
-     padding: 2px;
-     border:2px solid #114165;
-     border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 4px 2px 0 0;
+    content: "";
+    line-height: 0;
+    padding: 2px;
+    border:2px solid #114165;
+    border-radius: 10px;
 }
 .aside_list li{
-     text-align: right;
+    width: auto;
+    text-align: right;
 }
 .aside_list li a{
-     color: #465961;
-     text-decoration: none;
+    margin: 2px 0 2px 0;
+    color: #465961;
+    text-decoration: none;
+}
+.aside_list li a:hover {
+    display: inline-block;
+    width: auto;
+    color: #0c3256;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
 }
 .content {
-     margin: 0 200px 0 200px;
-     text-align: center;
-     background-color: #e3e6e7;
+    margin: 0 200px 0 200px;
+    text-align: center;
+    background-color: #e3e6e7;
 }
 .goods {
-     display: inline-block;
-     margin: 12px;
-     text-align: center;
+    display: inline-block;
+    margin: 12px;
+    text-align: center;
 }
 .goods__img {
-     background-color: white;
-     width: 136px;
-     text-align: center;
-     padding-top: 3px;
+    background-color: white;
+    width: 136px;
+    text-align: center;
+    padding-top: 3px;
 }
 
 
 footer {
-     clear: both;
+    clear: both;
 }
 .pic_brand {
-     margin: 0 auto;
-     text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 .buttom {
-     display: inline-block;
-     text-align: center;
-     width: 100%;
-     background-color: grey;
-     padding-bottom: 53px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background-color: grey;
+    padding-bottom: 53px;
 }
 .buttom ul li{
-     display: inline-block;
+    display: inline-block;
 }
 .buttom div {
 
-     margin: 0 auto;
+    margin: 0 auto;
 }
