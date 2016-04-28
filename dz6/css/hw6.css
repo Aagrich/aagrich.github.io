@@ -1,5 +1,10 @@
+@font-face {
+    font-family: lucida;
+    src(../fonts/LucidaSansUnicodeFont.ttf);
+}
+
 div, p, input, button, header, footer, aside, section {
-    font-family: tahoma, sans-serif;
+    font-family:lucida, sans-serif;
     font-size: 14px;
 }
 
@@ -189,7 +194,6 @@ section {
 .aside_head:before {
     display: inline-block;
     content: url(../img/list.png);
-    line-height: 0;
     padding: 3px 5px;
     border-radius: 14px;
     background-color: blue;
@@ -298,29 +302,48 @@ section {
 .goods__inf {
 }
 .goods_brand_name {
+    font-weight: 900;
     color: #206988;
 }
 .goods__price {
-    font-weight: bold;
+    font-weight: 900;
     color: #114165;
 }
 footer {
     clear: both;
 }
 .pic_brand {
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
 }
 .buttom {
     display: inline-block;
     text-align: center;
     width: 100%;
-    background-color: grey;
-    padding-bottom: 53px;
+    background-color: #213a4d;
+    padding:10px 0 53px 0;
 }
 .buttom ul li{
     display: inline-block;
 }
+.buttom ul li:nth-child(1n+2):before {
+    content: "";
+    margin: 10px;
+    border-left: 1px solid white;
+    font-size: 10px;
+}
+.buttom a{
+    color: white;
+    text-decoration: none;
+}
 .buttom div {
     margin: 0 auto;
+}
+.buttom p {
+    font-size: 10px;
+    color: #754542;
+    margin-top: 20px;
+}
+.buttom a:hover {
+    color: #52abcb;
 }
