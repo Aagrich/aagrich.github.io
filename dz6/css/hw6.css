@@ -25,7 +25,7 @@ header {
     line-height: 20px;
     padding-top: 5px;
     margin-left: 5px;
-    width: 300px;
+    width: 310px;
     font-size: 18px;
     font-weight: 400;
     color: #5e696d;
@@ -33,7 +33,7 @@ header {
 .contacts::before {
     display: block;
     float: left;
-    margin-right: 5px;
+    margin-right: 3px;
     content: url(../img/phone2.png);
     line-height: 0;
     padding: 1px 3px;
@@ -48,9 +48,9 @@ header {
 .logbox {
     margin: 0 5px 0 310px;
     padding-top: 5px;
-    padding-left: 14px;
+    padding-left: 15px;
     width: 480px;
-    height: 23px;
+    height: 21px;
     border-radius: 5px;
     background-color: blue;
     background: linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
@@ -74,30 +74,31 @@ header {
 }
 .enter_link {
     margin-left: 4px;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 600;
     text-decoration: none;
     color: white;
-    vertical-align: middle;
 }
 .reg_link {
     text-decoration: none;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 600;
     color: white;
-    vertical-align: middle;
 }
 .reg_link::before {
     content: "";
     display: inline-block;
-    height: 10px;
+    margin:0 5px -3px 2px;
+    height: 11px;
     border-left: 1px solid white;
 }
 .fog_pass_link {
     text-decoration: none;
-    margin-right: 10px;
-    font-size: 10px;
-    vertical-align: middle;
+    margin:2px 13px 0 0;
+    font-size: 11px;
+    font-weight: 600;
     float: right;
-    color: grey;
+    color: #bfbfbf;
     border-bottom: 1px solid grey;
 }
 .minimenu {
@@ -105,7 +106,7 @@ header {
     border: 1px solid grey;
     border-radius: 11px;
     padding: 2px;
-    margin: 3px 15px 3px 0;
+    margin: 2px 10px 3px 0;
     width: 66px;
     text-align: center;
     vertical-align: middle;
@@ -117,7 +118,7 @@ header {
     margin: 10px auto;
 }
 .menu {
-    margin-top: -7px;
+    margin-top: -5px;
     padding: 4px;
     border-radius: 5px;
     border: 1px solid #2c345a;
@@ -130,19 +131,27 @@ header {
 }
 .menu ul {
     margin-right: 275px;
-    margin-left: 100px;
+    margin-left: 120px;
     width: 100%;
 }
-.menu ul li{
+.menu li{
     display: inline-block;
 }
-.menu ul li a {
+.menu a {   
+    width: auto;
+    text-decoration: none;
+    color: lightgrey;
+    
+}
+ /* 
+ .menu ul li a {
     display: block;
-    padding: 5px 7px;
+    padding: 5px 20px;
     width: auto;
     text-decoration: none;
     color: lightgrey;
 }
+*/ 
 .menu ul li a:hover {
     border-radius: 13px;
     background-color: blue;
@@ -164,15 +173,19 @@ header {
 }
 .menu__goods {
     color:white;
+    font-size: 11px;
 }
 .goods__sum {
     color: #0d5a8f;
+    font-size: 14px;
 }
 .goods__num {
     color: #0d5a8f;
+    font-size: 14px;
 }
 .goods__text_sum {
     color:white;
+    font-size: 11px;
 }
 
 
