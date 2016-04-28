@@ -25,7 +25,10 @@ header {
     line-height: 20px;
     padding-top: 5px;
     margin-left: 5px;
-    width: 265px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #5e696d;
 }
 .contacts::before {
     display: block;
@@ -43,10 +46,10 @@ header {
     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
 }
 .logbox {
-    margin: 0 25px 0 290px;
+    margin: 0 5px 0 310px;
     padding-top: 5px;
     padding-left: 14px;
-    width: 510px;
+    width: 480px;
     height: 23px;
     border-radius: 5px;
     background-color: blue;
@@ -65,8 +68,9 @@ header {
 .logbox input {
     margin-left: 5px;
     vertical-align: middle;
-    width: 120px;
-    height: 12px;
+    font-size: 11px;
+    width: 110px;
+    height: 11px;
 }
 .enter_link {
     margin-left: 4px;
@@ -84,10 +88,8 @@ header {
 .reg_link::before {
     content: "";
     display: inline-block;
-    vertical-align: bottom;
     height: 10px;
     border-left: 1px solid white;
-    margin: 0 7px 0 5px;
 }
 .fog_pass_link {
     text-decoration: none;
