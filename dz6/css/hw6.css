@@ -304,6 +304,7 @@ section {
     color: #0c3256;
     font-weight: bold;
     font-style: italic;
+    font-size: 14px;
     text-decoration: underline;
 }
 .aside__check_brand li{
@@ -326,8 +327,8 @@ section {
     background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
 }
 .content {
-    margin: 0 190px 0 190px;
-    text-align: center;
+    margin: 10px 190px 0 190px;
+    padding: 3px 3px 17px 8px;
     border-radius: 2px;
     background-color: white;
     background: linear-gradient(top, #e5e7e8 0%, #b5c2c7 50%, #93a7b0 100%);
@@ -338,7 +339,7 @@ section {
 }
 .goods {
     display: inline-block;
-    margin: 12px;
+    margin: 13px;
     text-align: center;
 }
 .goods__img {
@@ -351,20 +352,27 @@ section {
     border:1px solid #b0b9bc;
 }
 .goods__inf {
+    margin-top: 2px;
+    font-size: 12px;
 }
 .goods_brand_name {
     font-weight: 900;
+    font-size: 16px;
     color: #206988;
+    margin-bottom: 1px;
 }
 .goods__price {
+    margin-left: 14px;
     font-weight: 900;
+    font-size: 16px;
+    font-style: italic;
     color: #114165;
 }
 footer {
     clear: both;
 }
 .pic_brand {
-    margin: 30px auto;
+    margin: 38px auto 22px auto;
     text-align: center;
 }
 .buttom {
@@ -372,7 +380,7 @@ footer {
     text-align: center;
     width: 100%;
     background-color: #213a4d;
-    padding:10px 0 53px 0;
+    padding:10px 0 50px 0;
 }
 .buttom ul li{
     display: inline-block;
@@ -381,7 +389,7 @@ footer {
     content: "";
     margin: 10px;
     border-left: 1px solid white;
-    font-size: 10px;
+    font-size: 12px;
 }
 .buttom a{
     color: white;
@@ -393,7 +401,7 @@ footer {
 .buttom p {
     font-size: 10px;
     color: #754542;
-    margin-top: 20px;
+    margin-top: 17px;
 }
 .buttom a:hover {
     color: #52abcb;
