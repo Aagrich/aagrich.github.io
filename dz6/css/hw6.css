@@ -1,10 +1,10 @@
 @font-face {
-    font-family: lucida;
-    src(../fonts/LucidaSansUnicodeFont.ttf);
+    font-family: 'lucida';
+    src: url('fonts/LucidaSansUnicodeFont.ttf');
 }
 
 div, p, input, button, header, footer, aside, section {
-    font-family:lucida, sans-serif;
+    font-family: lucida, sans-serif;
     font-size: 14px;
 }
 
@@ -209,9 +209,6 @@ header {
 }
 
 
-section {
-    clear: both;
-}
 .catalog {
     float: left;
     width: 190px;
@@ -256,15 +253,15 @@ section {
 }
 .aside_catalog_punct {
     border:1px solid grey;
-    width: 140px;
+    width: 139px;
     border-radius: 12px;
-    padding: 5px 2px;
+    padding: 6px 3px;
 }
 .aside_brand_punct{
     border:1px solid grey;
-    width: 125px;
+    width: 124px;
     border-radius: 12px;
-    padding: 5px 2px;
+    padding: 6px 3px;
 }
 .aside_catalog_punct:before, .aside_brand_punct:before {
     display: block;
