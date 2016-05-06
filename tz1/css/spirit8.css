@@ -1,12 +1,25 @@
+@import "fonts.css";
+
 p,a,div {
     	font-family: 'Open Sans', sans-serif;
 }
 b {
-  font-weight: 900;
-  font-style: normal;
+  font-family: "Open Sans Bold";
 }
 i {
-  color: orange;
+  font-family: "Open Sans Italic";
+}
+s {
+  text-decoration: none;
+  font-family: "Open Sans Semibold";
+}
+u {
+  font-family: 'Open Sans Light';
+  text-decoration: none;
+}
+tt {
+  text-decoration: none;
+  color: #fcac45;
 }
 
 .wraper {
@@ -23,7 +36,7 @@ hr {
   width: 80px;
   padding: 10px;
   border: 0;
-  border-top: 5px solid orange;
+  border-top: 5px solid #fcac45;
 }
 hr::after {
   display: block;
@@ -32,7 +45,7 @@ hr::after {
   width: 60px;
   height: 5px;
   border: 0;
-  background-color: orange;
+  background-color: #fdc57c;
 }
 
 /* H E A D E R */
@@ -42,14 +55,13 @@ header {
     width: auto;
     padding: 0 10%;
     text-align: center;
-    background-color: black;
+    background-color: #222222;
 }
 .text_logo {
     color: white;
     float: left;
     margin-top: 2%;
-    font-size: 22px;
-    font-weight: 900;
+    font-size: 24px;
 }
 nav {
     float: right;
@@ -61,48 +73,67 @@ nav li {
     width: auto;
     padding:1%;
 }
+nav li:after {
+  display: none;
+
+}
 nav a {
     display: inline-block;
     padding: 5px 3px 5px 3px;
     margin: 0 25%;
-    font-size: 12px;
+    font-family: 'Open Sans Semibold';
+    font-size: 14px;
     width: 103%;
     text-decoration: none;
     color: white;
 }
-nav a:hover {
-    border-bottom: 2px solid yellow;
+nav a:hover:after  {
+  content: "";
+  display: block;
+  float: left;
+  margin-top: 12px;
+  width: 100%;
+  height: 5px;
+  background-color: #393939;
+  background-image: url(../img/nav_line.jpg);
+  background-position: right;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+   
 }
 .text_welcom {
-    padding-top: 14%;
+    padding-top: 20%;
     text-align: center;
     font-size: 42px;
     font-weight: 300;
-    color: grey;
+    color: #999999;
 }
 .text_intro {
-  padding: 1% 0 14% 0;
-  color: lightgrey;
+  padding: 1% 0 16% 0;
+  color: #d7d7d7;
   font-size: 20px;
 }
 .circle_arrow {
     display: inline-block;
-    margin: 5% 0;
+    margin: 8% 0;
     padding: 22px;
     width: 0;
     border-radius: 24px;
-    border:2px solid white;
+    border:2px solid #c8c8c8;
+    background-image: url(../img/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .circle_arrow:hover {
-    border-color: orange;
-
+    border-color: #fcac45;
+    background-image: url(../img/arrow2.png);
 }
 
 /* S E C T I O N   #1 */
 
 .about_us {
   margin: 0 auto;
-  padding: 5% 10%;
+  padding: 5% 10% 0 10%;
 }
 .shadow_image {
   float: left;
@@ -123,14 +154,14 @@ nav a:hover {
   background-image: url(../img/inPC.png);
   background-repeat: no-repeat;
   background-size: 42%;
-} 
+}
 .about {
    margin: -3% 0 0 58%;
-   padding-bottom: 7%;
+   padding-bottom: 10%;
 }
 .header__about {
     font-size: 22px;
-    color: grey;
+    color: #636363;
 }
 .header__second_about {
     display: inline-block;
@@ -149,7 +180,7 @@ nav a:hover {
 .about_text {
     width: 88%;
     font-size: 16px;
-    color: grey;
+    color: #6c6c6c;
     line-height: 20px;
 }
 .about ul{
@@ -157,21 +188,23 @@ nav a:hover {
 }
 .about li {
     margin: 10px 0;
-    font-style: italic;
-    color: grey;
+    color: #5a5a5a;
 }
 .about li:before {
     content: "";
     display: inline-block;
     margin-right: 10px;
-    border: 7px double black;
+    border: 7px double #5a5a5a;
     border-radius: 7px;
 }
 .about button {
     padding: 15px 25px;
-    border: 1px solid grey;
+    cursor: pointer;
+    border: 1px solid #7f7f7f;
     border-radius: 2px;
     background-color: white;
+    color: #7f7f7f;
+    font-family: 'Open Sans Semibold';
 }
 .about button:before {
   content: url(../img/bag.png);
@@ -199,9 +232,10 @@ nav a:hover {
     display: inline-block;
     margin: 0 25px;
     padding-top: 100px;
-    width: 16%;
+    width: 200px;
     text-align: center;
     color: white;
+    vertical-align: top;
 }
 .teamate_img {
     margin: 35px auto;
@@ -229,35 +263,39 @@ nav a:hover {
   text-align: center;
 }
 .serv_header {
+  font-size: 36px;
   padding-bottom: 20px;
 }
 .serv_text {
-  margin: 0 10%;
-  color: grey;
-  font-style: italic;
-  line-height: 22px;
+  margin: 3% 10%;
+  color: #6c6c6c;
+  font-family: 'Open Sans Italic';
+  line-height: 20px;
 }
 .serv_profile {
     display: inline-block;
-    margin: 0 35px;
-    padding-top: 100px;
-    width: 16%;
+    margin: 0 1%;
+    padding-top: 30px;
+    width: 200px;
     text-align: center;
 }
 .serv_img {
     margin: 35px auto;
-    width: 120px;
-    padding: 30px 0;
+    width: 110px;
+    height: 110px;
     border-radius: 80px;
     border: 6px solid orange;
 }
+.serv_img img {
+ margin: 25% 0;
+}
 .serv_name {
-    font-weight: 900;
+    font-family: 'Open Sans Semibold';
     font-size: 24px;
 }
 .serv_subscribe {
     margin: 25px 0;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 /* S E C T I O N   #4 */
@@ -292,27 +330,39 @@ nav a:hover {
 .work_text {
   margin-top: 3%;
   line-height: 24px;
-  font-style: italic;
-  color: grey;
+  font-family: 'Open Sans Italic';
+  color: #6c6c6c;
 }
 .work_filter {
-  margin-top: 7%;
+  margin: 7% 0 4% 0;
 }
 .work_filter p {
+  font-family: 'Open Sans Semibold';
   float: left;
 }
-.work_filter li {
+.work_filter ul {
   float: right;
-  padding: 10px;
+  margin-bottom: 25px;
+}
+.work_filter li {
+  display: inline-block;
+}
+.work_filter li:nth-child(1n+2):before {
+    content: "";
+    margin: 10px;
+    border-left: 1px solid #6c6c6c;
+    font-size: 12px;
 }
 .work_filter a {
   text-decoration: none;
-  color: grey;
+  color: #6c6c6c;
 }
 .work_filter a:hover {
   color: black;
+  font-family: 'Open Sans Semibold';
 }
 .portfolio {
+  clear: both;
   display: flex;
   margin: 0 auto;
   flex-flow: row wrap;
@@ -321,4 +371,135 @@ nav a:hover {
 }
 .portfolio img {
   margin: 1% 0;
+}
+
+/* S E C T I O N   #6 */
+
+.feedback {
+  background-color: black;
+  padding: 5% 10%;
+  text-align: center;
+}
+.feedback_header {
+  color: white;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+.feedback_text {
+  margin: 5% 0 5% 0;
+  color: #e8e8e8;
+  font-family: 'Open Sans Semibold';
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 22px;
+}
+.feedback_autor {
+  margin: 0 0 5% 0;
+  color: #e8e8e8;
+  font-size: 18px;
+}
+
+/* S E C T I O N    #7 */
+
+.contact_us {
+  padding: 5% 25%;
+  text-align: center;
+}
+
+.contact_us__header {
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+.contact_us__text {
+  margin: 5% 0;
+  color: #6c6c6c;
+  font-family: 'Open Sans Italic';
+  font-size: 18px;
+  line-height: 24px;
+}
+.contact_us__input {
+  margin: 5% 0;
+  height: 50%;
+}
+.contact_us__input__signature {
+  text-align: left;
+  color: #6c6c6c;
+  margin-bottom: 8px;
+}
+.contact_us__input__signature::after {
+  content: "*";
+  color: red;
+  margin-left: 2px;
+}
+.contact_us__box {
+  text-align: justify;
+}
+.input_name {
+  display: inline-block;
+  width: 47%;
+  float: left;
+}
+.input_email {
+  display: inline-block;
+  width: 47%;
+  float: right;
+}
+.input_message {
+  padding-top: 2%;
+  clear: both;
+  height: 50%;
+  width:100%;
+}
+.input_name input {
+  padding: 5px 0 5px 5px;
+  width: 100%;
+  line-height: 26px;
+  font-size: 20px;
+}
+.input_email input {
+  padding: 5px 0 5px 5px;
+  width: 100%;
+  line-height: 26px;
+  font-size: 20px;
+}
+.input_message textarea {
+  padding: 5px 0 5px 5px;
+  width: 100%;
+  line-height: 22px;
+  font-size: 20px;
+}
+.contact_us button {
+  display: block;
+  float: right;
+  margin: 5% 0;
+  cursor: pointer;
+  border: 0;
+  background-color: #fcac45;
+  font-family: "Open Sans Semibold";
+  color: white;
+  font-size: 18px;
+  padding: 10px 55px;
+}
+
+/*   F O O T E R   */
+
+footer {
+  padding: 60px 10%;
+  background-color: #222;
+  text-align: right;
+}
+footer p {
+  display: inline-block;
+  float: left;
+  margin-top: 11px;
+  font-size: 13px;
+  color: grey;
+}
+.social_network {
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+}
+.social_network a {
+  margin: 0 5px;
 }
