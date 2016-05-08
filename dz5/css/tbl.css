@@ -1,0 +1,30 @@
+.wraper {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+table {
+  border-collapse: collapse;
+  border: 10px solid white;
+}
+tr,
+td {
+  margin: 0;
+}
+td {
+  height: 80px;
+  width: 80px;
+  border: 8px solid black;
+}
+.red {
+  background-color: red;
+}
+.black {
+  background-color: #222;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
