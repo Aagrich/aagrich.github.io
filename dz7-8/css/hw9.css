@@ -1,0 +1,70 @@
+.wrapper {
+  background-image: url(../img/bg960.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header {
+  padding: 5% 25%;
+  text-align: right;
+}
+header p {
+  color: white;
+  float: left;
+}
+header ul {
+  width: 80%;
+  display: inline-block;
+}
+header li {
+  display: inline-block;
+}
+header a {
+  display: block;
+  width: 100%;
+  margin: 0 5%;
+  text-decoration: none;
+  color: white;
+}
+header a:hover {
+  border-bottom: 3px solid purple;
+}
+.slider {
+  padding: 0 25%;
+  margin: 10% 0 20% 0;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slider__inform {
+  display: inline-block;
+  width: 50%;
+  margin: 25% 0;
+}
+.slider__inform_header {
+  color: white;
+  font-size: 36px;
+}
+.slider__inform_signature {
+  color: purple;
+  font-size: 26px;
+}
+.slider__inform_text {
+  color: white;
+}
+
+.slider__bg_img {
+  float: right;
+  margin: 22% 22% 0 0;
+  padding: 20% 10%;
+  background-image: url(../img/iphone42.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+}
+.slider__front_img {
+  padding: 45% 25%;
+  background-image: url(../img/iphone4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+}
