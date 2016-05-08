@@ -4,7 +4,7 @@
 }
 
 div, p, input, button, header, footer, aside, section {
-    font-family: lucida, sans-serif;
+    font-family: lucida, Arial, sans-serif;
     font-size: 14px;
 }
 
@@ -26,6 +26,7 @@ header {
     padding-top: 5px;
     margin-left: 5px;
     width: 310px;
+    font-family: Arial;
     font-size: 18px;
     font-weight: 400;
     color: #5e696d;
@@ -58,6 +59,9 @@ header {
     background: -webkit-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
     background: -o-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
     background: -ms-linear-gradient(top, #2c4d6d 0%, #114266 50%, #1e6584 100%);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
 }
 .logbox:before {
     display:block;
@@ -128,6 +132,9 @@ header {
     background: -webkit-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
     background: -o-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
     background: -ms-linear-gradient(top, #4d5663 0%, #202326 25%, #000 100%);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
 }
 .menu ul {
     margin-right: 275px;
@@ -143,13 +150,13 @@ header {
 .menu li:first-child {
     width:120px;
 }
-.menu a {   
+.menu a {
     display:block;
     width: auto;
     text-decoration: none;
     font-weight: 600;
     color: #bfbfbf;
-    padding-top: 5px; 
+    padding-top: 5px;
 }
 .menu ul li:hover {
     border-radius: 13px;
@@ -160,7 +167,7 @@ header {
     background: -o-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
     background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
 }
- /* 
+ /*
  .menu ul li a {
     display: block;
     padding: 5px 20px;
@@ -177,7 +184,7 @@ header {
     background: -o-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
     background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
 }
-*/ 
+*/
 .menu p {
      float: right;
 }
@@ -221,14 +228,22 @@ header {
     margin: 3px 0 3px 7px;
     border:1px solid grey;
     border-radius: 12px;
+    color: #0c3256;
     padding: 2px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
 }
 .aside_head_catalog {
     margin: 3px 7px 15px 0;
     border:1px solid grey;
     border-radius: 12px;
+    color: #0c3256;
     padding: 2px;
     font-size: 13px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
 }
 .aside_head:before {
     display: inline-block;
@@ -254,12 +269,14 @@ header {
 .aside_catalog_punct {
     border:1px solid grey;
     width: 139px;
+    color: #0c3256;
     border-radius: 12px;
     padding: 6px 3px;
 }
 .aside_brand_punct{
     border:1px solid grey;
     width: 124px;
+    color: #0c3256;
     border-radius: 12px;
     padding: 6px 3px;
 }
@@ -359,7 +376,8 @@ header {
     margin-bottom: 1px;
 }
 .goods__price {
-    margin-left: 14px;
+    margin-left: 15px;
+    font-family: Arial;
     font-weight: 900;
     font-size: 16px;
     font-style: italic;
