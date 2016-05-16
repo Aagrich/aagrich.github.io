@@ -1,6 +1,7 @@
 var a;
 var b;
 var arr;
+var result2;
 
 a = Math.abs(+prompt('Введите число', ''));
 b = Math.abs(+prompt('Введите степень', ''));
@@ -35,3 +36,13 @@ function calculate( a, b) {
  pow();
 
 console.log("Результатом ", a , " в " , b , " степени будет " , arr[b-1]);
+
+function test2(a, b) {
+  for (var i = 1; i < b; ++i) {
+    a = a*a;
+  }
+  return a;
+}
+result2 = test2(a,b);
+
+console.log( "second result will be = ", result2);
