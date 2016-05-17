@@ -4,7 +4,7 @@ var x;
 
 numbersOfUsers = 3;
 x = numbersOfUsers;
-listOfUsers = ["Wrong name"];
+listOfUsers = ["0"];
 
 
 
@@ -13,22 +13,26 @@ function addUsers(x) {
           var userName;
           userName = prompt("Введите имя нового пользователя:", "");
           listOfUsers.push(userName);
-          
+    
      }
 }
 function lookForUser() {
-          var userName;
+          var login;
           var listLength;
-          userName = prompt("Введите имя пользователя для входа", "");
+          var result;
+          var allow = ",  Вы успешно вошли";
+          login = prompt("Введите имя пользователя для входа", "");
           listLength = listOfUsers.length;
-          if (listOfUsers.indexOf(userName)) {
-          return "Wellcome!";
+          result = listOfUsers.indexOf(login, 0);
+          if (result == -1) {
+          return "Error!";
           }
-          else
-          return "Dennided!";
+          if (result > 0) {
+          return listOfUsers[result] + allow;     
+          }
+          return "Error!";
      }
 
+addUsers(x);
 
-// addUsers(x);
-// console.log(listOfUsers);
-// alert(lookForUser());
+alert(lookForUser());

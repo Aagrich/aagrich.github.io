@@ -6,14 +6,14 @@ a = Math.abs(+prompt('Введите число', ''));
 b = Math.abs(+prompt('Введите степень', ''));
 
 function pow(a, b) {
+  if (isNaN(a) || isNaN(b)) {
+    return "Введенные даные не являются числом! обновите страницу и введите числа!";
+  }
   if (b == 1) {
     return a;
   }
   if (b == 0) {
     return 1;
-  }
-  if (isNaN(a) || isNaN(b)) {
-    return "Введенные даные не являются числом! обновите страницу и введите числа!";
   }
   else var result = a * pow(a, b-1);
   return result;
