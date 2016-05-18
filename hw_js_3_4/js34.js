@@ -1,16 +1,21 @@
  var testPage = {
+
   tagPosition: null,
+
  	addElement: function(task) {
     var element = document.createElement(task.tag);
    
     if (task.tagClass){
-      task.className = task.tagClass;
+      element.className = task.tagClass;
+    }
+    if (task.tagId){
+      element.setAttribute('id', task.tagId);
     }
     if (task.tagType){
-      task.setAttribute('type', task.tagType);
+      element.setAttribute('type', task.tagType);
     }
     if (task.tagValue){
-      task.setAttribute('value', task.tagValue);
+      element.setAttribute('value', task.tagValue);
     }
     if (task.tagContent){
       element.innerHTML = task.tagContent;
@@ -31,11 +36,24 @@ testPage.addElement({
 var div = document.querySelector('div');
 testPage.addElement({
   tag: 'p',
-  tagContent: 'Some text',
+  tagContent: 'Тест по програмированию',
   tagParent: div
   });
 
+testPage.addElement ({
+  tag: 'ul',
+  tagId: 'first',
+  tagParent: div
+})
 
+var list = div.getElementById(first);
+
+
+testPage.addElement ({
+  tag: 'li',
+  tagContent: 'Вопрос №1'
+  tagParent: list
+})
 
 
 /* var page = document.body;
