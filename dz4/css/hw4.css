@@ -113,6 +113,9 @@ font-weight: 600;
 .panel .submenu li a {
   text-indent: 5px;
 }
+.submenu li {
+  display: block;
+}
 .panel > li:hover > ul.submenu {
     display: block;
 }

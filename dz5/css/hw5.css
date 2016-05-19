@@ -127,9 +127,9 @@ div, p, input, button, header {
   text-indent: 15px;
   font-size: 14px;
   line-height: 16px;
-  color: lightgrey;
 }
 .reginput input:hover {
+  color: white;
   background-color: #1b5288;
   border: 1px solid #1b5288;
   border-bottom: 1px solid #689bcc;
@@ -137,12 +137,15 @@ div, p, input, button, header {
   -moz-box-shadow: 0px 0px 12px 3px rgba(104,155,204,1);
   box-shadow: 0px 0px 12px 3px rgba(104,155,204,1);
 }
+.reginput input:hover::-webkit-input-placeholder {
+  color: white;
+}
 .checkmark {
   display: block;
   margin: 0 auto;
   font-size: 14px;
   width: 49%;
-  color: lightgrey;
+  color: #b5b5b5;
 }
 .subbutton {
   display: block;
@@ -168,7 +171,7 @@ div, p, input, button, header {
 .regbox p {
   display: block;
   text-align: center;
-  color: white;
+  color: #b5b5b5;
   font-size: 11px;
   padding-bottom: 14px;
 }
