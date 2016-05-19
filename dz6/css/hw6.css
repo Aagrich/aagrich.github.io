@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'lucida';
-    src: url('fonts/LucidaSansUnicodeFont.ttf');
+    src: url('../fonts/LucidaSansUnicodeFont.ttf');
 }
 
 div, p, input, button, header, footer, aside, section {
