@@ -5,6 +5,7 @@
 
 div, p, input, button, header {
   font-family: tahomaRegular, sans-serif;
+  font-weight: 600;
 }
 
 
@@ -35,13 +36,13 @@ div, p, input, button, header {
   text-align: center;
   width: 100%;
   height: 100%;
-  color: #4f9ed6;
+  color: #4eabda;
   font-size: 14px;
   text-decoration: none;
 }
 .first > ul li a:hover {
   color: white;
-  background-color: #4f9ed6;
+  background-color: #4eabda;
 }
 .first > p {
   display: inline-block;
@@ -148,9 +149,14 @@ div, p, input, button, header {
 .checkmark {
   display: block;
   margin: 0 auto;
-  font-size: 14px;
+  padding: 10px 0;
+  font-size: 13px;
   width: 49%;
   color: #b5b5b5;
+}
+.checkmark input{
+float: left;
+margin: 1px 7px 1px 0;
 }
 .subbutton {
   display: block;
@@ -167,7 +173,7 @@ div, p, input, button, header {
 	-moz-box-shadow:    0px 0px 3px rgba(77,158,216,1);
 	-webkit-box-shadow: 0px 0px 3px rgba(77,158,216,1);
 	box-shadow:         0px 0px 3px rgba(77,158,216,1);
-
+   font-weight: 600; 
 	 font-size: 14px;
   line-height: 15px;
   color: white;
