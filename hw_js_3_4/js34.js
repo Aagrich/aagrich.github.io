@@ -1,10 +1,12 @@
- var testPage = {
+ var tagList;
+ var testBlock = {
 
   tagPosition: null,
 
  	addElement: function(task) {
     var element = document.createElement(task.tag);
-   
+    var label = document.createElement('label');
+       
     if (task.tagClass){
       element.className = task.tagClass;
     }
@@ -20,6 +22,15 @@
     if (task.tagContent){
       element.innerHTML = task.tagContent;
     }
+    if (task.tagVariant){
+      element.innerHTML = task.tagVariant;
+      
+    }
+    if (task.tagLabel){
+      task.tagParent.insertBefore(label, null);
+      var x = task.tagParent.querySelector('label');
+      x.insertBefore(element, task.tagPosition);
+    }
     if (task.tagParent){
       task.tagParent.insertBefore(element, task.tagPosition);
     }
@@ -29,32 +40,61 @@
 var body = document.querySelector('body');
 
 
-testPage.addElement({
+testBlock.addElement({
   tag: 'div',
+  tagId: 'wraper',
   tagParent: body
 });
-var div = document.querySelector('div');
-testPage.addElement({
+var wraper = document.getElementById('wraper');
+
+console.log(wraper);
+testBlock.addElement({
   tag: 'p',
   tagContent: 'Тест по програмированию',
-  tagParent: div
+  tagParent: wraper
   });
 
-testPage.addElement ({
+testBlock.addElement ({
   tag: 'ul',
-  tagId: 'first',
-  tagParent: div
+  tagId: 'mainList',
+  tagParent: wraper
 })
+var mainList = document.getElementById('mainList');
 
-var list = div.getElementById(first);
-
-
-testPage.addElement ({
-  tag: 'li',
-  tagContent: 'Вопрос №1'
-  tagParent: list
-})
-
+  testBlock.addElement({
+    tag: 'li',
+    tagId:'question1',
+    tagContent: 'Вопрос №1',
+    tagParent: mainList
+  })
+  var question1 = document.getElementById('question1');
+  
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a1",
+        tagType: 'checkbox',
+        tagVariant: 'Вариант ответа №1',
+        tagLabel: "",
+        tagParent: question1
+       })
+  
+  testBlock.addElement({
+    tag: 'li',
+    tagId:'question2',
+    tagContent: 'Вопрос №2',
+    tagParent: mainList
+  })
+  var question2 = document.getElementById('question2');
+  
+  testBlock.addElement({
+    tag: 'li',
+    tagId:'question3',
+    tagContent: 'Вопрос №3',
+    tagParent: mainList
+  })
+  var question3 = document.getElementById('question3');
+    
+console.log(tagList);
 
 /* var page = document.body;
 
