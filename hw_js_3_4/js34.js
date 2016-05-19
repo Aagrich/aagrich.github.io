@@ -22,15 +22,15 @@
     if (task.tagContent){
       element.innerHTML = task.tagContent;
     }
-    if (task.tagVariant){
-      element.innerHTML = task.tagVariant;
-      
-    }
-    if (task.tagLabel){
-      task.tagParent.insertBefore(label, null);
-      var x = task.tagParent.querySelector('label');
-      x.insertBefore(element, task.tagPosition);
-    }
+    // if (task.tagVariant){
+    //   element.innerHTML = task.tagVariant;
+    //   
+    // }
+    // if (task.tagLabel){
+    //   mainList.insertBefore(label, task.tagPosition);
+    //   var x = task.tagParent.querySelector('label');
+    //   x.insertBefore(element, null);
+    // }
     if (task.tagParent){
       task.tagParent.insertBefore(element, task.tagPosition);
     }
@@ -73,9 +73,25 @@ var mainList = document.getElementById('mainList');
         tag: 'input',
         tagValue: "a1",
         tagType: 'checkbox',
-        tagVariant: 'Вариант ответа №1',
-        tagLabel: "",
-        tagParent: question1
+        tagContent: 'Вариант ответа №1',
+        tagPosition: question2,
+        tagParent: mainList
+       })
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a2",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №2',
+        tagPosition: question2,
+        tagParent: mainList
+       })
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a3",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №3',
+        tagPosition: question2,
+        tagParent: mainList
        })
   
   testBlock.addElement({
@@ -85,6 +101,31 @@ var mainList = document.getElementById('mainList');
     tagParent: mainList
   })
   var question2 = document.getElementById('question2');
+
+  testBlock.addElement({
+        tag: 'input',
+        tagValue: "a1",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №1',
+        tagPosition: question3,
+        tagParent: mainList
+       })
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a2",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №2',
+        tagPosition: question3,
+        tagParent: mainList
+       })
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a3",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №3',
+        tagPosition: question3,
+        tagParent: mainList
+       })
   
   testBlock.addElement({
     tag: 'li',
@@ -93,7 +134,39 @@ var mainList = document.getElementById('mainList');
     tagParent: mainList
   })
   var question3 = document.getElementById('question3');
-    
+
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a1",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №1',
+        tagPosition: checkButton,
+        tagParent: mainList
+       })
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a2",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №2',
+        tagPosition: checkButton,
+        tagParent: mainList
+       })
+      testBlock.addElement({
+        tag: 'input',
+        tagValue: "a3",
+        tagType: 'checkbox',
+        tagContent: 'Вариант ответа №3',
+        tagPosition: checkButton,
+        tagParent: mainList
+       })
+
+testBlock.addElement({
+    tag: "button",
+    tagId: 'checkButton',
+    tagContent: "Проверить мои результаты",
+    tagParent: mainList
+})
+var checkButton = document.getElementById('checkButton')
 console.log(tagList);
 
 /* var page = document.body;
