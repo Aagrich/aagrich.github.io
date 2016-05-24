@@ -6,7 +6,7 @@
  	addElement: function(task) {
     var element = document.createElement(task.tag);
     var label = document.createElement('label');
-       
+
     if (task.tagClass){
       element.className = task.tagClass;
     }
@@ -34,7 +34,7 @@
         tagId: task.tagVarId
       })
       label.insertAdjacentElement('afterBegin', checkbox);
-      
+
     }
     // if (task.tagLabel){
     //   mainList.insertBefore(label, task.tagPosition);
@@ -52,33 +52,36 @@ var body = document.querySelector('body');
 
 testBlock.addElement({
   tag: 'div',
-  tagId: 'wraper',
+  tagId: 'container',
+  tagClass:'container',
   tagParent: body
 });
-var wraper = document.getElementById('wraper');
+var container = document.getElementById('container');
 
-console.log(wraper);
 testBlock.addElement({
   tag: 'p',
+  tagClass: "header",
   tagContent: 'Тест по програмированию',
-  tagParent: wraper
+  tagParent: container
   });
 
 testBlock.addElement ({
-  tag: 'ul',
+  tag: 'ol',
+  tagClass: '',
   tagId: 'mainList',
-  tagParent: wraper
+  tagParent: container
 })
 var mainList = document.getElementById('mainList');
 
   testBlock.addElement({
     tag: 'li',
     tagId:'question1',
+    tagClass: "checkbox",
     tagContent: 'Вопрос №1',
     tagParent: mainList
   })
   var question1 = document.getElementById('question1');
-  
+
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №1',
         tagVarId: 'q1v1',
@@ -94,10 +97,11 @@ var mainList = document.getElementById('mainList');
         tagVarId: 'q1v3',
         tagParent: question1
        })
-  
+
   testBlock.addElement({
     tag: 'li',
     tagId:'question2',
+    tagClass: "checkbox",
     tagContent: 'Вопрос №2',
     tagParent: mainList
   })
@@ -118,25 +122,26 @@ var mainList = document.getElementById('mainList');
         tagVarId: 'q2v3',
         tagParent: question2
        })
-  
+
   testBlock.addElement({
     tag: 'li',
     tagId:'question3',
+    tagClass: "checkbox",
     tagContent: 'Вопрос №3',
     tagParent: mainList
   })
   var question3 = document.getElementById('question3');
- 
+
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №1',
         tagVarId: 'q3v1',
         tagParent: question3
-       }) 
+       })
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №2',
         tagVarId: 'q3v2',
         tagParent: question3
-       }) 
+       })
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №3',
         tagVarId: 'q3v3',
@@ -146,6 +151,7 @@ var mainList = document.getElementById('mainList');
 testBlock.addElement({
     tag: "button",
     tagId: 'checkButton',
+    tagClass: 'btn btn-primary btn-lg active',
     tagContent: "Проверить мои результаты",
     tagParent: mainList
 })
