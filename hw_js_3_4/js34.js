@@ -31,7 +31,7 @@
       var checkbox = this.addElement({
         tag: 'input',
         tagType: 'checkbox',
-        tagId: task.tagId
+        tagId: task.tagVarId
       })
       label.insertAdjacentElement('afterBegin', checkbox);
       
@@ -81,24 +81,18 @@ var mainList = document.getElementById('mainList');
   
       testBlock.addElement({
         tagVariant: 'VARIANT1',
-        tagId: 'var1',
+        tagVarId: 'var1',
         tagParent: question1
        })
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a2",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №2',
-        tagPosition: question2,
-        tagParent: mainList
+     testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question1
        })
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a3",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №3',
-        tagPosition: question2,
-        tagParent: mainList
+     testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question1
        })
   
   testBlock.addElement({
@@ -110,28 +104,19 @@ var mainList = document.getElementById('mainList');
   var question2 = document.getElementById('question2');
 
   testBlock.addElement({
-        tag: 'input',
-        tagValue: "a1",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №1',
-        tagPosition: question3,
-        tagParent: mainList
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question2
        })
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a2",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №2',
-        tagPosition: question3,
-        tagParent: mainList
+  testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question2
        })
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a3",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №3',
-        tagPosition: question3,
-        tagParent: mainList
+  testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question2
        })
   
   testBlock.addElement({
@@ -141,30 +126,21 @@ var mainList = document.getElementById('mainList');
     tagParent: mainList
   })
   var question3 = document.getElementById('question3');
-
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a1",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №1',
-        tagPosition: checkButton,
-        tagParent: mainList
-       })
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a2",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №2',
-        tagPosition: checkButton,
-        tagParent: mainList
-       })
-      testBlock.addElement({
-        tag: 'input',
-        tagValue: "a3",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №3',
-        tagPosition: checkButton,
-        tagParent: mainList
+ 
+          testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question3
+       }) 
+          testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question3
+       }) 
+          testBlock.addElement({
+        tagVariant: 'VARIANT1',
+        tagVarId: 'var1',
+        tagParent: question3
        })
 
 testBlock.addElement({
