@@ -5,10 +5,7 @@
 
 div, p, input, button, header {
   font-family: tahomaRegular, sans-serif;
-  font-weight: 600;
 }
-
-
 
 .first {
   background-image: url(../img/hbg.png);
@@ -38,6 +35,7 @@ div, p, input, button, header {
   height: 100%;
   color: #4eabda;
   font-size: 14px;
+  font-weight: bold;
   text-decoration: none;
 }
 .first > ul li a:hover {
@@ -51,8 +49,10 @@ div, p, input, button, header {
   padding: 0px 10px 0 10px;
   color: white;
   font-size: 14px;
+  font-weight: bold;
   line-height: 36px;
 }
+
 .first img {
   margin: 7px 0 0 10px;
   float: right;
@@ -150,7 +150,7 @@ div, p, input, button, header {
   display: block;
   margin: 0 auto;
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 14px;
   width: 49%;
   color: #b5b5b5;
 }
