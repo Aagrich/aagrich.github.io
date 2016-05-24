@@ -4,7 +4,7 @@
 }
 
 div, p, input, button, header, footer, aside, section {
-    font-family: lucida, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
@@ -309,6 +309,7 @@ header {
 .aside_list li a{
     margin-right: 12px;
     font-size: 13px;
+    font-family: Lucida;
     color: #465961;
     text-decoration: none;
 }
@@ -324,11 +325,21 @@ header {
 .aside__check_brand li{
     margin:6px 5px 8px 4px;
     color: #465961;
-    font-size: 13px;
+    font-size: 12px;
+    font-family: Lucida;
+}
+
+.aside__check_brand label {
+    display: block;
+
+}
+.aside__check_brand input {
+    margin-right:10px;
+    vertical-align: text-top;
 }
 .choise {
     margin: 9px 0 0 7px;
-    padding: 6px 15px;
+    padding: 5px 15px;
     font-size: 11px;
     color: white;
     border-radius: 15px;
@@ -339,6 +350,9 @@ header {
     background: -webkit-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
     background: -o-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
     background: -ms-linear-gradient(top, #1e6584 0%, #114266 50%, #2c4d6d 100%);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
+    box-shadow: 4px 4px 4px 0px rgba(191,191,191,1);
 }
 .content {
     margin: 10px 190px 0 190px;
@@ -368,6 +382,7 @@ header {
 .goods__inf {
     margin-top: 2px;
     font-size: 12px;
+    font-family: Lucida;
 }
 .goods_brand_name {
     font-weight: 900;
