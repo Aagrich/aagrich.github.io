@@ -25,6 +25,7 @@
     if (task.tagVariant){
       var label = this.addElement({
         tag: 'label',
+        tagClass: 'checkbox',
         tagContent: task.tagVariant,
         tagParent: task.tagParent
       })
@@ -34,19 +35,13 @@
         tagId: task.tagVarId
       })
       label.insertAdjacentElement('afterBegin', checkbox);
-
     }
-    // if (task.tagLabel){
-    //   mainList.insertBefore(label, task.tagPosition);
-    //   var x = task.tagParent.querySelector('label');
-    //   x.insertBefore(element, null);
-    // }
     if (task.tagParent){
-      task.tagParent.insertBefore(element, task.tagPosition);
+      task.tagParent.insertBefore(element , task.tagPosition);
     }
     return element;
  }
-}
+};
 var body = document.querySelector('body');
 
 
@@ -67,7 +62,7 @@ testBlock.addElement({
 
 testBlock.addElement ({
   tag: 'ol',
-  tagClass: '',
+  tagClass: 'list',
   tagId: 'mainList',
   tagParent: container
 })
@@ -76,7 +71,7 @@ var mainList = document.getElementById('mainList');
   testBlock.addElement({
     tag: 'li',
     tagId:'question1',
-    tagClass: "checkbox",
+    tagClass: "list__punct",
     tagContent: 'Вопрос №1',
     tagParent: mainList
   })
@@ -85,68 +80,68 @@ var mainList = document.getElementById('mainList');
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №1',
         tagVarId: 'q1v1',
-        tagParent: question1
-       })
+        tagParent: question1,
+      });
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №2',
         tagVarId: 'q1v2',
         tagParent: question1
-       })
+      });
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №3',
         tagVarId: 'q1v3',
         tagParent: question1
-       })
+      });
 
   testBlock.addElement({
     tag: 'li',
     tagId:'question2',
-    tagClass: "checkbox",
+    tagClass: "list__punct",
     tagContent: 'Вопрос №2',
     tagParent: mainList
-  })
+  });
   var question2 = document.getElementById('question2');
 
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №1',
         tagVarId: 'q2v1',
         tagParent: question2
-       })
+      });
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №2',
         tagVarId: 'q2v2',
         tagParent: question2
-       })
+      });
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №3',
         tagVarId: 'q2v3',
         tagParent: question2
-       })
+      });
 
   testBlock.addElement({
     tag: 'li',
     tagId:'question3',
-    tagClass: "checkbox",
+    tagClass: "list__punct",
     tagContent: 'Вопрос №3',
     tagParent: mainList
-  })
+  });
   var question3 = document.getElementById('question3');
 
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №1',
         tagVarId: 'q3v1',
         tagParent: question3
-       })
+      });
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №2',
         tagVarId: 'q3v2',
         tagParent: question3
-       })
+      });
   testBlock.addElement({
         tagVariant: 'Вариант ответа  №3',
         tagVarId: 'q3v3',
         tagParent: question3
-       })
+      });
 
 testBlock.addElement({
     tag: "button",
@@ -154,7 +149,7 @@ testBlock.addElement({
     tagClass: 'btn btn-primary btn-lg active',
     tagContent: "Проверить мои результаты",
     tagParent: mainList
-})
+});
 var checkButton = document.getElementById('checkButton')
 console.log(tagList);
 

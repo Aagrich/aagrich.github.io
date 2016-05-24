@@ -10,6 +10,10 @@ p, div, li, a, label {
   background-color: white;
 }
 .header {
+  display: block;
   margin: 0 auto;
   font-size: 18px;
+}
+.checkbox {
+  display:block;
 }
