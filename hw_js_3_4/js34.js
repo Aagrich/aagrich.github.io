@@ -22,10 +22,20 @@
     if (task.tagContent){
       element.innerHTML = task.tagContent;
     }
-    // if (task.tagVariant){
-    //   element.innerHTML = task.tagVariant;
-    //   
-    // }
+    if (task.tagVariant){
+      var label = this.addElement({
+        tag: 'label',
+        tagContent: task.tagVariant,
+        tagParent: task.tagParent
+      })
+      var checkbox = this.addElement({
+        tag: 'input',
+        tagType: 'checkbox',
+        tagId: task.tagId
+      })
+      label.insertAdjacentElement('afterBegin', checkbox);
+      
+    }
     // if (task.tagLabel){
     //   mainList.insertBefore(label, task.tagPosition);
     //   var x = task.tagParent.querySelector('label');
@@ -70,12 +80,9 @@ var mainList = document.getElementById('mainList');
   var question1 = document.getElementById('question1');
   
       testBlock.addElement({
-        tag: 'input',
-        tagValue: "a1",
-        tagType: 'checkbox',
-        tagContent: 'Вариант ответа №1',
-        tagPosition: question2,
-        tagParent: mainList
+        tagVariant: 'VARIANT1',
+        tagId: 'var1',
+        tagParent: question1
        })
       testBlock.addElement({
         tag: 'input',
