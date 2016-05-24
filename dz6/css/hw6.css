@@ -114,6 +114,9 @@ header {
     width: 66px;
     text-align: center;
     vertical-align: middle;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(191,191,191,1);
+    box-shadow: 3px 3px 3px 0px rgba(191,191,191,1);
 }
 .minimenu a {
     margin: 2px;
