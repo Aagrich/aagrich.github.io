@@ -79,19 +79,19 @@ var mainList = document.getElementById('mainList');
   })
   var question1 = document.getElementById('question1');
   
-      testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+  testBlock.addElement({
+        tagVariant: 'Вариант ответа  №1',
+        tagVarId: 'q1v1',
         tagParent: question1
        })
-     testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+  testBlock.addElement({
+        tagVariant: 'Вариант ответа  №2',
+        tagVarId: 'q1v2',
         tagParent: question1
        })
-     testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+  testBlock.addElement({
+        tagVariant: 'Вариант ответа  №3',
+        tagVarId: 'q1v3',
         tagParent: question1
        })
   
@@ -104,18 +104,18 @@ var mainList = document.getElementById('mainList');
   var question2 = document.getElementById('question2');
 
   testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+        tagVariant: 'Вариант ответа  №1',
+        tagVarId: 'q2v1',
         tagParent: question2
        })
   testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+        tagVariant: 'Вариант ответа  №2',
+        tagVarId: 'q2v2',
         tagParent: question2
        })
   testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+        tagVariant: 'Вариант ответа  №3',
+        tagVarId: 'q2v3',
         tagParent: question2
        })
   
@@ -127,19 +127,19 @@ var mainList = document.getElementById('mainList');
   })
   var question3 = document.getElementById('question3');
  
-          testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+  testBlock.addElement({
+        tagVariant: 'Вариант ответа  №1',
+        tagVarId: 'q3v1',
         tagParent: question3
        }) 
-          testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+  testBlock.addElement({
+        tagVariant: 'Вариант ответа  №2',
+        tagVarId: 'q3v2',
         tagParent: question3
        }) 
-          testBlock.addElement({
-        tagVariant: 'VARIANT1',
-        tagVarId: 'var1',
+  testBlock.addElement({
+        tagVariant: 'Вариант ответа  №3',
+        tagVarId: 'q3v3',
         tagParent: question3
        })
 
