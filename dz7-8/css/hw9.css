@@ -64,7 +64,7 @@ header a:hover {
   float: right;
   width: 113px;
   height: 216px;
-  margin: 10% 0 0 15%;
+  margin: 10% 15% 0 0;
   background-image: url(../img/iphone42.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -74,9 +74,44 @@ header a:hover {
   float: left;
   width: 220px;
   height: 500px;
-  margin: -85% 0 0 60%;
+  margin: -95% 15% 0 60%;
   background-image: url(../img/iphone4.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
+}
+.about {
+  padding: 0 15%;
+}
+
+.about__wrench {
+  float: left;
+  color: white;
+  width: 30%;
+}
+.about__wrench:before {
+  content: url(../img/wrench.png);
+  float: left;
+  margin:10px 10px 10px -40px;
+}
+.about__feedback {
+  color: white;
+  width:30%;
+  margin: 0 auto;
+}
+.about__feedback:before {
+  content: url(../img/feedback.png);
+  float: left;
+  margin:10px 10px 10px -40px;
+}
+
+.about__music {
+  float: right;
+  color: white;
+  width: 30%;
+}
+.about__music:before {
+  content: url(../img/music.png);
+  float: left;
+  margin:10px 10px 10px -40px;
 }
