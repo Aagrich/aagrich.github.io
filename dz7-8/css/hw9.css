@@ -82,6 +82,12 @@ header a:hover {
 }
 .about {
   padding: 0 15%;
+  background-color: purple;
+}
+.about__text_header {
+  text-transform: uppercase;
+  margin: 5px;
+  font-weight: bold;
 }
 
 .about__wrench {
