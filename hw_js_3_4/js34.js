@@ -146,7 +146,7 @@ var mainList = document.getElementById('mainList');
 testBlock.addElement({
     tag: "button",
     tagId: 'checkButton',
-    tagClass: 'btn btn-primary btn-lg active',
+    tagClass: 'checkButton',
     tagContent: "Проверить мои результаты",
     tagParent: mainList
 });
