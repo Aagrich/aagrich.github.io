@@ -7,9 +7,10 @@ div, p, li , a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding-bottom: 168px;
 }
 header {
-  padding: 5% 25%;
+  padding: 5% 15%;
   text-align: right;
 }
 header p {
@@ -17,11 +18,13 @@ header p {
   float: left;
 }
 header ul {
+  float: right;
   width: 80%;
   display: inline-block;
 }
 header li {
   display: inline-block;
+  margin-left: 15px;
 }
 header a {
   display: block;
@@ -34,42 +37,46 @@ header a:hover {
   border-bottom: 3px solid purple;
 }
 .slider {
-  padding: 0 25%;
-  margin: 10% 0 20% 0;
+  padding: 0 15%;
+  margin: 10% 0 0 0;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .slider__inform {
   display: inline-block;
-  width: 50%;
-  margin: 25% 0;
+  width: 70%;
+  margin: 10% 0;
 }
 .slider__inform_header {
   color: white;
-  font-size: 40px;
+  font-size: 60px;
 }
 .slider__inform_signature {
   color: purple;
-  font-size: 30px;
+  font-size: 40px;
 }
 .slider__inform_text {
   color: white;
+  font-size: 22px;
 }
 
 .slider__bg_img {
   float: right;
-  margin: 22% 22% 0 0;
-  padding: 20% 10%;
+  width: 113px;
+  height: 216px;
+  margin: 10% 0 0 15%;
   background-image: url(../img/iphone42.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 90%;
+  background-size: 100%;
 }
 .slider__front_img {
   float: left;
-  padding: 45% 25%;
+  width: 220px;
+  height: 500px;
+  margin: -85% 0 0 60%;
   background-image: url(../img/iphone4.png);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20%;
+  background-position: top;
+  background-size: 100%;
 }
