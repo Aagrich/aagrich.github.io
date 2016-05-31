@@ -8,6 +8,8 @@ var pause = document.getElementById('pause');
 var prolong = document.getElementById('prolong');
 var clear = document.getElementById('clear');
 var i = -1;
+var x = 0;
+var y = 0;
 var btnClick;
 
 
@@ -17,12 +19,19 @@ function action() {
 	var timer;
 	function timerok() {
 	
-		if ( i < 10 ){
+		if ( i < 20 ){
 			i++;
-			console.log(i);
+			i = (i < 10) ? ('0' + i):i;
 		}
-		if (i === 10) {
+		if (i === 20) {
 			i = 0;
+			x++;
+			x = (x < 10) ? ('0' + x):x;
+		}
+		if (x === 20) {
+			x = 0;
+			y++;
+			y = (y < 10) ? ('0' + y):y;
 		}
 		timer = setTimeout(timerok , 1000);
 		if (btnClick === pause) {
@@ -36,13 +45,13 @@ function action() {
 		if (btnClick === clear) {
 			clearTimeout(timer);
 		}
-		timeDisplay.innerHTML = i;
+		
+		
+		
+		timeDisplay.innerHTML = y + ":" + x + ":" + i;
 		
 	}
 
-	if (btnClick === pause) {
-		
-	}
 	if (btnClick === prolong) {
 		prolong.classList.add('hidden');
 		pause.classList.remove('hidden');
@@ -52,8 +61,10 @@ function action() {
 		pause.classList.add('hidden');
 		prolong.classList.add('hidden');
 		start.classList.remove('hidden');
-		timeDisplay.innerHTML = 0;
+		timeDisplay.innerHTML = '00:00:00';
 		i = -1;
+		y = 0;
+		x = 0;
 	}
 		if (btnClick === start) {
 		start.classList.add('hidden');
