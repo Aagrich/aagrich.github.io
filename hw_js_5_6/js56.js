@@ -7,26 +7,46 @@ var start = document.getElementById('start');
 var pause = document.getElementById('pause');
 var prolong = document.getElementById('prolong');
 var clear = document.getElementById('clear');
+var i = -1;
 
 
 function action() {
-	var click = event.target;
-	if (click == start) {
-		start.classList.add('hidden');
-		pause.classList.remove('hidden');
+	var btnClick = event.target;
+	var interval; 
+	var timer;
+	function timerok() {
+		if ( i < 9 ){
+			i++;
+			console.log(i);
+			timeDisplay.innerHTML = i;
+		}
+		if (i == 9) {
+			i = -1;
+		}
+		timer = setTimeout(timerok , 1000);
+
 	}
-	if (click == pause) {
+
+	if (btnClick == pause) {
 		pause.classList.add('hidden');
 		prolong.classList.remove('hidden');
+		clearTimeout(timer);
 	}
-	if (click == prolong) {
+	if (btnClick == prolong) {
 		prolong.classList.add('hidden');
 		pause.classList.remove('hidden');
 	}
-	if (click == clear) {
+	if (btnClick == clear) {
 		pause.classList.add('hidden');
 		prolong.classList.add('hidden');
 		start.classList.remove('hidden');
+		i = 0;
+		clearTimeout(timerok);
+	}
+		if (btnClick == start) {
+		start.classList.add('hidden');
+		pause.classList.remove('hidden');
+		timer = setTimeout(timerok() , 1000);		
 	}
 
 }
