@@ -8,10 +8,23 @@
  	margin: 25px auto;
  	border: 4px groove grey;
  }
- form p {
+ form div {
+ 	display: inline-block;
+ }
+ .input_singn {
  	display: inline-block;
  	width: 75px;
  }
+
+ form .message {
+ 	width: auto;
+ 	border: 2px solid grey;
+ 	padding: 5px;
+ 	border-radius: 10px;
+ 	margin-left: 10px;
+ 	display: none;
+ }
+
 
  .inform {
  	width: 100%;
