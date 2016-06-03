@@ -31,13 +31,14 @@
  	padding: 25px;
  	margin:25px auto;
  	border: 2px solid grey;
+ 	background-color: #ccc;
  }
 
- .labels {
+ .tabs__wraper {
  	background-color: #ddd;
  	border: 1px solid grey;
  }
- .labels p {
+ .tabs {
  	display: inline-block;
  	padding: 7px;
  	background-color: #eee;
@@ -45,8 +46,13 @@
  	border-bottom: 0;
  	margin:5px 5px 0 5px;
  }
+ .some_text {
+ 	margin-top: 0;
+ 	padding: 15px;
+ 	display: none;
+ }
 
- .labels__active {
+ .tabs__active {
  	background-color: white;
  	border: 1px solid grey;
  	border-bottom: 1px solid white;
@@ -55,7 +61,6 @@
 
 .text__active {
 	display: block;
+	background-color: white;
 }
-.text__hide {
-	display: none;
-}
+
