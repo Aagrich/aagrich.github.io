@@ -1,0 +1,48 @@
+.wraper {
+	margin: 0 auto;
+	width: 60%;
+}
+ form {
+ 	width: 100%;
+ 	padding: 25px;
+ 	margin: 25px auto;
+ 	border: 4px groove grey;
+ }
+ form p {
+ 	display: inline-block;
+ 	width: 75px;
+ }
+
+ .inform {
+ 	width: 100%;
+ 	padding: 25px;
+ 	margin:25px auto;
+ 	border: 2px solid grey;
+ }
+
+ .labels {
+ 	background-color: #ddd;
+ 	border: 1px solid grey;
+ }
+ .labels p {
+ 	display: inline-block;
+ 	padding: 7px;
+ 	background-color: #eee;
+ 	border: 1px solid lightgrey;
+ 	border-bottom: 0;
+ 	margin:5px 5px 0 5px;
+ }
+
+ .labels__active {
+ 	background-color: white;
+ 	border: 1px solid grey;
+ 	border-bottom: 1px solid white;
+ 	margin-bottom: -1px;
+ }
+
+.text__active {
+	display: block;
+}
+.text__hide {
+	display: none;
+}
