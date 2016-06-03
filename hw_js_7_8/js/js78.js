@@ -5,17 +5,16 @@ $( document ).ready(function() {
  var $firstname = $('.firstname');
  var $lastname = $('.lastname');
  var $adress = $('.adress');
- var $someDOM = $(this);
-
-function $showText() {
+// var $animat = $(this).animate({opacity: 1}, 5000, $(this).find('p').css('display', 'inline'));
+function $showMessage() {
 	$(this).find('p').css('display', 'inline');
  	}
-function $hideText() {
+function $hideMessage() {
 	$(this).find('p').css('display', 'none');
  	}
 
 
- $firstname.hover($showText,$hideText);
- $lastname.hover($showText,$hideText); 
- $adress.hover($showText,$hideText); 
+ $firstname.hover($showMessage,$hideMessage);
+ $lastname.hover($showMessage,$hideMessage); 
+ $adress.hover($showMessage,$hideMessage); 
 });
