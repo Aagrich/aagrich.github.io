@@ -164,6 +164,7 @@ margin: 1px 7px 1px 0;
   width: 28%;
   height: 36px;
   padding: 10px;
+  cursor: pointer;
 	background: -moz-linear-gradient(top,	#50aedb 0%,	#3c8fce 50%, #2e7ac4);
 	background: -webkit-gradient( linear, left top, left bottom, from(#50aedb), color-stop(0.50, #3c8fce), to(#2e7ac4));
 	-moz-border-radius: 1px;
