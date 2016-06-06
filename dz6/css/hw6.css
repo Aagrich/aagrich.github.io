@@ -343,6 +343,7 @@ header {
 .choise {
     margin: 9px 0 0 7px;
     padding: 5px 15px;
+    cursor: pointer;
     font-size: 11px;
     color: white;
     border-radius: 15px;
@@ -411,7 +412,6 @@ footer {
 .buttom {
     display: inline-block;
     text-align: center;
-    cursor: pointer;
     width: 100%;
     background-color: #213a4d;
     padding:10px 0 50px 0;
