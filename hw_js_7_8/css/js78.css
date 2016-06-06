@@ -38,7 +38,8 @@
  	background-color: #ddd;
  	border: 1px solid grey;
  }
- .tabs {
+ .tabs1, .tabs2, .tabs3 {
+	cursor: pointer;
  	display: inline-block;
  	padding: 7px;
  	background-color: #eee;
@@ -50,6 +51,8 @@
  	margin-top: 0;
  	padding: 15px;
  	display: none;
+	border: 1px solid grey;
+	border-top: 0;
  }
 
  .tabs__active {
@@ -63,4 +66,3 @@
 	display: block;
 	background-color: white;
 }
-
