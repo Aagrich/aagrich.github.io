@@ -1,13 +1,18 @@
 
+.wraper {
+  text-align: center;
+}
+
 .jcarousel {
+    margin: 10px auto;
     width: 900px;
     position: relative;
     overflow: hidden;
-    height: 560px;
+    height: 540px;
 }
 
 .jcarousel ul {
-    width: 900px;
+    width: auto;
     position: relative;
     list-style: none;
     margin: 0;
@@ -15,5 +20,13 @@
 }
 
 .jcarousel li {
+    width: 900px;
     float: left;
+}
+.jcarousel-next, .jcarousel-prev {
+  margin: 15px;
+  cursor: pointer;
+}
+.nambers a {
+  margin: 10px;
 }
