@@ -21,7 +21,7 @@
 
 .jcarousel li {
     width: 900px;
-    float: left;
+    float: right;;
 }
 .jcarousel-next, .jcarousel-prev {
   margin: 15px;

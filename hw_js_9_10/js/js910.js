@@ -3,7 +3,7 @@
 $(function() {
     $('.jcarousel')
         .jcarousel({
-            // Core configuration goes here
+              rtl: true
         })
         .jcarouselAutoscroll({
             interval: 3000,
@@ -11,4 +11,11 @@ $(function() {
             autostart: true
         })
     ;
+    $('.jcarousel-prev').click(function() {
+    $('.jcarousel').jcarousel('scroll', '-=1');
+});
+
+$('.jcarousel-next').click(function() {
+    $('.jcarousel').jcarousel('scroll', '+=1');
+});
 });
