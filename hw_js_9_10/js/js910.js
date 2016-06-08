@@ -1,16 +1,14 @@
 'use strict'
 
 $(function() {
-    $('.jcarousel').jcarousel({
-      vertical: true
-    });
-
-    $('.jcarousel-prev').click(function() {
-    $('.jcarousel').jcarousel('scroll', '-=1');
+    $('.jcarousel')
+        .jcarousel({
+            // Core configuration goes here
+        })
+        .jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        })
+    ;
 });
-
-$('.jcarousel-next').click(function() {
-    $('.jcarousel').jcarousel('scroll', '+=1');
-});
-
-    });
