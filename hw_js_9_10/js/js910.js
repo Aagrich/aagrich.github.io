@@ -18,4 +18,13 @@ $(function(){
     	});
 
 
+
+});
+$(function(){
+	$('input:checkbox').uniform();
+	});
+
+$(function(){
+    $("select").uniform();
+
 });
