@@ -31,7 +31,7 @@
 	overflow: hidden;
     border-radius: 20px;
 }
-.jcarousel ul :last-child {
+.pic-list :last-child {
 	margin-right: 60px;
 }
 .jcarousel-pagination {
