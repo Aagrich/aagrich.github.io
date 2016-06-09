@@ -31,7 +31,6 @@
 	overflow: hidden;
     border-radius: 20px;
 }
-
 .jcarousel ul :last-child {
 	margin-right: 60px;
 }
