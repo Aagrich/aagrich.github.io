@@ -1,8 +1,12 @@
 'use strict'
 
 $(function() {
-    $('.jcarousel').jcarousel({
-    	var test = $('.jcarousel');
-    	console.log(test);
-    });
+    $('.jcarousel').jcarousel();
+    $('.jcarousel-prev').click(function() {
+    $('.jcarousel').jcarousel('scroll', '-=1');
+});
+
+$('.jcarousel-next').click(function() {
+    $('.jcarousel').jcarousel('scroll', '+=1');
+});
 });
