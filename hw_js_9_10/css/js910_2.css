@@ -12,3 +12,17 @@ label {
 	width: 90%;
 	background-color: lightgrey;
 }
+.wrapper input {
+	opacity: 1;
+}
+.wrapper input::after {
+	content: "";
+	display: block;
+	width: 17px;
+	height: 17px;
+  background-image: url(../img/checkbox.png);
+}
+.wrapper input:checked::after {
+	background-image: url(../img/checkbox.png);
+	background-position: 0 -17px;
+}
