@@ -1,6 +1,7 @@
 .wrapper {
 	margin:50px auto;
 	width: 90%;
+	padding: 15px;
 	background-color: lightblue;
 }
 label {
@@ -10,14 +11,20 @@ label {
 .wrapper2 {
 	margin:50px auto;
 	width: 90%;
+	padding: 15px;
 	background-color: lightgrey;
 }
-.wrapper input {
-	opacity: 1;
+.wrapper label {
+		width: 69px;
 }
-.wrapper input::after {
+.checkbox1 {
+	float: right;
+ 	margin-top: -1px;
+}
+.checkbox1::after {
 	content: "";
 	display: block;
+	float: right;
 	width: 17px;
 	height: 17px;
   background-image: url(../img/checkbox.png);
@@ -25,4 +32,16 @@ label {
 .wrapper input:checked::after {
 	background-image: url(../img/checkbox.png);
 	background-position: 0 -17px;
+}
+.checkbox-disabled::after {
+	content: "";
+	display: block;
+	float: right;
+	width: 17px;
+	height: 17px;
+	background-image: url(../img/checkbox-disabled.png);
+}
+label .checkbox-disabled:checked::after {
+	background-position: 0 -17px;
+	background-image: url(../img/checkbox-disabled.png);
 }
