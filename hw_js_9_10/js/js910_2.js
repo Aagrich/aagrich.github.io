@@ -23,14 +23,16 @@ function jcheckbox(elem) {
 	});
 
 
-	if ($('[checked]', $elem)) { $( this, 'input ~ div').css(
+	if ($('[checked]', $elem)) { 
+		var $e =$('[checked]', $elem);
+
+		 $($e '+ div').css(
         	'background-position', '0 -17px');
 	}
 
 
 	
 	$label.click( function(){
-		var a = this;
 		if ($('input', this).prop("checked")) {
 				$('input', this).prop('checked', false);
 				$('.pic', this).css(
