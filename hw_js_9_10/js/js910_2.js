@@ -5,26 +5,36 @@ $(function() {
 function jcheckbox(elem) {
 	var $elem = $(elem);
 	var $checkbox = $("input", $elem);
+	var $label = $('label', $elem);
 	console.log($checkbox);
-	var $noNchecked = {
- 		
-	};
-	var $checked = {
-
-	};
 
 	$checkbox.css({
 		'float'  : 'right',
 		'margin' : '0',
 		'display': 'none'});
+
 	$checkbox.after("<div class='pic'></div>");
+
 	$('.pic', $elem).css({
 		'display': 'block',
  		'float'  : 'right',
  		'width'  : '17px',
  		'height' : '17px',
  		'background-image' : 'url(img/checkbox.png)'
+	});
+
+	$label.click( function(){
+		if ($(this).prop('checked')) {
+		$('.pic', this).css(
+			'background-position', '0');}
+		else {
+			$('.pic', this).css(
+			'background-position', '0 -17px');}
+		
 	})
+
+
+
 
 
 };
