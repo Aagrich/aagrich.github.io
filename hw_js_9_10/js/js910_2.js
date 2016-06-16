@@ -7,11 +7,7 @@ function jcheckbox(elem) {
 	var $checkbox = $("input", $elem);
 	console.log($checkbox);
 	var $noNchecked = {
-		display: 'block',
- 		float  : 'right',
- 		width  : '17px',
- 		height : '17px',
- 		backgroundImage: 'url(img/checkbox.png)'
+ 		
 	};
 	var $checked = {
 
@@ -22,6 +18,13 @@ function jcheckbox(elem) {
 		'margin' : '0',
 		'display': 'none'});
 	$checkbox.after("<div class='pic'></div>");
+	$('.pic', $elem).css({
+		'display': 'block',
+ 		'float'  : 'right',
+ 		'width'  : '17px',
+ 		'height' : '17px',
+ 		'background-image' : 'url(img/checkbox.png)'
+	})
 
 
 };
