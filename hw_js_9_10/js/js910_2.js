@@ -21,7 +21,12 @@ function jcheckbox(elem) {
  		'height' : '17px',
  		'background-image' : 'url(img/checkbox.png)'
 	});
+	if ($('[checked]', $elem)) { $('.pic', this).css(
+        	'background-position', '0 -17px');
+	}
 
+
+	
 	$label.click( function(){
 		var a = this;
 		if ($('input', this).prop("checked")) {
@@ -36,9 +41,7 @@ function jcheckbox(elem) {
 					'background-position', '0 -17px');
 			}
 		
-	})
-
-
+	});
 
 
 
