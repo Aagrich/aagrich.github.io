@@ -6,7 +6,6 @@ function jcheckbox(elem) {
 	var $elem = $(elem);
 	var $checkbox = $("input", $elem);
 	var $label = $('label', $elem);
-	console.log($checkbox);
 
 	$checkbox.css({
 		'float'  : 'right',
@@ -24,12 +23,18 @@ function jcheckbox(elem) {
 	});
 
 	$label.click( function(){
-		if ($(this).prop('checked')) {
-		$('.pic', this).css(
-			'background-position', '0');}
+		var a = this;
+		if ($('input', this).prop("checked")) {
+				$('input', this).prop('checked', false);
+				$('.pic', this).css(
+					'background-position', '0 0');
+
+			}
 		else {
-			$('.pic', this).css(
-			'background-position', '0 -17px');}
+				$('input', this).prop('checked', true);
+				$('.pic', this).css(
+					'background-position', '0 -17px');
+			}
 		
 	})
 
