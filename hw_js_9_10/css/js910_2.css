@@ -14,12 +14,12 @@ label {
 	padding: 15px;
 	background-color: lightgrey;
 }
-.wrapper label {
+label {
 		width: 69px;
 }
 .checkbox1 {
 	float: right;
- 	margin-top: -1px;
+ 	margin-top: 0;
 }
 .checkbox1::after {
 	content: "";
