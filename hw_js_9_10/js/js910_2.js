@@ -21,7 +21,9 @@ function jcheckbox(elem) {
  		'height' : '17px',
  		'background-image' : 'url(img/checkbox.png)'
 	});
-	if ($('[checked]', $elem)) { $('.pic', this).css(
+
+
+	if ($('[checked]', $elem)) { $( this, 'input ~ div').css(
         	'background-position', '0 -17px');
 	}
 
