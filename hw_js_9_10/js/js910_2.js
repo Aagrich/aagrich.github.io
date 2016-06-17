@@ -22,14 +22,11 @@ function jcheckbox(elem) {
  		'background-image' : 'url(img/checkbox.png)'
 	});
 
+    $('input[checked] ~ div').css(
+        'background-position', '0 -17px');
 
-	if ($('[checked]', $elem)) { 
-		var $e =$('[checked]', $elem);
-
-		 $($e '+ div').css(
-        	'background-position', '0 -17px');
-	}
-
+    $('input[disabled] ~ div').css(
+        'background-image', 'url(img/checkbox-disabled.png)')
 
 	
 	$label.click( function(){
