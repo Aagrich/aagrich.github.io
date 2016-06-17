@@ -3,6 +3,7 @@
 $(function() {
 
 function jcheckbox(elem) {
+	
 	var $elem = $(elem);
 	var $checkbox = $("input", $elem);
 	var $label = $('label', $elem);
@@ -30,12 +31,13 @@ function jcheckbox(elem) {
 
 	
 	$label.click( function(){
+
 		if ($('input', this).prop("checked") & $('input', this).prop("disabled") === false) {
 				$('input', this).prop('checked', false);
 				$('.pic', this).css(
 					'background-position', '0 0');
-
 			}
+
 		else {
 				$('input', this).prop('checked', true);
 				$('.pic', this).css(
