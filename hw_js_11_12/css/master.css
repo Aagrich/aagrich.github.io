@@ -1,0 +1,34 @@
+.wrapper {
+  padding: 5%;
+  height: 200px;
+  margin: 2% 5%;
+  background-color: lightgrey;
+  text-align: center;
+}
+.car-list {
+  width: 10000px;
+}
+.car-hider {
+  width: 600px;
+  overflow: hidden;
+  float:left;
+  margin: 0;
+}
+.car-pic {
+  display: block;
+  margin-right: 25px;
+  float: left;
+}
+.car-pic img {
+  max-width: 100px;
+}
+.car-arrow-left, .car-arrow-right {
+  float: left;
+  display: block;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: grey;
+  padding: 5px;
+  margin: 25px 10px 0 10px;
+
+}

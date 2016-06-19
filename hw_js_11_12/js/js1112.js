@@ -1,0 +1,5 @@
+$(function(){
+
+  $('.cool-carusel').cCarusel();
+
+});
