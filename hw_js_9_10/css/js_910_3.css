@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+li {
+		cursor: pointer;
+}
 
 .wrapper {
 	width: 70%;
@@ -10,7 +13,7 @@
 	background-color: lightgrey;
 }
 .main-menu, .second-menu, .last-menu {
-	margin: 15px;	
+	margin: 15px;
 	background-color: black;
 }
 .second-menu, .last-menu {
