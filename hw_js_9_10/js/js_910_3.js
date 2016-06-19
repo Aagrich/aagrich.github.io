@@ -10,25 +10,13 @@ $(function(){
 		$secondMenu.appendTo($mainInner);
 		$lastMenu.appendTo($secondInner);
 
-		$mainMenu.css({
-			'position': 'relative'
-		});
-		$secondMenu.css({
-			'position': 'absolyte',
-			'display': 'none'
-			});
-		$lastMenu.css({
-			'position': 'absolyte',
-			'display': 'none'
-			});
-
 		$mainInner.hover(function(){
-			$secondMenu.slideDown(200);
+			$secondMenu.slideDown(250);
 		}, function(){
 			$secondMenu.slideUp(200);
 		});
 		$secondInner.hover(function(){
-			$lastMenu.slideDown(200);
+			$lastMenu.slideDown(250);
 		}, function(){
 			$lastMenu.slideUp(200);
 		});
