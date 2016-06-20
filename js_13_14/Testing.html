@@ -9,6 +9,21 @@
     <script src="js/js13.js"></script>
   </head>
   <body>
+    <script type="text/tmpl" id='question'>
+      <h1> Тест по програмированию </h1>
+      <% for (i = 0; i < questiong.length; i++) { %>
+        <li> <%= questiong[i].name %> </li>
+          <% for (i = 0; i < questiong[i].variant[i].length) { %>
+            <label><input type=checkbox value= <%= questiong[i].variant[i] %> > <%=questiong[i].variant[i] %> 
+
+          <% }; %>
+
+      <% }; %>
+      <button> Проверить мои результаты </button>
+    </script>
 
   </body>
+  <ol>
+
+  </ol>
 </html>
