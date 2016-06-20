@@ -1,16 +1,18 @@
 $(function(){
 
    var $profile =  $('#profile').html();
-   var $body = $('body');
-   var me = [
-     {  name: 'John'  },
-     { secondName: 'Snow' }
-   ];
 
-   var content = tmpl($profile, {
-              about: me
-   });
+   var about = [{
+     name: 'john',
+     secondName: 'Snow'
+   },
+    {
+      value: 'strong',
+      secondValue: 'very strong'
+    }];
 
-   $body.append(content);
+   var content = tmpl( $profile, {about});
+
+   $('body').append(content);
 
 });
