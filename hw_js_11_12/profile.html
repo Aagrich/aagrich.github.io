@@ -3,15 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Profile( task #12)</title>
-    <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/profile.css" media="screen" title="no title" charset="utf-8">
     <script src="js/jquery.min.js"></script>
     <script src="js/tmpl.js"></script>
     <script src="js/js12.js"></script>
   </head>
   <body>
     <script type='text/tmpl' class="profile" id="profile">
-      <h1> <%= about[0].name %></h1>
+      <div class="wrapper">
+        <div class="box1">
+          <div class="photo">
+      <h1><%= about.name %></h1>
+      <p class="photocenter"> <%= about.photo %></p>
+      <p><%= about.workAs %></p>
+          </div>
+          <div class="box2">
+          <p>
+           <%= about.motivation %>
+          </p>
+          <ul>
+          <li><%= about.punct1   %> </li>
+          <li><%= about.punct2   %> </li>
+          <li><%= about.punct3   %> </li>
+          <li><%= about.punct4   %> </li>
+          <li><%= about.punct5   %> </li>
+          </ul>
+          </div>
+          <div class="box3">
+          <p> <%= about.contactNumber %> </p>
+          </div>
+          <div class="box2">
+            <p> <%= about.vkProfile %> </p>
+          </div>
+          <div class="box3">
+          <p> Коротко про себе: <br>
+            <%= about.aboutMe %>
+          </p>
+          </div>
+    </div>
+  </div>
     </script>
 
   </body>
