@@ -11,11 +11,11 @@
   <body>
     <script type="text/tmpl" id='question'>
       <h1> Тест по програмированию </h1>
-      <% for (i = 0; i < questiong.length; i++) { %>
+      <% for (i = 0; i < questiong.length; i++) {  %>
         <li> <%= questiong[i].name %> </li>
 
-        <% for (e = 0; e < 4; e++) { %>
-          <label> aaaaaaaaaaaaaaaaa </label>
+        <% for (e = 0; e < questiong[i].variant.length; e++) { %>
+          <label> <%= questiong[i].variant[e] %> </label>
 
       <% }; }; %>
 
