@@ -15,7 +15,7 @@
         <li> <%= questiong[i].name %> </li>
 
         <% for (e = 0; e < questiong[i].variant.length; e++) { %>
-          <label> <%= questiong[i].variant[e] %> </label>
+          <label><input type=checkbox value=<%= questiong[i].variant[e] %> > <%= questiong[i].variant[e] %> </label>
 
       <% }; }; %>
 
