@@ -1,10 +1,9 @@
 (function($){
 
-	$.fn.jCheckbox = function(elem, position) {
+	$.fn.jCheckbox = function(position) {
 	
-	var $elem = $(elem);
-	var $checkbox = $("input", $elem);
-	var $label = $('label', $elem);
+	var $checkbox = $("input", this);
+	var $label = $('label', this);
 
 	$checkbox.css({
 		'float'  : 'right',
@@ -13,9 +12,10 @@
 
 	$checkbox.after("<div class='pic'></div>");
 
-	$('.pic', $elem).css({
+	$('.pic', this).css({
 		'display': 'block',
  		'float'  : position,
+ 		'margin' : '0 6px',
  		'width'  : '17px',
  		'height' : '17px',
  		'background-image' : 'url(img/checkbox.png)'

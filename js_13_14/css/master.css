@@ -19,6 +19,9 @@ li {
   padding: 5px;
   margin-left: 10%;
 }
+input {
+padding: 10px;
+}
 label {
   display: block;
   margin: 5px;
