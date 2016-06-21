@@ -1,7 +1,7 @@
 $(function(){
 
    var $testList =  $('#question').html();
-
+   var result = [{},{},{}];
    var questiong = [
      {
        name: 'Who?',
@@ -37,8 +37,17 @@ $(function(){
    $('ol').append(content).jCheckbox('left');
 
    $('button').click(function(){ 
-   var test = $('input[checked]');
-   console.log(test);
+
+      var selected = $('.selected');
+
+      for (i = 0; i < selected.length; i++) {
+        var elem = selected.i;
+        var res = selected.i;
+       console.log(elem);
+       console.log(res);
+
+              }
+   
 
    });
 

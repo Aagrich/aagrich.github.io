@@ -32,12 +32,14 @@
 
 		if ($('input', this).prop("checked") & $('input', this).prop("disabled") === false) {
 				$('input', this).prop('checked', false);
+				$('input', this).prop('class', 'notSelected');
 				$('.pic', this).css(
 					'background-position', '0 0');
 			}
 
 		else {
 				$('input', this).prop('checked', true);
+				$('input', this).prop('class', 'selected');
 				$('.pic', this).css(
 					'background-position', '0 -17px');
 			}
