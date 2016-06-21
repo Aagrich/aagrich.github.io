@@ -33,9 +33,14 @@ $(function(){
    ];
 
    var content = tmpl( $testList, {questiong});
-   var test = questiong[0].variant[0].length;
-   console.log(test);
+
    $('ol').append(content).jCheckbox('left');
+
+   $('button').click(function(){ 
+   var test = $('input[checked]');
+   console.log(test);
+
+   });
 
 
 });
