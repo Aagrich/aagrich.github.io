@@ -45,6 +45,7 @@ $(function(){
    $('button').click(function(){
 
       var selected = $('.selected');
+
       for (i = 0; i < selected.length; i++) {
           var result;
           var x = 0;
