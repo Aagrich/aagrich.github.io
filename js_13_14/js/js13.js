@@ -36,19 +36,16 @@ $(function(){
 
    $('ol').append(content).jCheckbox('left');
 
-   $('button').click(function(){ 
+   $('button').click(function(){
 
+      // var selected = $('.selected' & '[name="Who?"]');
       var selected = $('.selected');
-
       for (i = 0; i < selected.length; i++) {
-        var elem = selected.i;
-        var res = selected.i;
-       console.log(elem);
-       console.log(res);
 
-              }
-   
-
+        if(selected[i].matches('input[name="'+questiong[0].name+'"]')) {
+          console.log(selected[i].matches('input[value="Nick"]'));
+        }
+      }
    });
 
 
