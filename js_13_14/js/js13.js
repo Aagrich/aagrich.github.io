@@ -1,7 +1,6 @@
 $(function(){
 
    var $testList =  $('#question').html();
-   var result = [{},{},{}];
    var questiong = [
      {
        name: 'Who?',
@@ -31,6 +30,13 @@ $(function(){
        ]
      }
    ];
+   var testkey = {
+
+
+   };
+   var result = {
+
+   };
 
    var content = tmpl( $testList, {questiong});
 
@@ -38,15 +44,21 @@ $(function(){
 
    $('button').click(function(){
 
-      // var selected = $('.selected' & '[name="Who?"]');
       var selected = $('.selected');
       for (i = 0; i < selected.length; i++) {
-
-        if(selected[i].matches('input[name="'+questiong[0].name+'"]')) {
-          console.log(selected[i].matches('input[value="Nick"]'));
-        }
+          var result;
+          var x = 0;
+          var q = selected[i].matches('input[name="'+questiong[0].name+'"]');
+          var a = selected[i].matches('input[value="'+questiong[0].variant[0]+'"]');
+          if(q & a) {
+            var result = true;
+              alert('Good!');
+           }
+          else {
+            alert('wrong');
+          }
       }
-   });
+ });
 
 
 });
