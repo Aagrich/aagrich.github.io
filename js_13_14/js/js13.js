@@ -9,7 +9,8 @@ $(function(){
          'Nick',
          'Jack',
          'Mike'
-       ]
+     ],
+        answer: ['Mike', 'John']
      },
      {
        name: 'Where?',
@@ -18,7 +19,8 @@ $(function(){
          'There',
          'Near',
          'Nowhere'
-       ]
+     ],
+        answer: ['Near']
      },
      {
        name: 'When?',
@@ -27,16 +29,10 @@ $(function(){
          'Tommorow',
          'Yesterday',
          'Never'
-       ]
+     ],
+        answer: ['Never']
      }
    ];
-   var testkey = {
-
-
-   };
-   var result = {
-
-   };
 
    var content = tmpl( $testList, {questiong});
 
