@@ -43,8 +43,8 @@ $(function(){
    $('button').click(function(){
 
       var selected = $('.selected');
-      var key = true;
-      var test = false;
+//      var key = true;
+//      var test = false;
       var allAnswers = true;
       var answers = [];
       var userAnswers = [];
@@ -62,20 +62,20 @@ $(function(){
 
             userAnswers.push(answer);
 
-            for (y = 0; y < questiong.length ; y++) {
-                var name = questiong[y];
-                if (questiong[y].name === question) {
-                    var result = questiong[y].answer.indexOf(answer);
-                    if (result > -1) {
-                         test = true;
-                    }
-                    else {
-                         key = false;
-                    }
-                };
-
-            }
-
+//            for (y = 0; y < questiong.length ; y++) {
+//                var name = questiong[y];
+//                if (questiong[y].name === question) {
+//                    var result = questiong[y].answer.indexOf(answer);
+//                    if (result > -1) {
+//                         test = true;
+//                    }
+//                    else {
+//                         key = false;
+//                    }
+//                };
+//
+//            }
+//
 //          var result;
 //          var x = 0;
 //          var q = selected[i].matches('input[name="'+questiong[0].name+'"]');
@@ -92,8 +92,12 @@ $(function(){
           if (userAnswers.indexOf(answers[i]) === -1) {
               allAnswers = false;
           }
+          if (answers.indexOf(userAnswers[i]) === -1) {
+              allAnswers = false;
+          }
       }
-      if ( key & test & allAnswers) {
+//      if ( key & test & allAnswers) {
+    if (allAnswers) {
           console.log(' GOOD RESULT!');
           console.log('RIGHT '+ answers);
           console.log('Your answers ' + userAnswers);
