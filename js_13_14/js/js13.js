@@ -49,9 +49,13 @@ $(function(){
             for (y = 0; y < questiong.length ; y++) {
                 var name = questiong[y];
                 if (questiong[y].name === question) {
-                    var ind = questiong[y].answer.indexOf(answer);
-                    console.log(ind + "-IND!");
-
+                    var result = questiong[y].answer.indexOf(answer);
+                    if (result > -1) {
+                        console.log(answer + '  is RIGHT!');
+                    }
+                    else {
+                        console.log(answer + ' is WRONG!');
+                    }
                 };
             }
 //          var result;
