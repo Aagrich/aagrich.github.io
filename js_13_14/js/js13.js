@@ -65,15 +65,25 @@ $(function(){
       }
     if (allAnswers) {
           console.log(' GOOD RESULT!');
+          mWindow('GOOD RESULT!');
 
       }
       else {
           console.log(' BAD, VERY BAD!');
+          mWindow('GOOD RESULT!');
       };
  });
  function mWindow(message) {
-     var result;
-     body.innerHtml(result);
+     var result = $("<div class = window-wrapper><div class = modal-window></div> </div>");
+     var OKbutton = $('<button class=OKbutton> OK </button>');
+     var $windowWrapper =  $('.window-wrapper');
+     var $modalWindow = $('.modal-window');
+     $('body').append(result);
+     $('modalWindow').append(OKbutton);
+
  }
+ $('.OK-button').click(function(){
+   result.remove();
+ })
 
 });
