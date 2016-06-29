@@ -1,0 +1,21 @@
+.wrapper {
+  margin: 25% auto;
+  width: 100%;
+  min-width: 240px;
+  min-height: 240px;
+  text-align: center;
+}
+.logo {
+  margin: 0 auto;
+  background-image: url(../img/Google_logo.svg.png);
+  background-size: cover;
+  width: 240px;
+  height: 80px;
+}
+input {
+  display: block;
+  margin: 5px auto;
+  width: 240px;
+  height: 24px;
+  font-size: 20px;
+}
