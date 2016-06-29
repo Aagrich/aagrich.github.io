@@ -1,8 +1,6 @@
 .wrapper {
-  margin: 25% auto;
+  margin: 15% auto;
   width: 100%;
-  min-width: 240px;
-  min-height: 240px;
   text-align: center;
 }
 .logo {
@@ -15,7 +13,20 @@
 input {
   display: block;
   margin: 5px auto;
-  width: 240px;
-  height: 24px;
-  font-size: 20px;
+  width: 460px;
+  height: 36px;
+  font-size: 24px;
+}
+button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  color: grey;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+button:hover {
+  border: 1px solid lightgrey;
+  color: black;
 }
