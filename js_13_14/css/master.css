@@ -28,6 +28,10 @@ label {
 button {
   margin: 15px 40%;
 }
+p {
+  margin: 30% auto;
+  font-size: 16px;
+}
 .window-wrapper {
   top: 0;
   left: 0;
@@ -42,20 +46,23 @@ button {
   top: 50%;
   bottom: 50%;
   margin-top: -12%;
-  margin-left: -12%;
+  margin-left: -10%;
   position: absolute;
   height: 24%;
-
-  min-height: 360px;
+  min-height: 260px;
   width: 24%;
-  min-width: 360px;
+  min-width: 260px;
   background-color: white;
   font-size: 16px;
-  text-align: center;
 }
 .OKbutton {
   position: absolute;
+  display: inline-block;
+  text-align: center;
+  left: 50%;
+  margin-left: -25px;
   bottom: 15px;
+  cursor: pointer;
   width: 50px;
   height: 25px;
   background-color: lightgrey;
