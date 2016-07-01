@@ -2,13 +2,14 @@
 $(function(){
 
 $('#myLuck').click(function(){
-
-	
+	var ask = $('.search')[0].value;
+	console.log(ask);
 
 });	
 
 $('#search').click(function(){
-	$.getJSON("https://api.riffsy.com/v1/search?key=LIVDSRZULELA&tag=Chick", 
+	var ask = $('.search')[0].value;
+	$.getJSON("https://api.riffsy.com/v1/search?key=LIVDSRZULELA&tag=" + ask, 
 	function(data){
 		console.log('result = ' + data);
 		var dataLength = data.results.length;
