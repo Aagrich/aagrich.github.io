@@ -30,3 +30,13 @@ button:hover {
   border: 1px solid lightgrey;
   color: black;
 }
+
+.results div {
+  display: inline-block;
+  width: 10%;
+  height: 10%;
+  max-height: 120px;
+  max-width: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
