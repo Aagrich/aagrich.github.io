@@ -1,19 +1,25 @@
-function GoogleCallback (func, data) {
-    window[func](data);
-};
-
 
 $(function(){
 
-$.getJSON("http://ajax.googleapis.com/ajax/services/search/web?v=1.0?key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&q=PHP&callback=GoogleCallback&context=?",
-function(data){
-    var ul = document.createElement("ul");
-    $.each(data.results, function(i, val){
-            var li = document.createElement("li");
-            li.innerHTML = '<a href="'+val.url+'" title="'+val.url+'" target="_blank">'+val.title+"</a> - "+val.content;
-            ul.appendChild(li);
-    });
-    $('body').html(ul);
-});
+$('#myLuck').click(function(){
 
+	
+
+});	
+
+$('#search').click(function(){
+	$.getJSON("https://api.riffsy.com/v1/search?key=LIVDSRZULELA&tag=Chick", 
+	function(data){
+		console.log('result = ' + data);
+		var dataLength = data.results.length;
+		var x = data.results[1];
+		console.log(x);
+		console.log(dataLength);
+		var list = document.createElement('ul');
+		var listItem = document.createElement('li');
+		listItem.innerHTML = x.title;
+		list.appendChild(listItem);
+		$('.results').html(list);	
+	});
+   });
 });
