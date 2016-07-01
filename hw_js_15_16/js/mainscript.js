@@ -13,8 +13,10 @@ $('#search').click(function(){
 	function(data){
 		$('.results > div').remove();
 		$('.wrapper').css({
-			'margin': '5%',
+			'margin': '0',
+			'padding': '3%',
 			'text-align': 'left',
+			'background-color' : 'grey'
 		});
 		$('input').css('display','inline-block');
 		$('#myLuck').css('display','none');
