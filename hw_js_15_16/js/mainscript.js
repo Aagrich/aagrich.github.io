@@ -4,12 +4,11 @@ $(function(){
 $('#myLuck').click(function(){
 	var ask = $('.search')[0].value;
 	console.log(ask);
+});
 
-});	
-
-$('#search').click(function(){
+function searchPic() {
 	var ask = $('.search')[0].value;
-	$.getJSON("https://api.riffsy.com/v1/search?key=LIVDSRZULELA&tag=" + ask + "&limit=15", 
+	$.getJSON("https://api.riffsy.com/v1/search?key=LIVDSRZULELA&tag=" + ask + "&limit=15",
 	function(data){
 		$('.results > div').remove();
 		$('.wrapper').css({
@@ -28,7 +27,10 @@ $('#search').click(function(){
 		var element = document.createElement('div');
 		element.innerHTML = result.title + '<a class="pic" href=' + result.url + '>' + '<img src=' + result.url + '>'+ '<br>' + result.url + '</a>';
 		$('.results').append(element);
-		};
-	});
-   });
+};
+});
+};
+$('#search').click(searchPic());
+
+
 });
