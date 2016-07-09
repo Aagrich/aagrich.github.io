@@ -4,7 +4,7 @@ var man = {
     name: "John",
     secondName: "Snow",
     age: 27,
-}
+};
 
 console.log(man.name);
 
