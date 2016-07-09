@@ -1,23 +1,6 @@
-$width: 400px;
-$height: 400px;
-
-
 body {
   background: {
-    color: black;
-  };
-  padding: 15%;
-}
-
-.wrapper {
-  background-color: lighgrey;
-  width: $width;
-  height: $height;
-  margin: 0 auto;
-  h1 {
-    color: red;
+    color: green;
+    
   }
-}
-h1 {
-  color: green;
 }
