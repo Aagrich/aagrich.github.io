@@ -4,6 +4,6 @@
 	"sources": [
 		"../dev/css/test.scss"
 	],
-	"mappings": "AAAA,AAAA,IAAI,CAAC;EACH,UAAU,AAAC,CAAC,AACV,KAAK,EAAE,KAAM,GAGhB",
+	"mappings": "",
 	"names": []
 }
