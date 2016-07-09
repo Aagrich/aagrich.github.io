@@ -20,7 +20,7 @@ var arr = [
     'full'
 ];
 
-function() {
+function makaka() {
     for (i = 0; i < arr.length; i++) {
         console.log(arr[i]);
     }
