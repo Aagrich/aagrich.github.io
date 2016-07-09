@@ -1,4 +1,4 @@
 $(function(){
-  $('.galochka').jCheckbox('left');
+  $('.aside__check_brand').jCheckbox('left');
   alert('dawn!');
 });
