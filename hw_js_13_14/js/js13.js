@@ -4,7 +4,7 @@ $(function(){
    var questiong = [
      {
        name: 'Who?',
-       variant: [
+       options: [
          'John',
          'Nick',
          'Jack',
@@ -14,7 +14,7 @@ $(function(){
      },
      {
        name: 'Where?',
-       variant: [
+       options: [
          'Here',
          'There',
          'Near',
@@ -24,7 +24,7 @@ $(function(){
      },
      {
        name: 'When?',
-       variant: [
+       options: [
          'Today',
          'Tommorow',
          'Yesterday',

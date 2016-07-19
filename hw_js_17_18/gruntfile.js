@@ -1,25 +1,29 @@
 module.exports = function(grunt) {
 
+
 grunt.initConfig({
-  concat: {
-    dist: {
-      src: ['js/src/*.js'],
-      dest: 'js/dist/script.min.js',
-    },
-  },
   uglify: {
       dist: {
-         'js/dist/script.js' : ['js/dist/script.min.js']
-      }
-  }
+        src: ['dev/script.main.js'],
+        dest: 'js/script.js',
+      },
+  },
+  concat: {
+    dist: {
+      src: ['dev/js/*.js'],
+      dest: 'dev/script.main.js',
+    },
+  },
 });
 
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.registerTask( 'default' , ['uglify']);
-grunt.registerTask( 'concat' , ['concat']);
 
+grunt.loadNpmTasks("grunt-contrib-uglify");
+grunt.loadNpmTasks("grunt-contrib-concat");
 
+grunt.registerTask( 'default' , [ 'concat', 'uglify']);
+
+grunt.registerTask('minimize', ['uglify']);
+grunt.registerTask('concatJS', ['concat']);
 
 
 };
