@@ -8,9 +8,8 @@ grunt.initConfig({
     },
   },
   uglify: {
-      build: {
-          src: 'js/src/*.js',
-          dest: 'js/dist/production.min.js'
+      dist: {
+         'js/dist/script.js' : ['js/dist/script.min.js']
       }
   }
 });
