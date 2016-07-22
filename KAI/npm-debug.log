@@ -1,0 +1,240 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'grunt-concat-css',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json
+5 warn package.json npm@1.0.0 No description
+6 warn package.json npm@1.0.0 No repository field.
+7 warn package.json npm@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt\package.json
+9 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-concat\package.json
+10 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-uglify\package.json
+11 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-watch\package.json
+12 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-sass\package.json
+13 verbose readDependencies loading dependencies from C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json
+14 silly cache add args [ 'grunt-concat-css', null ]
+15 verbose cache add spec grunt-concat-css
+16 silly cache add parsed spec Result {
+16 silly cache add   raw: 'grunt-concat-css',
+16 silly cache add   scope: null,
+16 silly cache add   name: 'grunt-concat-css',
+16 silly cache add   rawSpec: '',
+16 silly cache add   spec: 'latest',
+16 silly cache add   type: 'tag' }
+17 silly addNamed grunt-concat-css@latest
+18 verbose addNamed "latest" is being treated as a dist-tag for grunt-concat-css
+19 info addNameTag [ 'grunt-concat-css', 'latest' ]
+20 silly mapToRegistry name grunt-concat-css
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'grunt-concat-css',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   name: 'grunt-concat-css',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/grunt-concat-css
+25 verbose addNameTag registry:https://registry.npmjs.org/grunt-concat-css not in flight; fetching
+26 verbose request uri https://registry.npmjs.org/grunt-concat-css
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 11:22:21
+29 verbose request id 80022ca7a1671921
+30 http request GET https://registry.npmjs.org/grunt-concat-css
+31 http 200 https://registry.npmjs.org/grunt-concat-css
+32 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+32 verbose headers   etag: '"3LKNS640OEF6H86MCMHH97MF7"',
+32 verbose headers   'content-type': 'application/json',
+32 verbose headers   'content-encoding': 'gzip',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '2352',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Fri, 22 Jul 2016 08:21:13 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   age: '0',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-fra1231-FRA',
+32 verbose headers   'x-cache': 'HIT',
+32 verbose headers   'x-cache-hits': '1',
+32 verbose headers   'x-timer': 'S1469175673.387997,VS0,VE109',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 silly get cb [ 200,
+33 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+33 silly get     etag: '"3LKNS640OEF6H86MCMHH97MF7"',
+33 silly get     'content-type': 'application/json',
+33 silly get     'content-encoding': 'gzip',
+33 silly get     'cache-control': 'max-age=300',
+33 silly get     'content-length': '2352',
+33 silly get     'accept-ranges': 'bytes',
+33 silly get     date: 'Fri, 22 Jul 2016 08:21:13 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     age: '0',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-fra1231-FRA',
+33 silly get     'x-cache': 'HIT',
+33 silly get     'x-cache-hits': '1',
+33 silly get     'x-timer': 'S1469175673.387997,VS0,VE109',
+33 silly get     vary: 'Accept-Encoding' } ]
+34 verbose get saving grunt-concat-css to C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\registry.npmjs.org\grunt-concat-css\.cache.json
+35 verbose correctMkdir C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache correctMkdir not in flight; initializing
+36 silly addNameTag next cb for grunt-concat-css with tag latest
+37 silly addNamed grunt-concat-css@0.3.1
+38 verbose addNamed "0.3.1" is a plain semver version for grunt-concat-css
+39 silly mapToRegistry name grunt-concat-css
+40 silly mapToRegistry using default registry
+41 silly mapToRegistry registry https://registry.npmjs.org/
+42 silly mapToRegistry data Result {
+42 silly mapToRegistry   raw: 'grunt-concat-css',
+42 silly mapToRegistry   scope: null,
+42 silly mapToRegistry   name: 'grunt-concat-css',
+42 silly mapToRegistry   rawSpec: '',
+42 silly mapToRegistry   spec: 'latest',
+42 silly mapToRegistry   type: 'tag' }
+43 silly mapToRegistry uri https://registry.npmjs.org/grunt-concat-css
+44 verbose addRemoteTarball https://registry.npmjs.org/grunt-concat-css/-/grunt-concat-css-0.3.1.tgz not in flight; adding
+45 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-concat-css/-/grunt-concat-css-0.3.1.tgz',
+45 verbose addRemoteTarball   'b52c7511c696868cdae6ec4048df5bdd2896dd12' ]
+46 info retry fetch attempt 1 at 11:22:22
+47 info attempt registry request try #1 at 11:22:22
+48 http fetch GET https://registry.npmjs.org/grunt-concat-css/-/grunt-concat-css-0.3.1.tgz
+49 http fetch 200 https://registry.npmjs.org/grunt-concat-css/-/grunt-concat-css-0.3.1.tgz
+50 silly fetchAndShaCheck shasum b52c7511c696868cdae6ec4048df5bdd2896dd12
+51 verbose addTmpTarball C:\DOCUME~1\AB3B~1.KAD\LOCALS~1\Temp\npm-2796-4ddb9b92\registry.npmjs.org\grunt-concat-css\-\grunt-concat-css-0.3.1.tgz not in flight; adding
+52 verbose addTmpTarball already have metadata; skipping unpack for grunt-concat-css@0.3.1
+53 verbose correctMkdir C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache correctMkdir not in flight; initializing
+54 silly cache afterAdd grunt-concat-css@0.3.1
+55 verbose afterAdd C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\grunt-concat-css\0.3.1\package\package.json not in flight; writing
+56 verbose correctMkdir C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache correctMkdir not in flight; initializing
+57 verbose afterAdd C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\grunt-concat-css\0.3.1\package\package.json written
+58 silly install resolved [ { name: 'grunt-concat-css',
+58 silly install resolved     version: '0.3.1',
+58 silly install resolved     description: 'Concat CSS with @import statements at top and relative url preserved.',
+58 silly install resolved     homepage: 'https://github.com/urturn/grunt-concat-css',
+58 silly install resolved     author: { name: 'Olivier Amblet', email: 'olivier@amblet.net' },
+58 silly install resolved     repository:
+58 silly install resolved      { type: 'git',
+58 silly install resolved        url: 'https://github.com/urturn/grunt-concat-css.git' },
+58 silly install resolved     bugs: { url: 'https://github.com/urturn/grunt-concat-css/issues' },
+58 silly install resolved     licenses: [ [Object] ],
+58 silly install resolved     engines: { node: '>= 0.8.0' },
+58 silly install resolved     scripts: { test: 'grunt test' },
+58 silly install resolved     directories: { test: 'test' },
+58 silly install resolved     devDependencies:
+58 silly install resolved      { grunt: '~0.4.2',
+58 silly install resolved        'grunt-concat-css': 'git://github.com/webdoc/grunt-concat-css.git',
+58 silly install resolved        'grunt-contrib-clean': '~0.5.0',
+58 silly install resolved        'grunt-contrib-jshint': '~0.8.0',
+58 silly install resolved        'grunt-contrib-nodeunit': '~0.2.2' },
+58 silly install resolved     peerDependencies: { grunt: '~0.4.1' },
+58 silly install resolved     keywords: [ 'gruntplugin', 'css', 'concat' ],
+58 silly install resolved     _id: 'grunt-concat-css@0.3.1',
+58 silly install resolved     dist:
+58 silly install resolved      { shasum: 'b52c7511c696868cdae6ec4048df5bdd2896dd12',
+58 silly install resolved        tarball: 'https://registry.npmjs.org/grunt-concat-css/-/grunt-concat-css-0.3.1.tgz' },
+58 silly install resolved     _from: 'grunt-concat-css@latest',
+58 silly install resolved     _npmVersion: '1.2.17',
+58 silly install resolved     _npmUser: { name: 'oliamb', email: 'olivier@amblet.net' },
+58 silly install resolved     maintainers: [ [Object] ],
+58 silly install resolved     _shasum: 'b52c7511c696868cdae6ec4048df5bdd2896dd12',
+58 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-concat-css/-/grunt-concat-css-0.3.1.tgz' } ]
+59 info install grunt-concat-css@0.3.1 into C:\Documents and Settings\администратор.KADRTD\hw\KAI
+60 info installOne grunt-concat-css@0.3.1
+61 verbose installOne of grunt-concat-css to C:\Documents and Settings\администратор.KADRTD\hw\KAI not in flight; installing
+62 verbose correctMkdir C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\_locks correctMkdir not in flight; initializing
+63 verbose lock using C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\_locks\grunt-concat-css-b6735cfa70157b37.lock for C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+64 silly install write writing grunt-concat-css 0.3.1 to C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+65 verbose unbuild node_modules\grunt-concat-css
+66 silly gentlyRm C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css is being purged from base C:\Documents and Settings\администратор.KADRTD\hw\KAI
+67 verbose gentlyRm don't care about contents; nuking C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+68 verbose tar unpack C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\grunt-concat-css\0.3.1\package.tgz
+69 verbose tar unpacking to C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+70 silly gentlyRm C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css is being purged
+71 verbose gentlyRm don't care about contents; nuking C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+72 silly gunzTarPerm modes [ '777', '666' ]
+73 silly gunzTarPerm extractEntry package.json
+74 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+75 silly gunzTarPerm extractEntry .npmignore
+76 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+77 silly gunzTarPerm extractEntry README.md
+78 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+79 silly gunzTarPerm extractEntry Gruntfile.js
+80 silly gunzTarPerm modified mode [ 'Gruntfile.js', 420, 438 ]
+81 silly gunzTarPerm extractEntry .jshintrc
+82 silly gunzTarPerm modified mode [ '.jshintrc', 420, 438 ]
+83 silly gunzTarPerm extractEntry LICENSE-MIT
+84 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 420, 438 ]
+85 silly gunzTarPerm extractEntry tasks/concat_css.js
+86 silly gunzTarPerm modified mode [ 'tasks/concat_css.js', 420, 438 ]
+87 silly gunzTarPerm extractEntry test/concat_css_test.js
+88 silly gunzTarPerm modified mode [ 'test/concat_css_test.js', 420, 438 ]
+89 silly gunzTarPerm extractEntry test/expected/basedir_options.css
+90 silly gunzTarPerm modified mode [ 'test/expected/basedir_options.css', 420, 438 ]
+91 silly gunzTarPerm extractEntry test/expected/default_options.css
+92 silly gunzTarPerm modified mode [ 'test/expected/default_options.css', 420, 438 ]
+93 silly gunzTarPerm extractEntry test/expected/no_basedir_options.css
+94 silly gunzTarPerm modified mode [ 'test/expected/no_basedir_options.css', 420, 438 ]
+95 silly gunzTarPerm extractEntry test/expected/rebase_urls.css
+96 silly gunzTarPerm modified mode [ 'test/expected/rebase_urls.css', 420, 438 ]
+97 silly gunzTarPerm extractEntry test/fixtures/component_a/css/style.css
+98 silly gunzTarPerm modified mode [ 'test/fixtures/component_a/css/style.css', 420, 438 ]
+99 silly gunzTarPerm extractEntry test/fixtures/import.css
+100 silly gunzTarPerm modified mode [ 'test/fixtures/import.css', 420, 438 ]
+101 silly gunzTarPerm extractEntry test/fixtures/test.css
+102 silly gunzTarPerm modified mode [ 'test/fixtures/test.css', 420, 438 ]
+103 verbose write writing to C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css\package.json
+104 info preinstall grunt-concat-css@0.3.1
+105 verbose readDependencies loading dependencies from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css\package.json
+106 silly prepareForInstallMany adding grunt@~0.4.1 from grunt-concat-css peerDependencies
+107 warn peerDependencies The peer dependency grunt@~0.4.1 included from grunt-concat-css will no
+108 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+109 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+110 verbose readDependencies loading dependencies from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css\package.json
+111 silly install resolved []
+112 verbose about to build C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+113 info build C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+114 info linkStuff grunt-concat-css@0.3.1
+115 silly linkStuff grunt-concat-css@0.3.1 has C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules as its parent node_modules
+116 verbose linkBins grunt-concat-css@0.3.1
+117 verbose linkMans grunt-concat-css@0.3.1
+118 verbose rebuildBundles grunt-concat-css@0.3.1
+119 info install grunt-concat-css@0.3.1
+120 info postinstall grunt-concat-css@0.3.1
+121 verbose readDependencies loading dependencies from C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json
+122 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt\package.json
+123 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css\package.json
+124 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-concat\package.json
+125 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-uglify\package.json
+126 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-watch\package.json
+127 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-sass\package.json
+128 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\.bin\grunt\package.json
+129 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\.bin\grunt.cmd\package.json
+130 verbose already installed skipping grunt@~0.4.1 C:\Documents and Settings\администратор.KADRTD\hw\KAI
+131 silly install resolved []
+132 verbose unlock done using C:\Documents and Settings\администратор.KADRTD\Application Data\npm-cache\_locks\grunt-concat-css-b6735cfa70157b37.lock for C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+133 verbose validateInstall loading C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json for validation
+134 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:125:32
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:268:7
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+134 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+134 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+134 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+134 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+135 verbose cwd C:\Documents and Settings\администратор.KADRTD\hw\KAI
+136 error Windows_NT 5.1.2600
+137 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "grunt-concat-css" "--save-dev"
+138 error node v4.4.7
+139 error npm  v2.15.8
+140 error code EPEERINVALID
+141 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+141 error peerinvalid Peer grunt-concat-css@0.3.1 wants grunt@~0.4.1
+141 error peerinvalid Peer grunt-contrib-concat@1.0.1 wants grunt@>=0.4.0
+141 error peerinvalid Peer grunt-sass@1.2.0 wants grunt@>=0.4.0
+142 verbose exit [ 1, true ]
