@@ -2,7 +2,7 @@
 @import 'reset';
 
 body {
-	background-color: grey;
+	font-family: monospace;
 }
 
 .wrapper {
@@ -10,47 +10,80 @@ body {
 	height: 100%;
 	border-radius: 150px;
 	.shadow {
+		z-index: 1;
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-			box-shadow: 0px 0px 300px 135px white inset;
+		box-shadow: 0px 0px 300px 135px white inset;
 	}
 	.logo {
 		position: fixed;
-		top: 65px;
+		top: 60px;
 		left: 75px;
 		}
 	 	nav {
 			position: fixed;
 			top: 65px;
 			right: 75px;
+			margin-left: 240px;
 	 	}
 	 	li {
 	 	display: inline-block;
 	 	margin: 0 10px;
 	 	}
 	 	a {
+			display: block;
+			padding: 12px;
 			font-weight: bold;
 			font-size: 20px;
 	 	color: black;
 		text-decoration: none;
 	 	}
+		a:hover {
+			color: lightgrey;
+			background-color: black;
+			box-shadow: 0px 0px 12px 5px white inset;
+			border-radius: 7px;
+		}
 }
-header {
-	background-image: url("../img/pic7.jpg");
-	background-size: cover;
+.slider {
+	position: absolute;
+	top: 0;
 	width: 100%;
-	height: 960px;
+	height: 100%;
+	li {
+		display: none;
+			width: 100%;
+			height: 100%;
+			img {
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+			}
+	}
+	li:nth-child(2) {
+		display: block;
+		img {
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		}
+	}
+	}
+
+header {
+	clear: both;
 }
 
 
 .aboutKAI {
+	margin-top: 60%;
 	width: 100%;
-	height: 860px;
+	height: 100%;
 	background-image: url("../img/KAI.jpg");
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }

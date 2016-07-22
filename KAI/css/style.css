@@ -46,13 +46,14 @@ table {
   border-spacing: 0; }
 
 body {
-  background-color: grey; }
+  font-family: monospace; }
 
 .wrapper {
   width: 100%;
   height: 100%;
   border-radius: 150px; }
   .wrapper .shadow {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -61,32 +62,58 @@ body {
     box-shadow: 0px 0px 300px 135px white inset; }
   .wrapper .logo {
     position: fixed;
-    top: 65px;
+    top: 60px;
     left: 75px; }
   .wrapper nav {
     position: fixed;
     top: 65px;
-    right: 75px; }
+    right: 75px;
+    margin-left: 240px; }
   .wrapper li {
     display: inline-block;
     margin: 0 10px; }
   .wrapper a {
+    display: block;
+    padding: 12px;
     font-weight: bold;
     font-size: 20px;
     color: black;
     text-decoration: none; }
+  .wrapper a:hover {
+    color: lightgrey;
+    background-color: black;
+    box-shadow: 0px 0px 12px 5px white inset;
+    border-radius: 7px; }
+
+.slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  .slider li {
+    display: none;
+    width: 100%;
+    height: 100%; }
+    .slider li img {
+      opacity: 0;
+      width: 100%;
+      height: 100%; }
+  .slider li:nth-child(2) {
+    display: block; }
+    .slider li:nth-child(2) img {
+      opacity: 1;
+      width: 100%;
+      height: 100%; }
 
 header {
-  background-image: url("../img/pic7.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 960px; }
+  clear: both; }
 
 .aboutKAI {
+  margin-top: 60%;
   width: 100%;
-  height: 860px;
+  height: 100%;
   background-image: url("../img/KAI.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
