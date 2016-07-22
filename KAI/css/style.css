@@ -45,6 +45,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@margin-top-2-sector : 58%;
 body {
   font-family: monospace; }
 
@@ -59,7 +60,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0px 0px 300px 135px white inset; }
+    box-shadow: 0px 0px 300px 140px white inset; }
   .wrapper .logo {
     position: fixed;
     top: 60px;
@@ -98,23 +99,44 @@ body {
       opacity: 0;
       width: 100%;
       height: 100%; }
-  .slider li:nth-child(2) {
+  .slider li:nth-child(3) {
     display: block; }
-    .slider li:nth-child(2) img {
-      opacity: 1;
-      width: 100%;
-      height: 100%; }
+    .slider li:nth-child(3) img {
+      opacity: 1; }
 
 header {
   clear: both; }
 
 .aboutKAI {
-  margin-top: 60%;
+  margin-top: 58%;
   width: 100%;
-  height: 100%;
-  background-image: url("../img/KAI.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
+  height: 100%; }
+  .aboutKAI img {
+    width: 100%;
+    height: 100%; }
+  .aboutKAI .info, .aboutKAI .hear, .aboutKAI .eye, .aboutKAI .orient, .aboutKAI .conection, .aboutKAI .regul {
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: white;
+    border: 4px solid black; }
+  .aboutKAI .hear {
+    top: 39%;
+    left: 69%; }
+  .aboutKAI .eye {
+    top: 39%;
+    left: 69%; }
+  .aboutKAI .orient {
+    top: 39%;
+    left: 69%; }
+  .aboutKAI .conection {
+    top: 39%;
+    left: 69%; }
+  .aboutKAI .regul {
+    top: 39%;
+    left: 69%; }
 
 /*# sourceMappingURL=style.css.map */
