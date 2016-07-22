@@ -115,6 +115,7 @@ header {
     width: 100%;
     height: 100%; }
   .aboutKAI .info, .aboutKAI .hear, .aboutKAI .eye, .aboutKAI .orient, .aboutKAI .conection, .aboutKAI .regul {
+    margin-top: 58%;
     position: absolute;
     top: 49%;
     left: 49%;
@@ -128,15 +129,15 @@ header {
     left: 69%; }
   .aboutKAI .eye {
     top: 39%;
-    left: 69%; }
+    left: 39%; }
   .aboutKAI .orient {
-    top: 39%;
-    left: 69%; }
+    top: 49%;
+    left: 59%; }
   .aboutKAI .conection {
-    top: 39%;
-    left: 69%; }
+    top: 45%;
+    left: 60%; }
   .aboutKAI .regul {
-    top: 39%;
-    left: 69%; }
+    top: 59%;
+    left: 59%; }
 
 /*# sourceMappingURL=style.css.map */
