@@ -1,37 +1,30 @@
-@import 'reset';
 
-body {
-	background-color: grey;
-}
-
-.wrapper {
-	position:fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	box-shadow: 0px 0px 180px 75px #ffffff inset;
-	border-radius: 150px;
-}
-
-header {
-	.logo {
-	float: left;
-	margin: 85px 0 0 95px;
+	margin: 75px 0 0 85px;
 	}
 	nav {
 	float: right;
-	margin: 40px 65px 0 0;
+	margin: 55px 85px 0 0;
 	}
 	li {
 	display: inline-block;
 	margin: 0 10px;
 	}
 	a {
+		font-weight: bold;
+		font-size: 20px;
 	color: black;
+	text-decoration: none;
 	:hover {
 	color:blue;
 	text-decoration: underline;
 	}
 	}
+}
+.aboutKAI {
+	width: 100%;
+	height: 860px;
+	background-image: url("../img/KAI.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
