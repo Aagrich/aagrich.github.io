@@ -63,7 +63,7 @@ body {
 				height: 100%;
 			}
 	}
-	li:nth-child(3) {
+	li:nth-child(8) {
 		display: block;
 		img {
 		opacity: 1;
@@ -208,9 +208,10 @@ header {
 			clear: both;
 			color: white;
 			background-color: rgba(0, 0, 0, 0.3);
-			border-radius: 10px;
+			border-radius: 30px;
 		}
 		img {
+			border-radius: 30px;
 			float: left;
 			margin: 5px;
 			height: 50px;
@@ -218,4 +219,16 @@ header {
 		}
 	}
 
+}
+
+.coments {
+	margin: 0 15%;
+	p {
+		display: inline-block;
+	}
+	img {
+		width: 120px;
+		height: 120px;
+		border-radius: 60px;
+	}
 }
