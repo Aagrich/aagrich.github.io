@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose readDependencies loading dependencies from C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json
+5 warn package.json npm@1.0.0 No description
+6 warn package.json npm@1.0.0 No repository field.
+7 warn package.json npm@1.0.0 No README data
+8 verbose install where, deps [ 'C:\\Documents and Settings\\администратор.KADRTD\\hw\\KAI',
+8 verbose install   [ 'grunt',
+8 verbose install     'grunt-contrib-concat',
+8 verbose install     'grunt-contrib-uglify',
+8 verbose install     'grunt-contrib-watch',
+8 verbose install     'grunt-sass' ] ]
+9 verbose install where, peers [ 'C:\\Documents and Settings\\администратор.KADRTD\\hw\\KAI',
+9 verbose install   [] ]
+10 verbose installManyTop reading for lifecycle C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json
+11 info preinstall npm@1.0.0
+12 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt\package.json
+13 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css\package.json
+14 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-concat\package.json
+15 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-uglify\package.json
+16 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-watch\package.json
+17 verbose installManyTop reading scoped package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-sass\package.json
+18 info package.json grunt-concat-css@0.3.1 No license field.
+19 verbose readDependencies loading dependencies from C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json
+20 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt\package.json
+21 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css\package.json
+22 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-concat\package.json
+23 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-uglify\package.json
+24 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-contrib-watch\package.json
+25 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-sass\package.json
+26 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\.bin\grunt\package.json
+27 verbose targetResolver reading package data from C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\.bin\grunt.cmd\package.json
+28 verbose already installed skipping grunt@^1.0.1 C:\Documents and Settings\администратор.KADRTD\hw\KAI
+29 verbose already installed skipping grunt-contrib-concat@^1.0.1 C:\Documents and Settings\администратор.KADRTD\hw\KAI
+30 verbose already installed skipping grunt-contrib-uglify@^2.0.0 C:\Documents and Settings\администратор.KADRTD\hw\KAI
+31 verbose already installed skipping grunt-contrib-watch@^1.0.0 C:\Documents and Settings\администратор.KADRTD\hw\KAI
+32 verbose already installed skipping grunt-sass@^1.2.0 C:\Documents and Settings\администратор.KADRTD\hw\KAI
+33 silly install resolved []
+34 info build C:\Documents and Settings\администратор.KADRTD\hw\KAI
+35 info linkStuff npm@1.0.0
+36 silly linkStuff npm@1.0.0 has C:\Documents and Settings\администратор.KADRTD\hw as its parent node_modules
+37 verbose linkBins npm@1.0.0
+38 verbose linkMans npm@1.0.0
+39 verbose rebuildBundles npm@1.0.0
+40 verbose rebuildBundles [ '.bin',
+40 verbose rebuildBundles   'grunt',
+40 verbose rebuildBundles   'grunt-concat-css',
+40 verbose rebuildBundles   'grunt-contrib-concat',
+40 verbose rebuildBundles   'grunt-contrib-uglify',
+40 verbose rebuildBundles   'grunt-contrib-watch',
+40 verbose rebuildBundles   'grunt-sass' ]
+41 verbose rebuild bundle C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+42 info build C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules\grunt-concat-css
+43 info preinstall grunt-concat-css@0.3.1
+44 info linkStuff grunt-concat-css@0.3.1
+45 silly linkStuff grunt-concat-css@0.3.1 has C:\Documents and Settings\администратор.KADRTD\hw\KAI\node_modules as its parent node_modules
+46 verbose linkBins grunt-concat-css@0.3.1
+47 verbose linkMans grunt-concat-css@0.3.1
+48 verbose rebuildBundles grunt-concat-css@0.3.1
+49 info install grunt-concat-css@0.3.1
+50 info postinstall grunt-concat-css@0.3.1
+51 info install npm@1.0.0
+52 info postinstall npm@1.0.0
+53 info prepublish npm@1.0.0
+54 verbose validateInstall loading C:\Documents and Settings\администратор.KADRTD\hw\KAI\package.json for validation
+55 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:125:32
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:268:7
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+55 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+55 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+55 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+55 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+56 verbose cwd C:\Documents and Settings\администратор.KADRTD\hw\KAI
+57 error Windows_NT 5.1.2600
+58 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+59 error node v4.4.7
+60 error npm  v2.15.8
+61 error code EPEERINVALID
+62 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+62 error peerinvalid Peer grunt-concat-css@0.3.1 wants grunt@~0.4.1
+62 error peerinvalid Peer grunt-contrib-concat@1.0.1 wants grunt@>=0.4.0
+62 error peerinvalid Peer grunt-sass@1.2.0 wants grunt@>=0.4.0
+63 verbose exit [ 1, true ]
