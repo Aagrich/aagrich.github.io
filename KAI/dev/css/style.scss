@@ -63,7 +63,7 @@ body {
 				height: 100%;
 			}
 	}
-	li:nth-child(8) {
+	li:nth-child(7) {
 		display: block;
 		img {
 		opacity: 1;
@@ -223,8 +223,14 @@ header {
 
 .coments {
 	margin: 0 15%;
-	p {
-		display: inline-block;
+	li {
+		float: left;
+		margin: 10px;
+		&:nth-child(odd) {
+			float: right;
+			clear: both;
+
+		}
 	}
 	img {
 		width: 120px;

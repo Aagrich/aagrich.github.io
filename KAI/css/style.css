@@ -98,9 +98,9 @@ body {
       opacity: 0;
       width: 100%;
       height: 100%; }
-  .slider li:nth-child(8) {
+  .slider li:nth-child(7) {
     display: block; }
-    .slider li:nth-child(8) img {
+    .slider li:nth-child(7) img {
       opacity: 1; }
 
 header {
@@ -218,8 +218,12 @@ header {
 
 .coments {
   margin: 0 15%; }
-  .coments p {
-    display: inline-block; }
+  .coments li {
+    float: left;
+    margin: 10px; }
+    .coments li:nth-child(odd) {
+      float: right;
+      clear: both; }
   .coments img {
     width: 120px;
     height: 120px;
