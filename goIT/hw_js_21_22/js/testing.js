@@ -16,6 +16,8 @@ $(function () {
   }];
 
   function makeVariant(b) {
+
+    var arrVariant = [];
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -23,7 +25,8 @@ $(function () {
     try {
       for (var _iterator = b.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var a = _step.value;
-        return '\n\t\t' + '<label>' + '\n\t\t' + '<input name=' + '  ' + b.name + '  ' + 'type=checkbox' + '  ' + 'value=' + '  ' + a + '  ' + '>' + '\n\t\t' + a + '  ' + '</label>';
+        var variant = '\n\t\t' + '<label>' + ' ' + '<input name=' + ' ' + b.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ' + '</label>';
+        arrVariant.push(variant);
       }
     } catch (err) {
       _didIteratorError = true;
@@ -41,6 +44,7 @@ $(function () {
     }
 
     ;
+    return arrVariant;
   };
 
   var makeTest = function makeTest(test) {

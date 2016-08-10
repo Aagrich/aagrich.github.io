@@ -34,11 +34,14 @@ $(function(){
    ];
 
  	function makeVariant( b) {
+
+		let arrVariant = [];
 		for (let a of b.options)
-		{return `
-		${'<label>'}
-		${'<input name='}  ${b.name}  ${'type=checkbox'}  ${'value='}  ${a}  ${'>'}
-		${a}  ${'</label>'}`};
+		{let variant = `
+		${'<label>'} ${'<input name='} ${b.name} ${'type=checkbox'} ${'value='} ${a} ${'>'} ${a} ${'</label>'}`
+		arrVariant.push(variant);
+	};
+	return arrVariant;
 	};
 
 
