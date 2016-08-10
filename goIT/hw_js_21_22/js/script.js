@@ -33,18 +33,21 @@ $(function(){
      }
    ];
 
+ 	function makeVariant( b) {
+		for (let a of b.options)
+		{return `
+		${'<label>'}
+		${'<input name='}  ${b.name}  ${'type=checkbox'}  ${'value='}  ${a}  ${'>'}
+		${a}  ${'</label>'}`};
+	};
 
 
 
    var makeTest = function(test) {
-   		   let testList = createElement('ol');
+   		   let testList = document.createElement('ol');
    		for (let question of test) {
-   			testList.innerHTML(`${'<li>'} + ${question.name} + ${ for (let variant of question.options) {
-   				return `
-   				${'<label>'} + 
-   				${'<input name='} + ${question.name} + ${'type=checkbox'} + ${'value='} + ${variant} +${'>'} +
-   				${variant} + ${'</label>'}`;
-   			};}`);
+   			testList.innerHTML = `${'<li>'}  ${question.name}  ${ makeVariant(question)}`;
+
    			return testList;
    		}
    };
@@ -76,14 +79,18 @@ $(function(){
   	let message;
   		if (result === true) {
   			message = "Good RESULT!";
-  		};
+  		}
   		else {
   			message = "BAD result!";
   		};
-  		let modalWindow = `${'<div class = window-wrapper><div class = modal-window><p>'} + 
-  		${message} + 
+  		let modalWindow = `${'<div class = window-wrapper><div class = modal-window><p>'} +
+  		${message} +
   		${'</p></div> </div>'} + ${'<button class=OKbutton> OK </button>'}`;
   		page.appendChild(modalWindow);
   };
+
+	pushTest(makeTest(questiong),'test_window');
+
+
 
 });
