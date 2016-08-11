@@ -33,31 +33,31 @@ $(function(){
      }
    ];
 
- 	function makeVariant( b) {
 
-		let arrVariant = [];
-		for (let a of b.options)
-		{let variant = `
-		${'<label>'} ${'<input name='} ${b.name} ${'type=checkbox'} ${'value='} ${a} ${'>'} ${a} ${'</label>'}`
-		arrVariant.push(variant);
+ 	function makeVariant( question, page ) {
+		let variant = document.createElement('div');
+		for (let a of question.options)
+		{ let x = `
+		${'<label>'} ${'<input name='} ${question.name} ${'type=checkbox'} ${'value='} ${a} ${'>'} ${a} ${'</label>'}`;
+		variant.innerHTML = x;
+		page.appendChild(variant);
+		};
 	};
-	return arrVariant;
-	};
-
-
 
    var makeTest = function(test) {
    		   let testList = document.createElement('ol');
    		for (let question of test) {
-   			testList.innerHTML = `${'<li>'}  ${question.name}  ${ makeVariant(question)}`;
-
+   			testList.innerHTML = `${'<li>'}  ${question.name}`;
+				makeVariant(question, testList);
    			return testList;
-   		}
+   		};
    };
+
   function pushTest(test, pageId) {
   		   let page = document.getElementById(pageId);
   		   page.appendChild(test);
   };
+
   function checkTest(test) {
 
   			let answers = function(){
@@ -77,6 +77,7 @@ $(function(){
   				return true;
   			};
   };
+	
   function showResult(result) {
   	let page = document.getElementById(pageId);
   	let message;

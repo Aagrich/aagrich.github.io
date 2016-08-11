@@ -15,18 +15,18 @@ $(function () {
     answer: ['Never']
   }];
 
-  function makeVariant(b) {
-
-    var arrVariant = [];
+  function makeVariant(question, page) {
+    var variant = document.createElement('div');
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
 
     try {
-      for (var _iterator = b.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      for (var _iterator = question.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var a = _step.value;
-        var variant = '\n\t\t' + '<label>' + ' ' + '<input name=' + ' ' + b.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ' + '</label>';
-        arrVariant.push(variant);
+        var x = '\n\t\t' + '<label>' + ' ' + '<input name=' + ' ' + question.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ' + '</label>';
+        variant.innerHTML = x;
+        page.appendChild(variant);
       }
     } catch (err) {
       _didIteratorError = true;
@@ -44,7 +44,6 @@ $(function () {
     }
 
     ;
-    return arrVariant;
   };
 
   var makeTest = function makeTest(test) {
@@ -57,8 +56,8 @@ $(function () {
       for (var _iterator2 = test[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
         var question = _step2.value;
 
-        testList.innerHTML = '<li>' + '  ' + question.name + '  ' + makeVariant(question);
-
+        testList.innerHTML = '<li>' + '  ' + question.name;
+        makeVariant(question, testList);
         return testList;
       }
     } catch (err) {
@@ -75,6 +74,8 @@ $(function () {
         }
       }
     }
+
+    ;
   };
   function pushTest(test, pageId) {
     var page = document.getElementById(pageId);
