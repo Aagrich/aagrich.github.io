@@ -77,10 +77,12 @@ $(function () {
 
     ;
   };
+
   function pushTest(test, pageId) {
     var page = document.getElementById(pageId);
     page.appendChild(test);
   };
+
   function checkTest(test) {
 
     var answers = function answers() {
@@ -165,6 +167,7 @@ $(function () {
 
     ;
   };
+
   function showResult(result) {
     var page = document.getElementById(pageId);
     var message = void 0;
