@@ -16,15 +16,16 @@ $(function () {
   }];
 
   function makeVariant(question, page) {
-    var variant = document.createElement('div');
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
 
     try {
+
       for (var _iterator = question.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var a = _step.value;
-        var x = '\n\t\t' + '<label>' + ' ' + '<input name=' + ' ' + question.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ' + '</label>';
+        var variant = document.createElement('label');
+        var x = '\n\t ' + '<input name=' + ' ' + question.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ';
         variant.innerHTML = x;
         page.appendChild(variant);
       }
