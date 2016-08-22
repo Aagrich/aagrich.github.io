@@ -72,8 +72,8 @@ $(function(){
   				}
 
 				console.log('answers =' + answers);
-				let userAnswers = document.querySelectorAll('.selected');
-				console.log('userAnswers = ' + userAnswers[1]);
+				let userAnswers = document.getElementsByClassName('.selected');
+				console.log('userAnswers = ' + userAnswers);
 
   //			for (let value of answers) {
   //				if (userAnswers.indexOf(value) == -1) {
@@ -98,26 +98,30 @@ $(function(){
 			modalWindow.innerHTML = `${'<div class = modal-window><p>'}
   		${message}
   		${'</p></div>'} ${'<button class=OKbutton> OK </button>'}`;
+			$('.OKbutton').click(function(){
+        $('.window-wrapper').remove();
+      });
+			$('.OKbutton').onclick = function() {
+				console.log('click');
+			}
   		page.appendChild(modalWindow);
   };
 
 	function pushTest(test, pageId) {
 				 let page = document.getElementById(pageId);
-				 var button = document.createElement('button');
+				 let button = document.createElement('button');
 				 let testName = document.createElement('h1');
 				 testName.innerHTML = 'Test "Who? Where? When?"';
 				 page.appendChild(testName);
 				 page.appendChild(test);
+					$('ol').jCheckbox('left');
 				 button.innerHTML = 'Show my result';
 				 button.onclick = function() {showResult(checkTest(questiong), pageId)};
 				 page.appendChild(button);
-
+				;
 	};
 
 	pushTest(makeTest(questiong),'test_window');
-
-
-
 
 
 
