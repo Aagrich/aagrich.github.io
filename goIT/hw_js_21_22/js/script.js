@@ -46,12 +46,17 @@ $(function(){
 	};
 
    var makeTest = function(test) {
-   		   let testList = document.createElement('ol');
-   		for (let question of test) {
-   			testList.innerHTML = `${'<li>'}  ${question.name}`;
-					makeVariant(question, testList);
-   			return testList;
+				let testList = document.createElement('ol');
+
+   	  	for (let question of test) {
+
+				let punct = document.createElement('li');
+   			let x = `${question.name}`;
+				punct.innerHTML = x;
+				testList.appendChild(punct);
+				makeVariant(question, testList);
    		};
+				return testList;
    };
 
   function pushTest(test, pageId) {

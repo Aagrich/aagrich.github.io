@@ -49,6 +49,7 @@ $(function () {
 
   var makeTest = function makeTest(test) {
     var testList = document.createElement('ol');
+
     var _iteratorNormalCompletion2 = true;
     var _didIteratorError2 = false;
     var _iteratorError2 = undefined;
@@ -57,9 +58,12 @@ $(function () {
       for (var _iterator2 = test[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
         var question = _step2.value;
 
-        testList.innerHTML = '<li>' + '  ' + question.name;
+
+        var punct = document.createElement('li');
+        var x = '' + question.name;
+        punct.innerHTML = x;
+        testList.appendChild(punct);
         makeVariant(question, testList);
-        return testList;
       }
     } catch (err) {
       _didIteratorError2 = true;
@@ -77,6 +81,7 @@ $(function () {
     }
 
     ;
+    return testList;
   };
 
   function pushTest(test, pageId) {
