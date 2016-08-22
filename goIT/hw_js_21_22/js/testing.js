@@ -15,39 +15,41 @@ $(function () {
     answer: ['Never']
   }];
 
-  function makeVariant(question, page) {
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-
-      for (var _iterator = question.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var a = _step.value;
-        var variant = document.createElement('label');
-        var x = '\n\t ' + '<input name=' + ' ' + question.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ';
-        variant.innerHTML = x;
-        page.appendChild(variant);
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
-    }
-
-    ;
-  };
-
   var makeTest = function makeTest(test) {
+
+    function makeVariant(question, page) {
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+
+        for (var _iterator = question.options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var a = _step.value;
+
+          var variant = document.createElement('label');
+          var x = '\n\t\t\t\t\t\t\t' + '<input name=' + ' ' + question.name + ' ' + 'type=checkbox' + ' ' + 'value=' + ' ' + a + ' ' + '>' + ' ' + a + ' ';
+          variant.innerHTML = x;
+          page.appendChild(variant);
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+
+      ;
+    };
+
     var testList = document.createElement('ol');
 
     var _iteratorNormalCompletion2 = true;
@@ -84,97 +86,50 @@ $(function () {
     return testList;
   };
 
-  function pushTest(test, pageId) {
-    var page = document.getElementById(pageId);
-    page.appendChild(test);
-  };
-
   function checkTest(test) {
+    var answers = void 0;
 
-    var answers = function answers() {
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = test[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var question = _step3.value;
-          var _iteratorNormalCompletion4 = true;
-          var _didIteratorError4 = false;
-          var _iteratorError4 = undefined;
-
-          try {
-            for (var _iterator4 = test.question.answer[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-              var value = _step4.value;
-
-              Answers.push(value);
-            }
-          } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion4 && _iterator4.return) {
-                _iterator4.return();
-              }
-            } finally {
-              if (_didIteratorError4) {
-                throw _iteratorError4;
-              }
-            }
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
-
-      return Answers;
-    };
-    var userAnswers = querySelectorsAll('.selected');
-
-    var _iteratorNormalCompletion5 = true;
-    var _didIteratorError5 = false;
-    var _iteratorError5 = undefined;
+    var _iteratorNormalCompletion3 = true;
+    var _didIteratorError3 = false;
+    var _iteratorError3 = undefined;
 
     try {
-      for (var _iterator5 = answers[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-        var value = _step5.value;
+      for (var _iterator3 = test[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+        //	console.log(test.question.answer);
+        //	for (let value of test.question.answer) {
+        //		answers.push(value);
+        //		}
 
-        if (userAnswers.indexOf(value) == -1) {
-          return false;
-        };
-        return true;
+        var question = _step3.value;
       }
     } catch (err) {
-      _didIteratorError5 = true;
-      _iteratorError5 = err;
+      _didIteratorError3 = true;
+      _iteratorError3 = err;
     } finally {
       try {
-        if (!_iteratorNormalCompletion5 && _iterator5.return) {
-          _iterator5.return();
+        if (!_iteratorNormalCompletion3 && _iterator3.return) {
+          _iterator3.return();
         }
       } finally {
-        if (_didIteratorError5) {
-          throw _iteratorError5;
+        if (_didIteratorError3) {
+          throw _iteratorError3;
         }
       }
     }
 
-    ;
+    console.log('answers =' + answers);
+    var userAnswers = document.querySelectorAll('.selected');
+    console.log('userAnswers = ' + userAnswers[1]);
+
+    //			for (let value of answers) {
+    //				if (userAnswers.indexOf(value) == -1) {
+    //					return false;
+    //				};
+    //				return true;
+    //			};
   };
 
-  function showResult(result) {
+  function showResult(result, pageId) {
     var page = document.getElementById(pageId);
     var message = void 0;
     if (result === true) {
@@ -182,8 +137,25 @@ $(function () {
     } else {
       message = "BAD result!";
     };
-    var modalWindow = '<div class = window-wrapper><div class = modal-window><p>' + ' +\n  \t\t' + message + ' +\n  \t\t' + '</p></div> </div>' + ' + ' + '<button class=OKbutton> OK </button>';
+
+    var modalWindow = document.createElement('div');
+    modalWindow.className = 'window-wrapper';
+    modalWindow.innerHTML = '<div class = modal-window><p>' + '\n  \t\t' + message + '\n  \t\t' + '</p></div>' + ' ' + '<button class=OKbutton> OK </button>';
     page.appendChild(modalWindow);
+  };
+
+  function pushTest(test, pageId) {
+    var page = document.getElementById(pageId);
+    var button = document.createElement('button');
+    var testName = document.createElement('h1');
+    testName.innerHTML = 'Test "Who? Where? When?"';
+    page.appendChild(testName);
+    page.appendChild(test);
+    button.innerHTML = 'Show my result';
+    button.onclick = function () {
+      showResult(checkTest(questiong), pageId);
+    };
+    page.appendChild(button);
   };
 
   pushTest(makeTest(questiong), 'test_window');
