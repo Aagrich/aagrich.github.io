@@ -1,8 +1,18 @@
 <html>
     <body>
-        <canvas width="500" height="500" id="canvas"></canvas>
+        <canvas width="800" height="800" id="canvas"></canvas>
         <script>
             var data = [16, 68, 20, 30, 54];
+            var canvas = document.getElementById('canvas');
+            var c = canvas.getContext('2d');
+            c.fillStyle = "gray";
+            c.fillRect(100,100,500,500);
+            c.fillStyle = 'blue';
+            for(var i=0; i<data.length; i++) {
+                var dp = data[i];
+                c.fillRect(125 + i*100, 130, 50, dp*5);
+            }
+
         </script>
     </body>
 </html>
