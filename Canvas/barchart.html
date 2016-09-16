@@ -10,8 +10,15 @@
             c.fillStyle = 'blue';
             for(var i=0; i<data.length; i++) {
                 var dp = data[i];
-                c.fillRect(125 + i*100, 130, 50, dp*5);
-            }
+                c.fillRect(125 + i*100, 500-dp*5 + 70, 50, dp*5);
+            };
+            c.fillStyle = 'red';
+            c.lineWidth = 2.0;
+            c.beginPath();
+            c.moveTo(30, 10);
+            c.lineTo(30, 460);
+            c.lineTo(490,460);
+            c.stroke();
 
         </script>
     </body>
