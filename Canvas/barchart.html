@@ -7,6 +7,13 @@
             var c = canvas.getContext('2d');
             c.fillStyle = "gray";
             c.fillRect(100,100,500,500);
+            c.fillStyle = 'black';
+            c.lineWidth = 4.0;
+            c.beginPath();
+            c.moveTo(4,800);
+            c.lineTo(4,4);
+            c.lineTo(800, 4);
+            c.stroke();
             c.fillStyle = 'blue';
             for(var i=0; i<data.length; i++) {
                 var dp = data[i];
@@ -15,9 +22,9 @@
             c.fillStyle = 'red';
             c.lineWidth = 2.0;
             c.beginPath();
-            c.moveTo(30, 10);
-            c.lineTo(30, 460);
-            c.lineTo(490,460);
+            c.moveTo(130, 110);
+            c.lineTo(130, 560);
+            c.lineTo(590,560);
             c.stroke();
 
         </script>
