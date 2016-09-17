@@ -5,9 +5,9 @@
             var data = [16, 68, 20, 30, 54];
             var canvas = document.getElementById('canvas');
             var c = canvas.getContext('2d');
-            c.fillStyle = "gray";
+            c.fillStyle = "lightgray";
             c.fillRect(100,100,500,500);
-            c.fillStyle = 'black';
+            c.fillStyle = '#108008';
             c.lineWidth = 4.0;
             c.beginPath();
             c.moveTo(4,800);
@@ -17,15 +17,28 @@
             c.fillStyle = 'blue';
             for(var i=0; i<data.length; i++) {
                 var dp = data[i];
-                c.fillRect(125 + i*100, 500-dp*5 + 70, 50, dp*5);
+                c.fillRect(140 + i*100, 490-dp*5 + 70, 50, dp*5);
             };
-            c.fillStyle = 'red';
+            c.fillStyle = "green";
             c.lineWidth = 2.0;
             c.beginPath();
             c.moveTo(130, 110);
             c.lineTo(130, 560);
             c.lineTo(590,560);
             c.stroke();
+            c.fillStyle = 'black';
+            var labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+            for (var i = 0; i < 6; i++) {
+                c.fillText((5-i)*20 + "", 100 , i*80+160);
+                c.beginPath();
+                c.moveTo(125, i*80+160);
+                c.lineTo(130, i*80+160);
+                c.stroke();
+            };
+            for (var i = 0; i< labels.length; i++) {
+                c.fillText(labels[i], 150+ i*100, 575);
+            }
+
 
         </script>
     </body>
