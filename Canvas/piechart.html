@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <canvas width="500" height="500" id="canvas">
+
+        </canvas>
+        <script>
+            var data = [100, 68, 20, 30, 100];
+            var canvas = document.getElementById('canvas');
+            var c = canvas.getContext('2d');
+            c.fillStyle = 'lightgray';
+            c.fillRect(0,0, 500, 500);
+
+            var colors = [ 'orange', 'green', 'blue', 'yellow', 'teal'];
+
+            var total = 0;
+            for (var i=0; i < data.length; i++) {
+                total += data[i];
+            }
+
+            var prevAngle = 0;
+            for (var i = 0; i < data.length; i++) {
+
+            }
+        </script>
+    </body>
+</html>
