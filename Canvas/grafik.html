@@ -7,18 +7,26 @@
             c.fillStyle = 'lightgray';
             c.fillRect(0,0,500,500);
 
-            var data = [15,88,45,35,28,17,24,46,67];
+            var data = [15,88,45,35,28,17,24,46,67,50,32,47,60];
             var x = 0;
             var y = 0;
             for (var i = 0; i < data.length; i++){
-                x += 20;
-                y = data[i];
+                x += 500/data.length-4;
+                y = 500 - data[i];
+                var z = 500/data.length-4;
+
                 c.fillStyle = 'black';
                 c.beginPath();
                 c.moveTo(x, y);
-                c.arc(x, y, 5, 100, 200, false );
+                c.lineTo( z + x, 500-data[i+1]);
+                c.stroke();
+                c.beginPath();
+                c.moveTo(x, y);
+                c.lineTo( z + x, 500-data[i+1]);
+                c.arc(x, y, 4, 100, 160, false );
                 c.fill();
                 c.stroke();
+
             }
         </script>
     </body>
