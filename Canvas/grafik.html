@@ -4,7 +4,22 @@
         <script>
             var canvas = document.getElementById('canvas');
             var c = canvas.getContext('2d');
+            c.fillStyle = 'lightgray';
+            c.fillRect(0,0,500,500);
 
+            var data = [15,88,45,35,28,17,24,46,67];
+            var x = 0;
+            var y = 0;
+            for (var i = 0; i < data.length; i++){
+                x += 20;
+                y = data[i];
+                c.fillStyle = 'black';
+                c.beginPath();
+                c.moveTo(x, y);
+                c.arc(x, y, 5, 100, 200, false );
+                c.fill();
+                c.stroke();
+            }
         </script>
     </body>
 </html>
