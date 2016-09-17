@@ -11,6 +11,7 @@
             var x = 0;
             var y = 0;
             for (var i = 0; i < data.length; i++){
+
                 x += 500/data.length-4;
                 y = 500 - data[i];
                 var z = 500/data.length-4;
@@ -22,12 +23,12 @@
                 c.stroke();
                 c.beginPath();
                 c.moveTo(x, y);
-                c.lineTo( z + x, 500-data[i+1]);
                 c.arc(x, y, 4, 100, 160, false );
                 c.fill();
                 c.stroke();
+            };
 
-            }
+
         </script>
     </body>
 </html>
