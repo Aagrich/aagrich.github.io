@@ -1,0 +1,76 @@
+
+.wrapper {
+  text-align: center;
+  background-color: lightgrey;
+}
+.carousel::after {
+	content: "";
+	clear: both;
+}
+
+.jcarousel {
+	position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+    width: 1000px;
+    height: 580px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.jcarousel li {
+	width: 960px;
+	float: left;
+	padding: 0;
+	margin: 10px;
+	line-height: 0;
+	overflow: hidden;
+    border-radius: 20px;
+}
+.pic-list :last-child {
+	margin-right: 60px;
+}
+.jcarousel-pagination {
+	display: inline-block;
+}
+.jcarousel-pagination a {
+	text-decoration: none;
+	display: inline-block;
+	padding:5px 10px;
+	margin: 5px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+.jcarousel-pagination a:active {
+	background-color: grey;
+}
+
+.jcarousel-next, .jcarousel-prev {
+	font-size: 18px;
+	font-weight: 900;
+	display: inline-block;
+  	margin: 15px;
+  	cursor: pointer;
+}
+.choise {
+	clear: both;
+	margin: 50px;
+}
+select {
+	width: 120px;
+}
+.check-box {
+	padding-bottom: 50px;
+}
+.check-box  label {
+	margin: 10px;
+}

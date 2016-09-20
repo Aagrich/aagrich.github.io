@@ -2,53 +2,78 @@ var canvas = document.getElementById('gameWindow');
 var c = canvas.getContext('2d');
 var x = 25;
 var y = 120;
-paint(c,x,y);
+function animTestX() {
+    for (x; x < xz; x++) {
+        paint();
+    };
+    window.requestAnimationFrame(animTestX);
+};
+function animTestY() {
+    for (y; y < yz; y++) {
+        paint();
+    };
+    window.requestAnimationFrame(animTestY);
+};
+function paint() {
+c.fillStyle = 'lightblue';
+c.fillRect(0, 0, canvas.width, canvas.height);
+c.fillStyle = 'yellow';
+c.beginPath();
+c.arc(x, y, 10, 100, 200, false);
+c.fill();
+};
+paint();
 
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame    ||
-          window.oRequestAnimationFrame      ||
-          window.msRequestAnimationFrame     ||
-          function( callback ){
-            window.setTimeout(callback, 1000 / 60);
-          };
-})();
-
-function running(e,z) {
+function running(z) {
     document.addEventListener("keydown", function(event) {
-    if (event.keyCode == 37 & x > 0) {
+    if (event.keyCode == 37 & x-10 > 0) {
       c.clearRect(0,0,canvas.width,canvas.height);
-      x = x - z;
-      paint(e,x,y);
+      xz = x - z;
+      window.requestAnimationFrame(animTestX);
     };
-    if (event.keyCode == 39 & x < canvas.width) {
-          c.clearRect(0,0,canvas.width,canvas.height);
-      x = x + z;
-      paint(e,x,y);
-    };
-    if (event.keyCode == 38 & y > 0) {
-        console.log(y);
+    if (event.keyCode == 39 & x+10 < canvas.width) {
       c.clearRect(0,0,canvas.width,canvas.height);
-        paint(e,x,y);
+      xz = x + z;
+      window.requestAnimationFrame(animTestX);
     };
-    if (event.keyCode == 40 & y < canvas.height) {
+    if (event.keyCode == 38 & y-10 > 0) {
+      yz = y - z;
       c.clearRect(0,0,canvas.width,canvas.height);
-      y = y + z;
-      paint(e,x,y);
+      window.requestAnimationFrame(animTestY);
+    };
+    if (event.keyCode == 40 & y+10 < canvas.height) {
+      c.clearRect(0,0,canvas.width,canvas.height);
+      yz = y + z;
+      window.requestAnimationFrame(animTestY);
     };
 });
 };
-function paint(e,x,y) {
-e.fillStyle = 'lightblue';
-e.fillRect(0, 0, canvas.width, canvas.height);
-e.fillStyle = 'yellow';
-e.beginPath();
-e.arc(x, y, 10, 100, 200, false);
-e.fill();
+running(2);
+
+function animTestX() {
+     if (x < xz) {
+        x++
+        paint();
+    };
+    if (x > xz) {
+        x--
+        paint();
+    }
+    window.requestAnimationFrame(animTestX);
+
+};
+function animTestY() {
+    if (y < yz) {
+        y++
+        paint();
+    };
+    if (y > yz) {
+        y--
+        paint();
+    }
+    window.requestAnimationFrame(animTestY);
 };
 
-running(c,5);
 
 
 
