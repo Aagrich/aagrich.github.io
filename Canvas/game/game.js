@@ -46,12 +46,18 @@ function running(z) {
       yz = y + z;
       window.requestAnimationFrame(animTestY);
     };
+    if ( y = canvas.height-10) {
+        for (var i = 0; i < 10; i ++) {
+            y--;
+            window.requestAnimationFrame(animTestY);
+        };
+    };
 });
 };
 running(2);
 
 function animTestX() {
-     if (x < xz) {
+    if (x < xz) {
         x++
         paint();
     };
@@ -60,7 +66,6 @@ function animTestX() {
         paint();
     }
     window.requestAnimationFrame(animTestX);
-
 };
 function animTestY() {
     if (y < yz) {
