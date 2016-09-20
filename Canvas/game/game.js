@@ -1,24 +1,39 @@
 var canvas = document.getElementById('gameWindow');
 var c = canvas.getContext('2d');
-paint(c,0,0);
+var x = 50;
+var y = 120;
+paint(c,x,y);
+
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          window.oRequestAnimationFrame      ||
+          window.msRequestAnimationFrame     ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
 
 function running(e,z) {
     document.addEventListener("keydown", function(event) {
-        var x = 0;
-        var y = 0;
     if (event.keyCode == 37) {
+      c.clearRect(0,0,canvas.width,canvas.height);
       x = x - z;
       paint(e,x,y);
     };
     if (event.keyCode == 39) {
+          c.clearRect(0,0,canvas.width,canvas.height);
       x = x + z;
       paint(e,x,y);
     };
     if (event.keyCode == 38) {
+      c.clearRect(0,0,canvas.width,canvas.height);
       y = y - z;
         paint(e,x,y);
     };
     if (event.keyCode == 40) {
+      c.clearRect(0,0,canvas.width,canvas.height);
       y = y + z;
       paint(e,x,y);
     };
@@ -28,13 +43,12 @@ function paint(e,x,y) {
 e.fillStyle = 'lightblue';
 e.fillRect(0, 0, canvas.width, canvas.height);
 e.fillStyle = 'yellow';
-e.translate(x,y);
 e.beginPath();
-e.arc(25, 125, 10, 100, 200, false);
+e.arc(x, y, 10, 100, 200, false);
 e.fill();
 };
 
-running(c,3);
+window.requestAnimFrame(running(c,5));
 
 
 
