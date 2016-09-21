@@ -27,33 +27,24 @@ paint();
 function running(z) {
     document.addEventListener("keydown", function(event) {
     if (event.keyCode == 37 & x-10 > 0) {
-      c.clearRect(0,0,canvas.width,canvas.height);
       xz = x - z;
       window.requestAnimationFrame(animTestX);
     };
     if (event.keyCode == 39 & x+10 < canvas.width) {
-      c.clearRect(0,0,canvas.width,canvas.height);
       xz = x + z;
       window.requestAnimationFrame(animTestX);
     };
-    if (event.keyCode == 38 & y-10 > 0) {
-      yz = y - z;
-      c.clearRect(0,0,canvas.width,canvas.height);
+    if (event.keyCode == 38 & y == 120 ) {
+      yz = y - 50;
       window.requestAnimationFrame(animTestY);
     };
     if (event.keyCode == 40 & y+10 < canvas.height) {
-      c.clearRect(0,0,canvas.width,canvas.height);
       yz = y + z;
       window.requestAnimationFrame(animTestY);
     };
-    if ( y = canvas.height-10) {
-        for (var i = 0; i < 10; i ++) {
-            y--;
-            window.requestAnimationFrame(animTestY);
-        };
-    };
 });
 };
+
 running(2);
 
 function animTestX() {
@@ -75,8 +66,19 @@ function animTestY() {
     if (y > yz) {
         y--
         paint();
-    }
+    };
+    if (y < 72) {
+        yz = 120;
+        paint();
+    };
     window.requestAnimationFrame(animTestY);
+};
+
+function ballDown(e) {
+    if ( e < 72 ) {
+      yz = 120;
+      window.requestAnimationFrame(animTestY);
+    };
 };
 
 
