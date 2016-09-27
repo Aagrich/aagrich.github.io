@@ -1,34 +1,18 @@
 <html>
+    <head>
+           <meta charset="utf-8">
+           <title>Simple line diagram</title>
+           <link rel="stylesheet" href='css/style.css' type="text/css"></link>
+    </head>
+    
     <body>
+        <h1>TEST TEXT!</h1>
         <canvas width="500px" height="500px" id="canvas"></canvas>
-        <script>
-            var canvas = document.getElementById('canvas');
-            var c = canvas.getContext('2d');
-            c.fillStyle = 'lightgray';
-            c.fillRect(0,0,500,500);
-
-            var data = [15,88,45,35,28,17,24,46,67,50,32,47,60];
-            var x = 0;
-            var y = 0;
-            for (var i = 0; i < data.length; i++){
-
-                x += 500/data.length-4;
-                y = 500 - data[i];
-                var z = 500/data.length-4;
-
-                c.fillStyle = 'black';
-                c.beginPath();
-                c.moveTo(x, y);
-                c.lineTo( z + x, 500-data[i+1]);
-                c.stroke();
-                c.beginPath();
-                c.moveTo(x, y);
-                c.arc(x, y, 4, 100, 160, false );
-                c.fill();
-                c.stroke();
-            };
-
-
+        <ol class="sailsList" id="sailsList">
+            
+        </ol>
+        <script src="js/script.js">
         </script>
     </body>
+
 </html>
