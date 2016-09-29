@@ -13,7 +13,6 @@ function makeList(data,listId) {
         if (data[i] == 1) {
             punct.innerHTML = data[i] + " sail";
         }
-        punct.appendChild(delButton);
         list.appendChild(punct);
     }
 };
