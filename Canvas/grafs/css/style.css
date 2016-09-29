@@ -1,3 +1,13 @@
+.wrapper {
+    margin: 0 25%;
+}
+@media screen (max-width: 800px;){
+    .wrapeper {
+        margin: 0;
+    }
+}
+
+
 canvas {
     width:600px;
     height: 600px;
@@ -11,7 +21,9 @@ canvas {
         height: 300px;
     }
 }
-
+h1 {
+    text-align: center;
+}
 .sailsList {
     float: left;
     padding: 10px;
