@@ -1,0 +1,25 @@
+h1,h2 {
+    text-align: center;
+}
+
+.html-css-examples {
+    display: inline-block;
+    margin: 3%;
+    width: 42%;
+    text-align: center;
+}
+.js-examples {
+    display: inline-block;
+    margin: 3%;
+    width: 42%;
+    text-align: center;
+}
+.pages {
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px;
+    margin: 1%;
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
