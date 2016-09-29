@@ -44,4 +44,30 @@ h1,h2 {
     }
 }
 
-.landapge
+.landpage-pic {
+    background-image: url(img/landingpage.jpg);
+}
+.profile-pic {
+    background-image: url(img/profile.jpg);
+}
+.shop-pic {
+    background-image: url(img/shop.jpg);
+}
+.test-pic {
+    background-image: url(img/test.jpg);
+}
+.search-pic {
+    background-image: url(img/search.jpg);
+}
+.logpage-pic {
+    background-image: url(img/logpage.jpg);
+}
+.simplepage-pic {
+    background-image: url(img/simplepage.jpg);
+}
+.homepage-pic {
+    background-image: url(img/homepage.jpg);
+}
+.diagram-pic {
+    background-image: url(img/diagram.jpg);
+}
