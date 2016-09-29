@@ -1,4 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
 h1,h2 {
+    margin: 5px;
     text-align: center;
 }
 
@@ -22,4 +29,18 @@ h1,h2 {
     width: 100px;
     height: 100px;
     background-color: grey;
+    font-weight: 600;
 }
+@media (max-width: 800px) {
+    .pages {
+        width: 75px;
+        height: 75px;
+        font-weight: 300;
+    }
+}
+@media (min-width: 1280px) {
+    .wrapper {
+        padding: 0 25%;
+    }
+}
+
