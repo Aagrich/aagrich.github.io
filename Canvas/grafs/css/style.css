@@ -12,7 +12,7 @@ canvas {
     padding: 20px;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
     canvas {
         width: 300px;
         height: 300px;
