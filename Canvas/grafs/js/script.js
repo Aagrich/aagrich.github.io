@@ -27,9 +27,10 @@ var canvas = document.getElementById('canvas');
  c.fillStyle = 'black';
  c.lineWidth = 2.0;
  c.beginPath();
- for (var i = 0; i < canvas.height; i = i + 5) {
+ for (var i = 0; i < canvas.height; i = i + 10) {
      c.moveTo(0,i);
-     c.lineTo(4,i);
+     c.lineTo(6,i);
+     c.fillText(Math.abs(i - canvas.height), 10, i);
      c.stroke();
  }
 
