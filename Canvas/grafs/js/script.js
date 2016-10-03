@@ -33,7 +33,6 @@ var canvas = document.getElementById('canvas');
      c.fillText(Math.abs(i - canvas.height), 10, i);
      c.stroke();
  }
-
  var x = 0;
  var y = 0;
  for (var i = 0; i < data.length; i++){
@@ -49,6 +48,13 @@ var canvas = document.getElementById('canvas');
      c.moveTo(x, y);
      c.arc(x, y, 4, 100, 160, false );
      c.fill();
+     c.moveTo(x,canvas.height);
+     c.lineWidth = 2.0;
+     c.lineTo(x,canvas.height-6);
+     c.fillText((function(){
+         if (i<9) return "0" + (i + 1);
+         else return i+1;})(),
+                x-6,canvas.height-10);
      c.stroke();
  };
 };
