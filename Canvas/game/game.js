@@ -21,6 +21,8 @@ c.fillStyle = 'yellow';
 c.beginPath();
 c.arc(x, y, 10, 100, 200, false);
 c.fill();
+c.fillStyle = 'green';
+c.fillText('Use arrows', 10, 100);
 };
 paint();
 
@@ -56,7 +58,7 @@ function animTestX() {
         x--
         paint();
     }
-    window.requestAnimationFrame(animTestX);
+    window.requestAnimationFrame(animTestX, 2000/30);
 };
 function animTestY() {
     if (y < yz) {
@@ -71,13 +73,13 @@ function animTestY() {
         yz = 120;
         paint();
     };
-    window.requestAnimationFrame(animTestY);
+    window.requestAnimationFrame(animTestY, 2000/30);
 };
 
 function ballDown(e) {
     if ( e < 72 ) {
       yz = 120;
-      window.requestAnimationFrame(animTestY);
+      window.requestAnimationFrame(animTestY, 2000/30);
     };
 };
 
