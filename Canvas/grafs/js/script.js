@@ -24,6 +24,14 @@ var canvas = document.getElementById('canvas');
  var c = canvas.getContext('2d');
  c.fillStyle = 'lightgray';
  c.fillRect(0,0,canvas.height,canvas.width);
+ c.fillStyle = 'black';
+ c.lineWidth = 2.0;
+ c.beginPath();
+ for (var i = 0; i < canvas.height; i = i + 5) {
+     c.moveTo(0,i);
+     c.lineTo(4,i);
+     c.stroke();
+ }
 
  var x = 0;
  var y = 0;
