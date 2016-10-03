@@ -6,13 +6,13 @@ function animTestX() {
     for (x; x < xz; x++) {
         paint();
     };
-    window.requestAnimationFrame(animTestX);
+    animTestX;
 };
 function animTestY() {
     for (y; y < yz; y++) {
         paint();
     };
-    window.requestAnimationFrame(animTestY);
+    animTestY;
 };
 function paint() {
 c.fillStyle = 'lightblue';
@@ -28,24 +28,24 @@ function running(z) {
     document.addEventListener("keydown", function(event) {
     if (event.keyCode == 37 & x-10 > 0) {
       xz = x - z;
-      window.requestAnimationFrame(animTestX);
+     animTestX();
     };
     if (event.keyCode == 39 & x+10 < canvas.width) {
       xz = x + z;
-      window.requestAnimationFrame(animTestX);
+      animTestX();
     };
     if (event.keyCode == 38 & y == 120 ) {
       yz = y - 50;
-      window.requestAnimationFrame(animTestY);
+      animTestY();
     };
     if (event.keyCode == 40 & y+10 < canvas.height) {
       yz = y + z;
-      window.requestAnimationFrame(animTestY);
+      animTestY();
     };
 });
 };
 
-running(2);
+running(10);
 
 function animTestX() {
     if (x < xz) {
