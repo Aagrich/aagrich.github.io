@@ -1,31 +1,55 @@
+/* -------- H E A D E R ----------*/
+
 .wrapper {
     width: 100%;
-    margin: 0 auto;
 }
-.nav {
-    text-align: center;
+header {
+    width: 100%;
+}
+.nav_background {
     width: 100%;
     height: 41px;
-    overflow: visible;
     background-image: url(img/top-panel.jpg);
     background-repeat: repeat-x; 
 }
+.nav {
+    width: 980px;
+    margin: 0 auto;
+}
+.nav a,p {
+    text-decoration: none;
+    color: lightgray;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font-size: 10px;
+}
 .menu {
-    float: left;
+float: left;
 }
 .menu li {
     display: inline-block;
+    height: 100%;
+    margin: 15px;
 }
 .reg_menu {
     float: right;
 }
 .reg_menu li {
     display: inline-block;
+    height: 100%;
+    margin: 15px;
 }
 .basket {
-    margin: 0 auto;
-    color: aliceblue;
+    margin-left: 425px;
+    width:307px;
+    height: 52px;
+    text-align: center;
+    background-image: url(img/basket_background.png);
 }
 .basket p {
     display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
 }
