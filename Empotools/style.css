@@ -76,13 +76,26 @@ header {
     background-position: 43px 20px, 0 -6px;
 }
 
+
 .info {
+    position: relative;
     float: left;
     width: 450px;
     height: 110px;
     background-image: url(img/menu_background.jpg);
     background-repeat: no-repeat;
     background-position: 225px 0;
+}
+.info:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 14;
+    width:16px;
+    height: 110px;
+    background-image: url(img/bolt.png), url(img/bolt.png);
+    background-repeat: no-repeat;
+    background-position: 0 8px, 0 92px;
 }
 .info li {
 
