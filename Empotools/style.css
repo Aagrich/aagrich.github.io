@@ -11,12 +11,19 @@ header {
     height: 41px;
     background-image: url(img/top-panel.jpg);
     background-repeat: repeat-x; 
+    overflow: hidden;
 }
-.nav {
+.second_nav_background {
+    width: 100%;
+    height: 110px;
+    background-image: url(img/info_panel.jpg);
+    background-repeat: repeat-x;
+}
+.nav, .second_nav {
     width: 980px;
     margin: 0 auto;
 }
-.nav a,p {
+.nav a,.basket p {
     text-decoration: none;
     color: lightgray;
     font-family: sans-serif;
@@ -25,7 +32,7 @@ header {
     font-size: 10px;
 }
 .menu {
-float: left;
+    float: left;
 }
 .menu li {
     display: inline-block;
@@ -41,6 +48,9 @@ float: left;
     margin: 15px;
 }
 .basket {
+    position: absolute;
+    top: 0;
+    left: 25%;
     margin-left: 425px;
     width:307px;
     height: 52px;
@@ -52,4 +62,36 @@ float: left;
     margin-left: 20px;
     margin-top: 20px;
     color: white;
+}
+.second_nav {
+    
+}
+.logo {
+    text-align: center;
+    float: left;
+    width: 248px;
+    height:155px;
+    background-image:url(img/logo.png), url(img/logo_background.png);
+    background-repeat: no-repeat;
+    background-position: 43px 20px, 0 -6px;
+}
+
+.info {
+    float: left;
+    width: 450px;
+    height: 110px;
+    background-image: url(img/menu_background.jpg);
+    background-repeat: no-repeat;
+    background-position: 225px 0;
+}
+.info li {
+
+}
+.info a {
+
+    text-decoration: none;
+    color: black;
+}
+.contacts {
+    display: inline-block;
 }
