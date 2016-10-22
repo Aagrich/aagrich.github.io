@@ -73,6 +73,7 @@ header {
     margin-top: 9px;
 }
 .goods_catalog {
+    opacity: 0;
     position: absolute;
     text-align:left; 
     top: 163px;
