@@ -37,76 +37,150 @@ header {
 .menu {
     float: left;
 }
-.menu li {
-    display: inline-block;
-    height: 100%;
-    margin: 15px;
-}
 .reg_menu {
     float: right;
 }
-.reg_menu li {
+.menu li, .reg_menu li {
     display: inline-block;
-    height: 100%;
-    margin: 15px;
+    width: auto;
 }
-
-.second_nav {
-    
+.menu a, .reg_menu a {
+    line-height: 41px;
+    padding: 0 15px;
 }
 .logo {
-    text-align: center;
-    float: left;
-    width: 248px;
-    height:155px;
+    margin-left: 4px;
+    width: 245px;
+    height:125px;
     background-image:url(img/logo.png), url(img/logo_background.png);
     background-repeat: no-repeat;
     background-position: 43px 20px, 0 -6px;
 }
+.catalog {
+    text-align: center;
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 253px;
+    height: 240px;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-image: url(img/catalog_background.png);
+    background-repeat: no-repeat;
+    background-position:  0 85px;
+}
+.catalog p {
+    margin-top: 9px;
+}
+.goods_catalog {
+    position: absolute;
+    text-align:left; 
+    top: 163px;
+    left: 20px;
+    background-image: url(img/category_background.jpg);
+    background-size: cover;
+}
+.goods_catalog li{
+    line-height: 32px;
+}
+.goods_catalog a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    margin-right: 2px;
+    color: lightgrey;
+}
+.goods_catalog li a:before {
+    content: "";
+    color: black;
+    display: inline-block;
+    float: left;
+    margin: 4px 8px 0 8px;
+    width: 24px;
+    height: 26px;
+    background-image: url(img/icons.png);
+    background-position: 0 0;
+}
 
+.goods_catalog li:nth-child(1) a:before {
+     background-position: 0 0;
+}
+.goods_catalog li:nth-child(2) a:before {
+     background-position: 0 468px;
+}
+.goods_catalog li:nth-child(3) a:before {
+     background-position: 0 436px;
+}
+.goods_catalog li:nth-child(4) a:before {
+     background-position: 0 402px;
+}
+.goods_catalog li:nth-child(5) a:before {
+     background-position: 0 365px;
+}
+.goods_catalog li:nth-child(6) a:before {
+     background-position: 0 24px;
+}
+.goods_catalog li:nth-child(7) a:before {
+     background-position: 0 330px;
+}
+.goods_catalog li:nth-child(8) a:before {
+     background-position: 0 300px;
+}
+.goods_catalog li:nth-child(9) a:before {
+     background-position: 0 268px;
+}
+.goods_catalog li:nth-child(10) a:before {
+     background-position: 0 232px;
+}
+.goods_catalog li:nth-child(11) a:before {
+     background-position: 0 202px;
+}
+.goods_catalog li:nth-child(12) a:before {
+     background-position: 0 162px;
+}
+.goods_catalog li:nth-child(13) a:before {
+     background-position: 0 128px;
+}
+.goods_catalog li:nth-child(14) a:before {
+     background-position: 0 96px;
+}
+.goods_catalog li:nth-child(15) a:before {
+     background-position: 0 62px;
+}
 
 .info {
-    position: relative;
     float: left;
     width: 450px;
     height: 110px;
-    background-image: url(img/menu_background.jpg);
+    background-image:url(img/menu_bolt.png), url(img/menu_bolt.png), url(img/menu_background.jpg);
     background-repeat: no-repeat;
-    background-position: 225px 0;
+    background-position: 423px 10px, 423px 95px, 225px 0;
 }
-.info:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 14;
-    width:16px;
-    height: 110px;
-    background-image: url(img/bolt.png), url(img/bolt.png);
-    background-repeat: no-repeat;
-    background-position: 0 8px, 0 92px;
-}
-.info ul {
+.info_menu {
     display: inline-block;
     margin: 10px 10px 10px 40px;
 }
-.info li {
+.info_menu li {
     margin: 5px;
 }
-.info a {
+.info_menu a {
     font-family: sans-serif;
     font-size: 10px;
     text-decoration: none;
     color: black;
 }
+
 .contacts_status_wrapper {
     display: inline-block;
     width: 310px;
     height: 110px;
+    overflow: hidden;
 }
 .contacts {
     float: left;
     height: 50%;
-    padding: 20px 0 0 0;
+    padding: 12px 0 0 0;
     font-size: 14px;
 }
 .contacts p {
@@ -116,8 +190,8 @@ header {
 .status {
     display: inline-block;
     line-height: 20px;
-    margin: 30px 0 0 0;
-    width: 140px;
+    margin-top: 25px;
+    width: 125px;
     float: right;
     font-size: 11px;
     font-family: sans-serif;
@@ -131,11 +205,10 @@ header {
 }
 .networks_ico_wrapper {
     float:right; 
-    width: 140px;
+    width: 125px;
     display: inline-block;
 }
 .vk_link {
-    margin-left: 20x;
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -168,11 +241,35 @@ header {
     font-family: sans-serif;
 }
 .call_us {
+    overflow: hidden;
     display: inline-block;
+    text-align: center;
+}
+.phone_number {
+    font-size: 24px;
+    line-height: 30px;
+}
+.about_number {
+    font-size: 10px;
+    color: grey;
+}
+.call_back {
+    margin: 10px;
+    font-size: 10px;
+    line-height: 43px;
+    color: white;
+    width: 182px;
+    background-image:  url(img/bolt.png), url(img/bolt.png), url(img/bolt.png), url(img/bolt.png),url(img/backcall_background.png);
+    background-repeat: no-repeat;
+    background-position: 2 2, 2 30, 162 2,162 30, 0 0;
+}
+.search_box {
+    margin-left: 255px;
 }
 /*---------RIGHT MENU----------*/
 
 .short_menu_wrapper {
+    display: none;
     position: fixed;
     top: 0;
     width: 100%;
