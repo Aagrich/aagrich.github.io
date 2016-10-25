@@ -4,7 +4,13 @@ i {
 
 
 /* -------- H E A D E R ----------*/
-
+.main_background {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/background.jpg), url(img/second_background.jpg);
+    background-repeat: repeat-x, repeat;
+    background-size: 750px, contain;
+}
 
 header {
     width: 100%;
@@ -293,6 +299,12 @@ header {
     background-color: red;
     color: white;
 }
+
+
+/*--------M A I N   P A G E----------*/
+
+
+
 .wrapper {
     padding-top: 25px;
     clear: both;
@@ -390,12 +402,32 @@ header {
     box-shadow: 1px;
     -webkit-box-shadow: inset 0px -1px 1px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px -1px 1px 0px rgba(0,0,0,0.5);
-    box-shadow: inset 0px -1px 1px 0px rgba(0,0,0,0.5);
+     box-shadow: inset 0px -1px 1px 0px rgba(0,0,0,0.5);
 }
 .rounds_wrapper li:nth-child(2) {
     background-color: red;
 }
-/*---------RIGHT MENU----------*/
+
+
+.brand_slider {
+    float: right;
+    max-width: calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: 720px;
+    height: 112px;
+    margin: 5px 0;
+    padding: 5px;
+    background-image: url(img/brand_background.jpg);
+}
+.brand_viewer {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/*---------R I G H T   M E N U----------*/
+
+
 
 .short_menu_wrapper {
     display: none;
