@@ -411,18 +411,102 @@ header {
 
 .brand_slider {
     float: right;
-    max-width: calc(100% - 10px);
-    width: calc(100% - 10px);
-    min-width: 720px;
+    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+    min-width: 710px;
     height: 112px;
-    margin: 5px 0;
-    padding: 5px;
+    margin: 10px 0;
+    padding: 10px;
     background-image: url(img/brand_background.jpg);
 }
-.brand_viewer {
-    width: 100%;
+.brand_wrapper {
+    overflow: hidden;
     height: 100%;
+    width: 100%;
     background-color: white;
+}
+.brand_viewer {
+    width: 100000px;
+    height: 112px;
+}
+.brand_viewer li:nth-child(n) {
+    display: inline-block;
+    height: 72px;
+    width: 160px;
+    margin: 40px 40px 0 40px;
+    background-image: url(img/hammer.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.lider_slider {
+    float: right;
+    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+    min-width: 710px;
+    height: 230px;
+    margin: 10px 0;
+    padding: 10px;
+    background-image: url(img/lider_background.jpg);
+}
+
+.lider_slider h5 {
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.lider_wrapper {
+    clear: both;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+.lider_viewer {
+    width: 100000px;
+    height: 210px;
+    padding:0 30px;
+}
+.lider_viewer li:nth-child(n) {
+    display: inline-block;
+    height: 210px;
+    width: 220px;
+    overflow: hidden;
+    margin: 0;
+    background-image: url(img/goods_item.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lider_viewer h6 {
+    color: grey;
+    margin: 10px 0 140px 10px;
+}
+.goods_old_price {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    color: grey;
+    font-size: 12px;
+    text-decoration: line-through;
+    
+}
+.goods_price {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    
+}
+.lider_viewer button {
+    float: right;
+    border: 0;
+    background-color: yellow;
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+    border-radius: 5px;
 }
 
 /*---------R I G H T   M E N U----------*/

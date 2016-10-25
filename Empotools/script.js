@@ -15,7 +15,7 @@
                 Velocity( topSlider, {'margin-left' : '125px'}, 1150);
             };
             if (brandSlider) {
-                Velocity( brandSlider, {width : (brandSlider.offsetWidth + 240)+"px"}, 800);
+                Velocity( brandSlider, {width : (brandSlider.offsetWidth + 250)+"px"}, 800);
                 Velocity( brandSlider, {'margin-bottom' : '5px'}, 1000)
             }
             setTimeout(function(){funcStatus = false;}, 1200);
@@ -28,7 +28,7 @@
                 Velocity( topSlider, {'margin-left' : '250px'}, 600);
             };
              if (brandSlider) {
-                Velocity( brandSlider, {width : (brandSlider.offsetWidth - 260)+"px"}, 700);
+                Velocity( brandSlider, {width : (brandSlider.offsetWidth - 270)+"px"}, 700);
                 Velocity( brandSlider, {'margin-bottom' : '25px'}, 1000)
             };
         };
