@@ -1,16 +1,21 @@
 (function(){
-    
-    function showMenu(mainElement, menu, act, start, end ) {
-    var el = document.getElementById(mainElement);
-    var goal = document.getElementById(menu);
-    el.addEventListener("mouseover", function(){
-        velocity(goal, {act : end}, 1000);
-    });
-    el.addEventListener("mouseout", function(){
-        velocity(goal, {act : start}, 1000);
-    });
+    var goalStatus = false;   
+    var el = document.getElementById('catalog');
+    var goal = document.getElementById('goodsCatalog');
+    function showMenu() {
+        if (goalStatus === true) {
+            goalStatus = false;
+            Velocity( goal, {height : 0}, 1000);
+            return;
+        };
+        if (goalStatus === false) {
+            goalStatus = true;
+            Velocity( goal, {height : '520px'}, 1000);
+        };
+
     };
     
-    showMenu("catalog", "goodsCatalog", 'opacity', 0, 1);
+    el.addEventListener('click', showMenu);
 
 })();
+    
