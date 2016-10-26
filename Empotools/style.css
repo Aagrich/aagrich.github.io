@@ -543,7 +543,7 @@ header {
     clear: both;
     width: calc(100% - 10px);
     overflow: hidden;
-    height: auto;
+    height: 920px;
     padding: 10px 5px;
     background-image: url(img/about_background.jpg);
 }
@@ -671,11 +671,37 @@ header {
 }
 .shops_citys {
     width: calc(100% - 90px);
+    position: relative;
+    height: auto;
     border: 1px solid lightgrey;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
+}
+.shops_citys ul {
+    height: 100px;
+    overflow: hidden;
 }
 .shops_citys li {
     display: inline-block;
+    margin: 10px;
+}
+.citys_map {
+    float: right;
+    margin: -45px 0 0 20px;
+}
+#shopsListButton {
+    position: absolute;
+    bottom: -7px;
+    display: inline-block;
+    padding: 0 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: white;
+}
+footer {
+    width: 100%;
+    background-image: url(img/footer_background.jpg);
 }
 /*---------R I G H T   M E N U----------*/
 

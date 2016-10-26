@@ -38,4 +38,29 @@
     el.addEventListener('click', showMenu);
 
 })();
+(function(){
+    var el = document.getElementById('shopsListButton');
+    var goal = document.getElementById('shopsCitysList');
+    var parent = document.getElementById('aboutUs');
+    var goalStatus = false;
+    var funcStatus = false;
+    function showCitys() {
+         if (funcStatus) return;
+        funcStatus = true;
+        if (goalStatus === true) {
+            goalStatus = false;
+            Velocity( goal, {height : '100px'}, 700);
+            Velocity( parent, {height : (parent.offsetHeight - 120)+'px'}, 700);
+            setTimeout(function(){funcStatus = false;}, 1200);
+          return;
+        };
+        if (goalStatus === false) {
+            goalStatus = true;
+            Velocity( goal, { height : "180px" }, 1000);
+            Velocity( parent, { height : (parent.offsetHeight + 80)+'px' }, 1000);
+        };
+        setTimeout(function(){funcStatus = false;}, 1200);
+    };
+    el.addEventListener('click', showCitys);
+})();
     
