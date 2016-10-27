@@ -107,14 +107,12 @@ header {
 }
 .goods_catalog li a:before {
     content: "";
-    color: black;
     display: inline-block;
     float: left;
     margin: 4px 8px 0 8px;
     width: 24px;
     height: 26px;
     background-image: url(img/icons.png);
-    background-position: 0 0;
 }
 
 .goods_catalog li:nth-child(1) a:before {
@@ -721,6 +719,7 @@ footer {
 }
 .nav_info {
     margin: 0 190px 0 125px;
+    height: 100%;
     padding: 20px;
     overflow: hidden;
     border-right: 1px solid #909090;
@@ -761,9 +760,10 @@ footer {
     line-height: 22px;
 }
 
-.conection_types {
+.connection_types {
     float: right;
     width: 173px;
+    height: 100%;
     border-left: 1px solid #272727;
     padding: 18px;
     background-image: url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png);
@@ -800,30 +800,54 @@ footer {
 .networks_links li:nth-child(6) {
     background-position: -144px 0;
 }
-
+.subscribe_news {
+    display: block;
+    color: white;
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+}
+.connection_types input {
+    padding: 0 5px;
+    line-height: 22px;
+    width: 100%;
+    border: 0;
+    font-size: 12px;
+}
+.connection_types button {
+    line-height: 22px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid grey;
+    background-color: yellow;
+}
+.copyright_text {
+    margin-top: 50px;
+    color: lightgrey;
+    line-height: 22px;
+    font-size: 14px;
+}
+.who_is_we {
+    color: lightgrey;
+    line-height: 22px;
+    font-size: 14px;
+}
 
 /*---------R I G H T   M E N U----------*/
 
 
-
-.short_menu_wrapper {
-    display: none;
+.short_menu {
+    z-index: 1000;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 1px;
     height: 100%;
-}
-.short_menu {
-    position: relative;
-    width: 980px;
-    margin: 0 auto;
-    height: 100%;
+    overflow: hidden;
 }
 .basket {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 420px;
-    width:307px;
+    left: calc(100%/2 - 60px); 
+    width: 307px;
     height: 52px;
     text-align: center;
     background-image: url(img/basket_background.png);
@@ -833,5 +857,87 @@ footer {
     margin-left: 20px;
     margin-top: 20px;
     color: white;
+}
+.right_menu {
+    position: fixed;
+    width: 90px;
+    left: calc(100%/2 + 500px); 
+    top: 160px;
+    border-radius: 5px;
+    background-color: rgba( 29, 29, 29, 0.6);
+    border-color: #7d7d7d #595959;
+    border-right-style: groove;
+    border-right-width: 2px;
+    border-left-style: ridge;
+    border-left-width: 2px;
+    border-top-style: ridge;
+    border-top-width: 2px;
+    border-bottom-style: groove;
+    border-bottom-width: 2px;
+
+}
+.right_menu li{ 
+    display: block;
+    float: left;
+    width: 90px;
+    height: 50px;
+    background-image: url(img/right_menu_ico.png);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #4a4a4a;
+    
+}
+.right_menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.right_menu li:hover {
+    background-image: url(img/right_menu_ico_active.png);
+    background-color: rgb( 29, 29, 29);
+}
+.right_menu li:nth-child(1) {
+     background-position: 30px 12px;
+}
+.right_menu li:nth-child(2) {
+     background-position: 30px -37px;
+}
+.right_menu li:nth-child(3) {
+     background-position: 30px -86px;
+}
+.right_menu li:nth-child(4) {
+     background-position: 30px -137px;
+}
+.right_menu li:nth-child(5) {
+     background-position: 30px -188px;
+}
+.right_menu li:nth-child(6) {
+     background-position: 28px -238px;
+}
+.right_menu li:nth-child(7) {
+     background-position: 30px -285px;
+}
+.right_menu li:nth-child(8) {
+     background-position: 30px -335px;
+}
+.right_menu li:nth-child(9) {
+     background-position: 30px -385px;
+}
+.right_menu li:nth-child(10) {
+     background-position: 30px -435px;
+}
+.right_menu li:nth-child(11) {
+     background-position: 30px -485px;
+}
+.right_menu li:nth-child(12) {
+     background-position: 30px -537px;
+}
+.right_menu li:nth-child(13) {
+     background-position: 30px -585px;
+}
+.right_menu li:nth-child(14) {
+     background-position: 30px -637px;
+}
+.right_menu li:nth-child(15) {
+     background-position: 30px -688px;
 }
 
