@@ -701,8 +701,107 @@ header {
 }
 footer {
     width: 100%;
+    height: 325px;
+    margin-top: 35px;
+    overflow: hidden;
     background-image: url(img/footer_background.jpg);
 }
+.pay_types {
+    float: left;
+    width: 125px;
+    height: 100%;
+    text-align: center;
+    background-image: url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px, 102px 5px, 5px 310px, 102px 310px;
+    border-right: 1px solid #272727;
+}
+.pay_types img {
+    margin: 60px auto;
+}
+.nav_info {
+    margin: 0 190px 0 125px;
+    padding: 20px;
+    overflow: hidden;
+    border-right: 1px solid #909090;
+    border-left: 1px solid #909090;
+    background-image: url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px, 620px 5px, 5px 310px, 620px 310px;
+}
+.nav_info a {
+    color: white;
+    font-size: 14px;
+}
+.nav_info li {
+    margin: 10px;
+}
+.help_info {
+    float: left;
+    width: 190px;
+}
+.codex_info {
+    float: right;
+    width: 220px;
+}
+
+
+.market_links {
+    margin-top: 28px;
+    width: 600px;
+    height: 42px;
+}
+.site_info {
+    margin-top: 30px;
+    color: lightgrey;
+    line-height: 22px;
+}
+.if_mistake {
+    color: lightgrey;
+    line-height: 22px;
+}
+
+.conection_types {
+    float: right;
+    width: 173px;
+    border-left: 1px solid #272727;
+    padding: 18px;
+    background-image: url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png), url(img/foter_bolt.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px, 190px 5px, 5px 310px, 190px 310px;
+}
+.networks_links {
+    height: 28px;
+    width: auto;
+    font-size: 5px; /*like margin-left: 5px for li - but it better */
+}
+.networks_links li {
+    display: inline-block;
+    height: 100%;
+    width: 28px;
+    background-image: url(img/networks_links.png);
+    background-repeat: no-repeat;
+}
+.networks_links li:nth-child(1) {
+    background-position: 0 0;
+}
+.networks_links li:nth-child(2) {
+    background-position: -29px 0;
+}
+.networks_links li:nth-child(3) {
+    background-position: -58px 0;
+}
+.networks_links li:nth-child(4) {
+    background-position: -87px 0;
+}
+.networks_links li:nth-child(5) {
+    background-position: -115px 0;
+}
+.networks_links li:nth-child(6) {
+    background-position: -144px 0;
+}
+
+
 /*---------R I G H T   M E N U----------*/
 
 
@@ -735,3 +834,4 @@ footer {
     margin-top: 20px;
     color: white;
 }
+
