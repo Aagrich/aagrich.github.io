@@ -36,7 +36,7 @@
 }
 
 body {
-    font-family: "PT Sans";
+    font-family: "PT Sans Caption";
 }
 
 i {
@@ -96,7 +96,6 @@ header {
 .nav a {
     display: block;
     padding: 16px;
-    font-family: 'PT Sans Caption';
     text-decoration: none;
     color: #c9c9c9;
     font-size: 10px;
@@ -180,7 +179,6 @@ border: 0;
     display: block;
     width: 100%;
     height: 100%;
-    font-family: "PT Sans Caption";
     font-size: 10px;
     margin-right: 2px;
     color: lightgrey;
@@ -248,7 +246,7 @@ border: 0;
     margin: 5px;
 }
 .info_menu a {
-    font-size: 10px;
+    font-size: 11px;
     text-decoration: none;
     color: black;
 }
@@ -270,7 +268,7 @@ border: 0;
 }
 .status {
     display: inline-block;
-    line-height: 20px;
+    line-height: 18px;
     margin-top: 25px;
     width: 125px;
     float: right;
@@ -325,7 +323,7 @@ border: 0;
     text-align: center;
 }
 .phone_number {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
 }
 .about_number {
@@ -353,14 +351,16 @@ border: 0;
 }
 .search_box input {
     width: 625px;
-    height: 100%;
+    font-size: 10px;
+    line-height: 34px;
     border-width: 0;
 }
 .search_box button {
     float: right;
-    height: 100%;
+    line-height: 34px;
     width: 90px;
     border-width: 0;
+    font-size: 10px;
     text-align: center;
     background-color: red;
     color: white;
@@ -412,7 +412,7 @@ border: 0;
     line-height: 105px;
     background-color: red;
     color: white;
-    font-size: 36px;
+    font-size: 33px;
     text-align: center;
     border-radius: 96px;
 }
@@ -514,8 +514,8 @@ border: 0;
 
 .goods_slider h5 {
     font-size: 24px;
+    font-family: "PT Sans"
     color: white;
-    font-weight: bold;
     margin-bottom: 13px;
 }
 
@@ -554,7 +554,7 @@ border: 0;
     height: 210px;
     padding:0 40px;
 }
-.goods_viewer li:nth-child(n) {
+.goods_viewer li {
     display: inline-block;
     height: 210px;
     width: 215px;
@@ -567,6 +567,8 @@ border: 0;
 
 }
 .goods_viewer h6 {
+    font-size: 14px;
+    font-weight: bold;
     color: grey;
     margin: 10px 0 140px 40px;
 }
@@ -596,10 +598,20 @@ border: 0;
     float: right;
     border: 0;
     background-color: yellow;
-    padding: 10px;
+    padding: 5px 15px;
     margin: 0 10px 5px 10px;
+    line-height: 23px;
+    font-family: "PT Sans";
+    font-size: 10px;
     border-radius: 5px;
 }
+
+
+
+/*------A B O U T   U S---------------*/
+
+
+
 .about_us {
     clear: both;
     width: calc(100% - 10px);
@@ -620,10 +632,11 @@ border: 0;
     line-height: 40px;
     padding: 0 40px;
     background-color: red;
+    font-size: 18px;
     font-weight: bold;
 }
 .about_us h4 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: red;
     margin-bottom: 30px;
@@ -711,12 +724,13 @@ border: 0;
     margin: 5px;
 }
 .video_name {
-    font-weight: bold;
+    font-size: 14px;
 }
 .video_viewers {
     color: lightgrey;
 }
 .video_author {
+    font-size: 12px;
     color: grey;
 }
 .our_shops {
@@ -724,7 +738,7 @@ border: 0;
     padding: 10px 10px 10px 30px;
 }
 .our_shops_header {
-    font-size: 26px;
+    font-size: 24px;
     margin: 15px 30px;
 }
 .shops_citys {
@@ -741,6 +755,10 @@ border: 0;
 .shops_citys li {
     display: inline-block;
     margin: 10px;
+}
+.shops_citys li a {
+    font-size: 13px;
+    text-decoration: none;
 }
 .citys_map {
     float: right;
@@ -789,10 +807,10 @@ footer {
 }
 .nav_info a {
     color: white;
-    font-size: 14px;
+    font-size: 13px;
 }
 .nav_info li {
-    margin: 10px;
+    margin: 10px 5px;
 }
 .help_info {
     float: left;
@@ -810,12 +828,15 @@ footer {
     height: 42px;
 }
 .site_info {
+    font-size: 13px;
     margin-top: 30px;
     color: lightgrey;
+    font-size: 12px;
     line-height: 22px;
 }
 .if_mistake {
     color: lightgrey;
+    font-size: 12px;
     line-height: 22px;
 }
 
@@ -832,7 +853,7 @@ footer {
 .networks_links {
     height: 28px;
     width: auto;
-    font-size: 5px; /*like margin-left: 5px for li - but it better */
+    font-size: 3px; 
 }
 .networks_links li {
     display: inline-block;
@@ -863,32 +884,34 @@ footer {
     display: block;
     color: white;
     margin: 30px 0 20px 0;
+    font-size: 13px;
     font-weight: bold;
 }
 .connection_types input {
     padding: 0 5px;
-    line-height: 22px;
+    line-height: 25px;
     width: 100%;
     border: 0;
-    font-size: 12px;
+    font-size: 10px;
 }
 .connection_types button {
-    line-height: 22px;
+    line-height: 25px;
     width: 100%;
     margin-top: 10px;
     border: 1px solid grey;
     background-color: yellow;
+    font-size: 10px;
 }
 .copyright_text {
     margin-top: 50px;
     color: lightgrey;
     line-height: 22px;
-    font-size: 14px;
+    font-size: 12px;
 }
 .who_is_we {
     color: lightgrey;
     line-height: 22px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /*---------R I G H T   M E N U----------*/
