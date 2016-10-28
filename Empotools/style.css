@@ -34,15 +34,12 @@
     font-weight: bold;
     font-style: normal;
 }
-
+i {
+    color: #c90201;
+}
 body {
     font-family: "PT Sans Caption";
 }
-
-i {
-    color: red;
-}
-
 
 /* -------- H E A D E R ----------*/
 .main_background {
@@ -75,13 +72,21 @@ header {
     margin: 0 auto;
     font-size: 0;
 }
+.second_nav {
+    width: 1025px;
+    margin: 0 auto;
+    font-size: 0;
+    background-image: url(img/bolt.png),url(img/bolt.png),url(img/bolt.png),url(img/bolt.png);
+    background-repeat: no-repeat;
+    background-position: 993px 5px, 1008px 5px,993px 95px, 1008px 95px;
+}
 .menu {
     float: left;
     margin-left: 15px;
 }
 .reg_menu {
     float: right;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 .nav li {
     display: inline-block;
@@ -111,7 +116,8 @@ header {
     height: 110px;
     background-image:url(img/menu_bolt.png), url(img/menu_bolt.png), url(img/menu_background.jpg);
     background-repeat: no-repeat;
-    background-position: 423px 10px, 423px 95px, 225px 0;
+    background-position: 433px 10px, 433px 95px, 235px 0;
+    border-right: 1px solid #a2a2a2;
 }
 .logo {
     margin-left: 4px;
@@ -240,10 +246,10 @@ border: 0;
 }
 .info_menu {
     display: inline-block;
-    margin: 10px 10px 10px 40px;
+    margin: 10px 10px 10px 35px;
 }
 .info_menu li {
-    margin: 5px;
+    margin: 10px;
 }
 .info_menu a {
     font-size: 11px;
@@ -252,8 +258,9 @@ border: 0;
 }
 
 .contacts_status_wrapper {
+    padding-left: 10px;
     display: inline-block;
-    width: 310px;
+    width: 295px;
     height: 110px;
     overflow: hidden;
 }
@@ -270,10 +277,10 @@ border: 0;
     display: inline-block;
     line-height: 18px;
     margin-top: 25px;
-    width: 125px;
+    width: 110px;
     float: right;
-    font-size: 11px;
-    color: crimson;
+    font-size: 10px;
+    color: #c90201;
 }
 .tell_about_us {
     clear: both;
@@ -282,8 +289,9 @@ border: 0;
     margin: auto 0;
 }
 .networks_ico_wrapper {
+    margin-right: 10px;
     float:right; 
-    width: 125px;
+    width: 110px;
     display: inline-block;
 }
 .vk_link {
@@ -295,12 +303,12 @@ border: 0;
     
 }
 .ok_link {
-    margin-left: 6px;
+    margin-left: 5px;
     width: 28px;
     height: 28px;
     display: inline-block;
     background-image: url(img/networks.png);
-    background-position: 64 0;
+    background-position: 62 0;
 }
 .fb_link {
     margin-left: 6px;
@@ -318,17 +326,25 @@ border: 0;
     font-size: 10px;
 }
 .call_us {
+    float: right;
     overflow: hidden;
     display: inline-block;
+    padding-right: 20px;
+    margin-right: 15px;
     text-align: center;
+    height: 100%;
+    border-bottom-color: #afafaf #eeeeee;
+    border-right: 2px groove;
 }
 .phone_number {
+    margin-top: 10px;    
     font-size: 20px;
-    line-height: 30px;
+    line-height: 28px;
+    color: #a20201;
 }
 .about_number {
     font-size: 10px;
-    color: grey;
+    color: #999999;
 }
 .call_back {
     margin: 10px;
@@ -336,24 +352,29 @@ border: 0;
     line-height: 43px;
     color: white;
     width: 182px;
+    cursor: pointer;
     background-image:  url(img/bolt.png), url(img/bolt.png), url(img/bolt.png), url(img/bolt.png),url(img/backcall_background.png);
     background-repeat: no-repeat;
     background-position: 2 2, 2 30, 162 2,162 30, 0 0;
 }
 .search_box {
-    margin-top: 15px;
+    margin: 15px 35px 0 0;
     float: right;
     width: 720px;
     height: 36px;
-    border: 5px solid rgba(0,0,0, 0.5);
+    border: 5px solid rgba( 2, 2, 2, 0.5);
     border-radius: 5px;
     clear: left;
 }
 .search_box input {
-    width: 625px;
+    width: 630px;
+    padding-left: 20px;
     font-size: 10px;
     line-height: 34px;
     border-width: 0;
+}
+.search_box input:before {
+    content: "&#128269;";
 }
 .search_box button {
     float: right;
@@ -362,8 +383,9 @@ border: 0;
     border-width: 0;
     font-size: 10px;
     text-align: center;
-    background-color: red;
+    background-color: #e60603;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -380,8 +402,8 @@ border: 0;
 .top_slider_viewer {
     margin-left: 125px;
     width: 720px;
-    height: 310px;
-    border: 5px solid rgba(0,0,0, 0.5);
+    height: 450px;
+    border: 5px solid rgba( 2, 2, 2, 0.5);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -447,7 +469,7 @@ border: 0;
 }
 .rounds_wrapper {
     position: absolute;
-    bottom: 15px;
+    bottom: 155px;
     right: 15px;
     float: right;
     width: auto;
@@ -470,6 +492,85 @@ border: 0;
 .rounds_wrapper li:nth-child(2) {
     background-color: red;
 }
+.sub_slider {
+    font-size: 0;
+}
+.sub_slider li {
+    position: relative;
+    display: inline-block;
+    width: 199px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-right: none;
+    background-color: white;
+}
+.sub_slider li:nth-child(2) {
+    top: -200px;
+}
+.sub_slider button {
+    float: right;
+    border: 0;
+    background-color: yellow;
+    padding: 5px 15px;
+    margin: 0 10px 5px 10px;
+    line-height: 23px;
+    font-family: "PT Sans";
+    font-size: 10px;
+    border-radius: 5px;
+}
+.stock {
+    font-family: "PT Sans";
+    font-size: 12px;
+    color: #ff5858;
+    font-weight: bold;
+}
+.stock_goods_name {
+    font-size: 12px;
+    margin-top: 8px;
+}
+.goods_type {
+    margin-top: 3px;
+    font-size: 12px;
+    color: #777777;
+}
+.stock_old_price {
+    font-size: 12px;
+    margin-top: 15px;
+    display: inline-block;
+    float: left;
+    color: #747474;
+    text-decoration: line-through;
+}
+.stock_new_price {
+    margin: 10px 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    float: left;
+}
+.sub_slider img {
+    margin: 10px  0 0 35px;
+}
+.tech_info {
+    float: left;
+    width: 100px;
+    font-size: 11px;
+}
+.sub_slider button {
+    display: inline-block;
+    float: right;
+    border: 0;
+    background-color: yellow;
+    padding: 5px 15px;
+    line-height: 23px;
+    font-family: "PT Sans";
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+
+/***************** S L I D E R S *****************/
+
 
 
 .brand_slider {
@@ -535,12 +636,11 @@ border: 0;
     top: 95px;
     display: inline-block;
     text-align: center;
-    line-height: 20px;
+    line-height: 22px;
     color: white;
     background-color: rgba(215, 40, 40, 0.9);
     width: 35px;
-    height: 20px;
-    font-size: 18px;
+    font-size: 22px;
     font-family:monospace;
 }
 .goods_button_left {
