@@ -1,3 +1,5 @@
+/*   C A T A L O G        A N I M A T I O N */
+
 (function(){
     var el = document.getElementById('catalog');
     var goal = document.getElementById('goodsCatalog');
@@ -15,7 +17,7 @@
                 Velocity( topSlider, {'margin-left' : '125px'}, 1150);
                 setTimeout(function(){arrow.style.marginTop = "0"; arrow.style.transform = "rotate(0)";}, 650);
             };
-            setTimeout(function(){funcStatus = false;}, 1200);
+            setTimeout(function(){funcStatus = false;}, 800);
           return;
         };
         if (goalStatus === false) {
@@ -27,13 +29,16 @@
                 arrow.style.marginTop = "-5px";
             };
         };
-        setTimeout(function(){funcStatus = false;}, 1200);
+        setTimeout(function(){funcStatus = false;}, 800);
     };
 
     
     el.addEventListener('click', showMenu);
 
 })();
+
+/* C I T Y S   A N I M A T I O N */
+
 (function(){
     var el = document.getElementById('shopsListButton');
     var goal = document.getElementById('shopsCitysList');
@@ -60,4 +65,34 @@
     el.addEventListener('click', showCitys);
 })();
 
+/* T O P    S L I D E R  */
+
+(function(){
+    // var viewer = document.getElementById('topSlider');
+    var slider = document.getElementById('slider');
+    var slides = slider.getElementsByTagName('section');
+    var slide = slides[2];
+    var roundsBox = document.getElementById('navRounds');
+    for (var i = 0; i < slides.length; i++ ) {
+        var round = document.createElement('li');
+        round.classList.add("slide"+ i);
+        roundsBox.appendChild(round);
+    };
+    var rounds = roundsBox.getElementsByTagName('li');
+    function showSlide() {
+        if (event.target === roundsBox) return;
+        for (var i =0; i < rounds.length;i ++) {
+            rounds[i].style.backgroundColor = 'rgba( 0, 0, 0, 0.5)';
+        }
+
+        var goal = event.target;
+        console.log(goal);
+        goal.style.backgroundColor = 'red';
+    } ;
+
+    roundsBox.addEventListener('click', showSlide);
+    
+    
+    
+})();
          

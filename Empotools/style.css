@@ -494,9 +494,6 @@ border: 0;
     -moz-box-shadow: inset 0px -1px 1px 0px rgba(0,0,0,0.5);
      box-shadow: inset 0px -1px 1px 0px rgba(0,0,0,0.5);
 }
-.rounds_wrapper li:nth-child(2) {
-    background-color: red;
-}
 .sub_slider {
     font-size: 0;
 }
@@ -508,9 +505,12 @@ border: 0;
     border: 1px solid #cccccc;
     border-right: none;
     background-color: white;
+    transition: transform 1s;
 }
-.sub_slider li:nth-child(2) {
-    top: -170px;
+.sub_slider li:hover {
+    width: 198px;
+    border: 1px solid #e60906;
+    transform: translateY(-170px);
 }
 .stock {
     font-family: "PT Sans";
@@ -1033,7 +1033,7 @@ footer {
 .basket {
     position: fixed;
     top: 0;
-    left: calc(100%/2 - 60px); 
+    left: calc(100%/2 - 80px); 
     width: 307px;
     height: 52px;
     text-align: center;
