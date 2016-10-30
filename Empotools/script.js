@@ -108,6 +108,36 @@
     roundsBox.addEventListener('click', showSlide);
     demonstration(1000, 0);
     
+})();
+
+(function(){
+    var slider = document.getElementById('brandSlider');
+    var slides = slider.getElementsByTagName('li');
+    var lt = document.getElementById('brandLt');
+    var gt = document.getElementById('brandGt');
+    var step = slides[0].offsetWidth;
+    var length = slides.length;
+    var status = 0;
+    console.log(length);
+    function scrollLeft() {
+        var edge = slides.length*step - 4*step;
+        if (slider.offsetLeft === 0) {
+            Velocity( slider, {"margin-left": -edge}, 2300);
+            return;
+        }
+        Velocity( slider, {'margin-left': status + step}, 1000);
+        status = status + step;
+    };
+    function scrollRight() {
+        var edge = slides.length*step;
+        if (slider.offsetLeft === edge) {
+            Velocity( slider, {"margin-left": 0}, 2300);
+        };
+        Velocity( slider, {'margin-left': status - step}, 1000);
+        status = status - step;
+    };
+    lt.addEventListener('click', scrollLeft);
+    gt.addEventListener('click', scrollRight);
+    
     
 })();
-         
