@@ -71,27 +71,42 @@
     // var viewer = document.getElementById('topSlider');
     var slider = document.getElementById('slider');
     var slides = slider.getElementsByTagName('section');
-    var slide = slides[2];
     var roundsBox = document.getElementById('navRounds');
     for (var i = 0; i < slides.length; i++ ) {
         var round = document.createElement('li');
-        round.classList.add("slide"+ i);
+        round.value = i;
         roundsBox.appendChild(round);
     };
     var rounds = roundsBox.getElementsByTagName('li');
     function showSlide() {
         if (event.target === roundsBox) return;
-        for (var i =0; i < rounds.length;i ++) {
+        for (var i = 0; i < rounds.length; i++) {
             rounds[i].style.backgroundColor = 'rgba( 0, 0, 0, 0.5)';
         }
-
         var goal = event.target;
-        console.log(goal);
         goal.style.backgroundColor = 'red';
+        var value = -(goal.value * 720)+'px';
+        Velocity( slider, {'margin-left': value}, 1000);
     } ;
+    function demonstration(time, n) {
+        var rounds = roundsBox.getElementsByTagName('li');
+        if (n === slides.length) {
+            n= 0;
+        };
+        var el = rounds[n];
+            for (var i =0; i < rounds.length;i ++) {
+            rounds[i].style.backgroundColor = 'rgba( 0, 0, 0, 0.5)';
+        };
+            el.style.backgroundColor = 'red';
+            var value = -(el.value * 720)+'px';
+            Velocity( slider, {'margin-left': value}, time);
+        n++;
+
+        setTimeout(function() {demonstration(time, n)}, 5000);
+    };
 
     roundsBox.addEventListener('click', showSlide);
-    
+    demonstration(1000, 0);
     
     
 })();
