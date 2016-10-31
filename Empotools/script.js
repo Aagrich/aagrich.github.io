@@ -120,23 +120,33 @@
     var step = slides[0].offsetWidth;
     var length = slides.length;
     var status = 0;
+    var counter = 4;
     console.log(length);
     function scrollLeft() {
         var edge = slides.length*step - 4*step;
-        if (slider.offsetLeft === 0) {
-            Velocity( slider, {"margin-left": -edge}, 2300);
+        if (counter <= 4) {
+            counter = length-4;
+            Velocity( slider, {"margin-left": -edge}, 2000);
+            status = -edge;
             return;
         }
-        Velocity( slider, {'margin-left': status + step}, 1000);
+        Velocity( slider, {'margin-left': status + step}, 600);
+        counter--;
         status = status + step;
+        console.log(counter);
     };
     function scrollRight() {
         var edge = slides.length*step;
-        if (slider.offsetLeft === edge) {
-            Velocity( slider, {"margin-left": 0}, 2300);
+        if (counter >= length) {
+            counter = 4;
+            Velocity( slider, {"margin-left": 0}, 2000);
+            status = 0;
+            return;
         };
-        Velocity( slider, {'margin-left': status - step}, 1000);
+        Velocity( slider, {'margin-left': status - step}, 600);
+        counter++;
         status = status - step;
+        console.log(counter);
     };
     lt.addEventListener('click', scrollLeft);
     gt.addEventListener('click', scrollRight);
