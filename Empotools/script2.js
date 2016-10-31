@@ -72,7 +72,6 @@
     var slider = document.getElementById('slider');
     var slides = slider.getElementsByTagName('section');
     var roundsBox = document.getElementById('navRounds');
-    var n = 0;
     for (var i = 0; i < slides.length; i++ ) {
         var round = document.createElement('li');
         round.value = i;
@@ -85,12 +84,11 @@
             rounds[i].style.backgroundColor = 'rgba( 0, 0, 0, 0.5)';
         }
         var goal = event.target;
-        n = goal.value;
         goal.style.backgroundColor = 'red';
-        var roundValue = -(goal.value * 720)+'px';
-        Velocity( slider, {'margin-left': roundValue}, 1000);
+        var value = -(goal.value * 720)+'px';
+        Velocity( slider, {'margin-left': value}, 1000);
     } ;
-    function demonstration(time) {
+    function demonstration(time, n) {
         var rounds = roundsBox.getElementsByTagName('li');
         if (n === slides.length) {
             n= 0;
@@ -104,11 +102,11 @@
             Velocity( slider, {'margin-left': value}, time);
         n++;
 
-        setTimeout(function() {demonstration(time)}, 5000);
+        setTimeout(function() {demonstration(time, n)}, 5000);
     };
 
     roundsBox.addEventListener('click', showSlide);
-    demonstration(1000);
+    demonstration(1000, 0);
     
 })();
 
