@@ -125,11 +125,11 @@
     function scrollLeft() {
         var edge = slides.length*step - 4*step;
         if (counter <= 4) {
-            counter = length-4;
+            counter = length;
             Velocity( slider, {"margin-left": -edge}, 2000);
             status = -edge;
             return;
-        }
+        };
         Velocity( slider, {'margin-left': status + step}, 600);
         counter--;
         status = status + step;
