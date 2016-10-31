@@ -112,6 +112,8 @@
     
 })();
 
+/*      B R A N D    S L I D E R     */
+
 (function(){
     var slider = document.getElementById('brandSlider');
     var slides = slider.getElementsByTagName('li');
@@ -121,7 +123,6 @@
     var length = slides.length;
     var status = 0;
     var counter = 4;
-    console.log(length);
     function scrollLeft() {
         var edge = slides.length*step - 4*step;
         if (counter <= 4) {
@@ -133,7 +134,6 @@
         Velocity( slider, {'margin-left': status + step}, 600);
         counter--;
         status = status + step;
-        console.log(counter);
     };
     function scrollRight() {
         var edge = slides.length*step;
@@ -146,10 +146,58 @@
         Velocity( slider, {'margin-left': status - step}, 600);
         counter++;
         status = status - step;
-        console.log(counter);
     };
     lt.addEventListener('click', scrollLeft);
     gt.addEventListener('click', scrollRight);
     
     
+})();
+
+/*  M A I N    S L I D E R S    */
+
+(function(){
+    function makeSlider(sliderViewer,sliderName, scrollTime, visibleElements ) {
+        var viewer = document.getElementById(sliderViewer);
+        var slider = document.getElementById(sliderName);
+        var slides = slider.getElementsByTagName('li');
+        var lt = viewer.getElementsByClassName('goods_button_left')[0];
+        var gt = viewer.getElementsByClassName('goods_button_right')[0];
+        var step = slides[0].offsetWidth;
+        var status = 0;
+        var counter = visibleElements;
+        var correction = visibleElements;
+        
+        function scrollLeft() {
+            var edge = slides.length*step - correction*step;
+            if (counter <= correction) {
+                counter = slides.length;
+                Velocity( slider, {"margin-left": -edge}, scrollTime*3);
+                status = -edge;
+                return;
+            };
+            Velocity( slider, {'margin-left': status + step}, scrollTime);
+            counter--;
+            status = status + step;
+        };
+        
+        function scrollRight() {
+            var edge = slides.length*step;
+            if (counter >= slides.length) {
+                counter = correction;
+                Velocity( slider, {"margin-left": 0}, scrollTime*3);
+                status = 0;
+                return;
+            };
+            Velocity( slider, {'margin-left': status - step}, scrollTime);
+            counter++;
+            status = status - step;
+        };
+        
+    lt.addEventListener('click', scrollLeft);
+    gt.addEventListener('click', scrollRight);
+    
+    };
+    makeSlider('liderViewer','sailsLider', 600, 6 );
+    makeSlider('electroViewer','electroGoods', 600, 6 );
+    makeSlider('gardenViewer','gardenGoods', 600, 6 );
 })();
