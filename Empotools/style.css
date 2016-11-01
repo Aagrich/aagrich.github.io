@@ -209,6 +209,12 @@ border: 0;
     height: 26px;
     background-image: url(img/icons.png);
 }
+.goods_catalog li:hover a:before {
+    background-image: url(img/active_ico.png);
+}
+.goods_catalog li:hover {
+    background-color: rgba( 0, 0, 0, 0.8);
+}
 
 .goods_catalog li:nth-child(1) a:before {
      background-position: 0 0;
@@ -997,7 +1003,8 @@ footer {
 }
 .nav_info a {
     color: white;
-    font-size: 13px;
+    font-size: 12px;
+    text-decoration: underline;
 }
 .nav_info li {
     margin: 10px 5px;
@@ -1013,7 +1020,7 @@ footer {
 
 
 .market_links {
-    margin-top: 28px;
+    margin-top: 40px;
     width: 600px;
     height: 42px;
 }
@@ -1073,7 +1080,7 @@ footer {
 .subscribe_news {
     display: block;
     color: white;
-    margin: 30px 0 20px 0;
+    margin: 40px 0 20px 0;
     font-size: 13px;
     font-weight: bold;
 }

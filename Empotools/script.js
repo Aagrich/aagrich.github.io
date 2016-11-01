@@ -5,6 +5,7 @@
     var goal = document.getElementById('goodsCatalog');
     var topSlider = document.getElementById('topSlider');
     var arrow = document.getElementById('catalogArrow');
+    var arrowWrapper = document.getElementById('catArrowWrapper');
     var goalStatus = false;   
     var funcStatus = false;
     function showMenu() {
@@ -16,6 +17,7 @@
             if (topSlider) {
                 Velocity( topSlider, {'margin-left' : '125px'}, 1150);
                 setTimeout(function(){arrow.style.marginTop = "0"; arrow.style.transform = "rotate(0)";}, 650);
+                arrowWrapper.style.height = '10px';
             };
             setTimeout(function(){funcStatus = false;}, 800);
           return;
@@ -27,6 +29,7 @@
                 Velocity( topSlider, {'margin-left' : '250px'}, 600);
                 arrow.style.transform = "rotate(180deg)";
                 arrow.style.marginTop = "-5px";
+                arrowWrapper.style.height = 0;
             };
         };
         setTimeout(function(){funcStatus = false;}, 800);
