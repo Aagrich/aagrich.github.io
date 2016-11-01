@@ -37,34 +37,6 @@
 
 })();
 
-/* C I T Y S   A N I M A T I O N */
-
-(function(){
-    var el = document.getElementById('shopsListButton');
-    var goal = document.getElementById('shopsCitysList');
-    var parent = document.getElementById('aboutUs');
-    var goalStatus = false;
-    var funcStatus = false;
-    function showCitys() {
-         if (funcStatus) return;
-        funcStatus = true;
-        if (goalStatus === true) {
-            goalStatus = false;
-            Velocity( goal, {height : '100px'}, 700);
-            Velocity( parent, {height : (parent.offsetHeight - 120)+'px'}, 700);
-            setTimeout(function(){funcStatus = false;}, 1200);
-          return;
-        };
-        if (goalStatus === false) {
-            goalStatus = true;
-            Velocity( goal, { height : "180px" }, 1000);
-            Velocity( parent, { height : (parent.offsetHeight + 80)+'px' }, 1000);
-        };
-        setTimeout(function(){funcStatus = false;}, 1200);
-    };
-    el.addEventListener('click', showCitys);
-})();
-
 /* T O P    S L I D E R  */
 
 (function(){
@@ -200,4 +172,32 @@
     makeSlider('liderViewer','sailsLider', 600, 6 );
     makeSlider('electroViewer','electroGoods', 600, 6 );
     makeSlider('gardenViewer','gardenGoods', 600, 6 );
+})();
+
+/* C I T Y S   A N I M A T I O N */
+
+(function(){
+    var el = document.getElementById('shopsListButton');
+    var goal = document.getElementById('shopsCitysList');
+    var parent = document.getElementById('aboutUs');
+    var goalStatus = false;
+    var funcStatus = false;
+    function showCitys() {
+         if (funcStatus) return;
+        funcStatus = true;
+        if (goalStatus === true) {
+            goalStatus = false;
+            Velocity( goal, {height : '100px'}, 700);
+            Velocity( parent, {height : (parent.offsetHeight - 140)+'px'}, 700);
+            setTimeout(function(){funcStatus = false;}, 1200);
+          return;
+        };
+        if (goalStatus === false) {
+            goalStatus = true;
+            Velocity( goal, { height : "220px" }, 1000);
+            Velocity( parent, { height : (parent.offsetHeight + 100)+'px' }, 1000);
+        };
+        setTimeout(function(){funcStatus = false;}, 1200);
+    };
+    el.addEventListener('click', showCitys);
 })();
