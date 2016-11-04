@@ -525,11 +525,13 @@ border: 0;
     background-color: white;
     transition: transform 1s;
 }
+/*
 .sub_slider li:hover {
     width: 198px;
     border: 1px solid #e60906;
     transform: translateY(-145px);
 }
+*/
 .stock {
     font-family: "PT Sans";
     font-size: 12px;
