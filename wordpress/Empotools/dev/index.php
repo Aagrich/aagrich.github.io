@@ -1,126 +1,6 @@
-<html>
-    <head>
-       <meta charset="utf-8">
-        <title>ЭМРО тулс</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>  
-            <div class="short_menu">
-                <div class="basket">
-                    <p>В КОРЗИНЕ:</p>
-                    <p>0 ТОВАРОВ</p>
-                    <p>НА СУМУ</p>
-                    <p>0 РУБ</p>
-                 </div>
-                 <ul class="right_menu">
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                      <li><a href="#"></a></li>
-                 </ul>
-            </div>
-            <header>
-                <div class="nav_background">
-                   <div class="nav">
-                     <ul class="menu">
-                        <li><a href="#">ГЛАВНАЯ</a></li>
-                        <li><a href="#">АКЦИИ</a></li>
-                        <li><a href="#">ВОЗДУХОДУВКИ</a></li>
-                        <li><a href="#">БЕНЗОГЕНЕРАТОРЫ</a></li>
-                     </ul>
-                     <ul class="reg_menu">
-                        <li><a href="#">ВХОД</a></li>
-                        <li><a href="#">РЕГИСТРАЦИЯ</a></li>
-                     </ul>
 
-                    </div>
-                </div>
-                <div class="second_nav_background">
-                <div class="second_nav">
-                <section class="info">
-                        <div class="catalog">
-                           <a class="logo">
-                           </a>
-                          <p id="catalog">  КАТАЛОГ ТОВАРОВ </p>
-                          <ul id="goodsCatalog" class="goods_catalog">
-                              <li><a href="">ЭЛЕКТРОИНСТРУМЕНТЫ</a></li>
-                              <li><a href="">ВСЕ ДЛЯ САДА</a></li>
-                              <li><a href="">ОБОРУДОВАНИЕ</a></li>
-                              <li><a href="">ИЗМИРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></li>
-                              <li><a href="">РУЧНЫЕ ИНСТРУМЕНТЫ</a></li>
-                              <li><a href="">ВОЗДУХОДУВКИ</a></li>
-                              <li><a href="">САНТЕХНИКА И КЛИМАТ</a></li>
-                              <li><a href="">СТАНКИ</a></li>
-                              <li><a href="">АВТОТОВАРЫ</a></li>
-                              <li><a href="">БЫТОВАЯ ТЕХНИКА И ОТДЫХ</a></li>
-                              <li><a href="">СВЕТ И ЭЛЕКТРИКА</a></li>
-                              <li><a href="">РАСХОДНЫЕ МАТЕРИАЛЫ</a></li>
-                              <li><a href="">СПЕЦОДЕЖДА И ЗАЩИТА</a></li>
-                              <li><a href="">ЗАПАСНЫЕ ЧАСТИ</a></li>
-                              <li><a href="">УЦЕНЕННЫЕ ТОВАРЫ</a></li>
-                            </ul>
-                            <div id="catArrowWrapper"><img id="catalogArrow" src="img/catalog_arrow.png" alt=""></div>
-                         </div>
-                    <ul class="info_menu">
-                        <li><a href="">ОПТОВИКАМ</a></li>
-                        <li><a href="">ОПЛАТА И ДОСТАВКА</a></li>
-                        <li><a href="">ПРОИЗВОДИТЕЛИ</a></li>
-                        <li><a href="">КОНТАКТЫ</a></li>
-                    </ul>
-
-                </section>
-                <div class="contacts_status_wrapper">
-                <div class="contacts">
-                    <p><i>skype</i> 320volt</p>
-                    <p><i>Email</i> 320volt@mail.ru</p>
-                </div>
-                <div class="status">
-                    ПРОВЕРИТЬ СТАТУС ЗАКАЗА
-                </div>
-                <div class="tell_about_us">
-                    <p class="tell_friends">
-                        РАСCКАЗАТЬ ДРУЗЬЯМ:
-                    </p>
-                    <div class="networks_ico_wrapper">
-                        <a href="#" class="vk_link"></a>
-                        <a href="#" class="ok_link"></a>
-                        <a href="#" class="fb_link"></a>
-                    </div>
-                </div>
-                </div>
-                <div class="call_us">
-                    <p class="phone_number">
-                        8 (800) 333-9-220
-                    </p>
-                    <p class="about_number">
-                        БЕСПЛАТНЫЙ ЗВОНОК ПО РОССИИ
-                    </p>
-                    <div class="call_back">
-                        ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-                    </div>
-                </div>
-
-
-                    <div class="search_box">
-                    <input placeholder="ПОИСК ПО САЙТУ" type="search">
-                    <button id="search">ПОИСК</button>
-                    </div>
-
-                  </div>
-               </div>
-            </header>
+<?php get_header(); ?>
+           
             <div class="main_background">
         <div class="wrapper">    
             <article id="topSlider"  class="top_slider_viewer">
@@ -147,7 +27,7 @@
                 <ul id="navRounds" class="rounds_wrapper">
                 </ul>
                     <section class="sub_slider_viewer">
-                <ul class="sub_slider" id="subSlider">
+                <ul class="sub_slider">
                     <li>
                         <p class="stock">Акция</p>
                         <p class="stock_goods_name">DDE V500II ТРОЛЛЬ </p>
@@ -159,7 +39,7 @@
                          <button>В КОРЗИНУ</button>
                     </li>
                     <li>
-                        <p class="stock">Акция</p>
+                         <p class="stock">Акция</p>
                         <p class="stock_goods_name">DDE V500II ТРОЛЛЬ </p>
                         <p class="goods_type">Бензиновый культиватор</p>
                         <p class="stock_old_price">18169 р.</p>
@@ -801,78 +681,7 @@
                     </section>
                 </div>
             </article>
-            <footer>
-                <section class="pay_types">
-                    <img src="img/pay_type.jpg" alt="" usemap="#map_paytypes" />
-                    <map name="map_paytypes">
-                        <area alt="" target="_blank" title="" href="http://www.visa.com.ua/" shape="poly" coords="12,7,51,7,52,23,13,23" />
-                        <area alt="" target="_blank" title="" href="https://qiwi.com/" shape="poly" coords="54,4,78,4,78,25,56,24" />
-                        <area alt="" target="_blank" title="" href="http://www.mastercard.com/" shape="poly" coords="12,41,45,40,46,62,12,62" />
-                        <area alt="" target="_blank" title="" href="www.sberbank.ua" shape="poly" coords="49,41,70,41,70,61,48,61" />
-                        <area alt="" target="_blank" title="" href="https://www.capitaller.ru" shape="poly" coords="11,73,82,73,82,92,11,92" />
-                        <area alt="" target="_blank" title="" href="https://money.yandex.ru" shape="poly" coords="83,126,12,125,12,102,83,102" />
-                    </map>
-                </section>
-                     <section class="connection_types">
-                    <ul class="networks_links">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <p class="subscribe_news">
-                        Подпишись на новости
-                    </p>
-                    <input type="email" placeholder="E-mail">
-                    <button id='subscraibeNews'>ПОДПИСАТЬСЯ</button>
-                    <p class="copyright_text">&copy; 2002 - 2014 "220 Вольт".</p>
-                    <p class="who_is_we">Сеть магазинов электроинструмента</p>
-                </section>
-                <section class="nav_info">
-                    <ul class="help_info">
-                        <li><a href="">Сервис</a></li>
-                        <li><a href="">Вакансии</a></li>
-                        <li><a href="">Мобильная версия</a></li>
-                        <li><a href="">Лабаратория подарка</a></li>
-                    </ul>
-                    <ul class="codex_info">
-                        <li><a href="">Правила торговли</a></li>
-                        <li><a href="">Наш рекорд Гиннесса</a></li>
-                        <li><a href="">Статьи</a></li>
-                        <li><a href="">Политика Конфиденциальности</a></li>
-                    </ul>
-                    <ul class="helpful_info">
-                        <li><a href="">Советы по выбору</a></li>
-                        <li><a href="">Полезные расчеты</a></li>
-                        <li><a href="">Отзывы</a></li>
-                        <li><a href="">Дополнительная гарантия</a></li>
-                    </ul>
+<?php
 
-                    <div class="market_links">
-                        <img src="img/market_links.jpg" alt="" usemap="#map_market" />
-                        <map name="map_market">
-                            <area alt="" title="" href="#" shape="poly" coords="5,10,98,10,98,38,5,38" />
-                            <area alt="" title="" href="#" shape="poly" coords="111,10,204,10,204,38,111,38" />
-                            <area alt="" title="" href="#" shape="poly" coords="217,10,310,10,310,38,217,38" />
-                            <area alt="" title="" href="#" shape="poly" coords="337,3,338,39,420,39,420,3" />
-                            <area alt="" title="" href="#" shape="poly" coords="456,10,595,10,595,38,456,38" />
-                        </map>
-                    </div>
-                    <p class="site_info">
-                        Информация на сайте www.220-volt.ru не является публичной офертой. Указаные цены действуют только при оформлении заказа через интернет-магазин www.220-volt.ru.
-                    </p>
-                    <p class="if_mistake">
-                        Обнаружив ошибку или неточность в тексте или описании товара, выделите ее и нажмите Shift+Enter.
-                    </p>
-                </section>
-           
-            </footer>
-           </div>
-        </div>
-        <script src="js/velocity.js"></script>
-        <script src="script.js"></script>
-    </body>
-</html>
-
+get_footer();
+                ?>

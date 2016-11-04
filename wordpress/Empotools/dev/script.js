@@ -87,47 +87,6 @@
     
 })();
 
-/*      S U B    S L I D E R         */
-
-(function(){
-    var slider = document.querySelectorAll('.sub_slider')[0];
-    var slides = slider.getElementsByTagName('li');
-    var elements = slider.querySelectorAll('*');
-    var watcher = document.querySelectorAll('.wrapper')[0];
-    var status = false;
-    var beforeElement = slides[0];
-    
-    function changeStatus() {
-        status = true;
-        return;
-    }
-    function stopEvent(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-    }
-    
-    function showSlide(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if(status) return;
-        status = true;
-        Velocity( beforeElement, { top : 0}, 700);
-        beforeElement = e.currentTarget;
-        Velocity( e.currentTarget, { top : '-175px'}, 900);
-        return;
-    }
-    for (var i = 0; i < elements.length; i ++) {
-        elements[i].addEventListener('mouseover', stopEvent);
-    }
-    for (var i = 0; i < slides.length; i ++) {
-        slides[i].addEventListener('mouseover', showSlide);
-    }
-    
-  
-
-})();
-
 /*      B R A N D    S L I D E R     */
 
 (function(){
