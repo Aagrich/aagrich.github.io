@@ -48,17 +48,20 @@
             <header>
                 <div class="nav_background">
                    <div class="nav">
-                     <ul class="menu">
-                        <li><a href="#">ГЛАВНАЯ</a></li>
-                        <li><a href="#">АКЦИИ</a></li>
-                        <li><a href="#">ВОЗДУХОДУВКИ</a></li>
-                        <li><a href="#">БЕНЗОГЕНЕРАТОРЫ</a></li>
-                     </ul>
-                     <ul class="reg_menu">
-                        <li><a href="#">ВХОД</a></li>
-                        <li><a href="#">РЕГИСТРАЦИЯ</a></li>
-                     </ul>
-
+                       <?php 
+                        wp_nav_menu( array(
+                            'menu'=>'Главное меню',
+                            'menu_class'=>'menu',
+                            'container'=>'li',
+                            'after'=>' /'
+                        ) );
+                       wp_nav_menu( array(
+                            'menu'=>'Меню входа/регистрации',
+                            'menu_class'=>'reg_menu',
+                            'container'=>'li',
+                            'after'=>' /'
+                        ) );
+                        ?>
                     </div>
                 </div>
                 <div class="second_nav_background">
@@ -83,14 +86,16 @@
                             </ul>
                             <div id="catArrowWrapper"><img id="catalogArrow" src=" <?php echo get_template_directory_uri() . '/img/catalog_arrow.png '?> " alt=""></div>
                          </div>
-                    <ul class="info_menu">
-                        <li><a href="">ОПТОВИКАМ</a></li>
-                        <li><a href="">ОПЛАТА И ДОСТАВКА</a></li>
-                        <li><a href="">ПРОИЗВОДИТЕЛИ</a></li>
-                        <li><a href="">КОНТАКТЫ</a></li>
-                    </ul>
-
-                </section>
+                         
+                         <?php 
+                        wp_nav_menu( array(
+                            'menu'=>'Информ-меню',
+                            'menu_class'=>'info_menu',
+                            'container'=>'li',
+                            'after'=>' /'
+                        ) );
+                        ?>
+                 </section>
                 <div class="contacts_status_wrapper">
                 <div class="contacts">
                     <p><i>skype</i> 320volt</p>

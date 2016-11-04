@@ -117,6 +117,15 @@ function empo_tools_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+register_nav_menus(array(
+	'right-top'    => 'Меню входа/регистрации',    
+    'left-top' => 'Главное меню',
+    'sub-top'    => 'Информ-меню',    
+    'left-bottom' => 'Меню помощи',
+    'between-bottom'    => 'Сервис-меню',    
+    'right-bottom' => 'Меню правил',
+));
+
 add_action( 'wp_enqueue_scripts', 'empo_tools_scripts' );
 
 /**

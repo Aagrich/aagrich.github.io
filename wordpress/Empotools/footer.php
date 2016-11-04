@@ -41,25 +41,26 @@
                     <p class="who_is_we">Сеть магазинов электроинструмента</p>
                 </section>
                 <section class="nav_info">
-                    <ul class="help_info">
-                        <li><a href="">Сервис</a></li>
-                        <li><a href="">Вакансии</a></li>
-                        <li><a href="">Мобильная версия</a></li>
-                        <li><a href="">Лабаратория подарка</a></li>
-                    </ul>
-                    <ul class="codex_info">
-                        <li><a href="">Правила торговли</a></li>
-                        <li><a href="">Наш рекорд Гиннесса</a></li>
-                        <li><a href="">Статьи</a></li>
-                        <li><a href="">Политика Конфиденциальности</a></li>
-                    </ul>
-                    <ul class="helpful_info">
-                        <li><a href="">Советы по выбору</a></li>
-                        <li><a href="">Полезные расчеты</a></li>
-                        <li><a href="">Отзывы</a></li>
-                        <li><a href="">Дополнительная гарантия</a></li>
-                    </ul>
-
+                      <?php 
+                        wp_nav_menu( array(
+                            'menu'=>'Меню помощи',
+                            'menu_class'=>'help_info',
+                            'container'=>'li',
+                            'after'=>' /'
+                        ) );
+                       wp_nav_menu( array(
+                            'menu'=>'Меню правил',
+                            'menu_class'=>'codex_info',
+                            'container'=>'li',
+                            'after'=>' /'
+                        ) );
+                         wp_nav_menu( array(
+                            'menu'=>'Сервис-меню',
+                            'menu_class'=>'helpful_info',
+                            'container'=>'li',
+                            'after'=>' /'
+                        ) );
+                        ?>
                     <div class="market_links">
                         <img src='<?php echo get_template_directory_uri() . "/img/market_links.jpg" ?>' alt="" usemap="#map_market" />
                         <map name="map_market">
