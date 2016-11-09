@@ -749,13 +749,9 @@ border: 0;
     width: 219px;
     border-left: 1px solid grey;
     overflow: hidden;
-    margin: 0;
-/*
-    background-image: url(img/goods_item.jpg);
+    background-image: url(img/no_image.jpg);
     background-repeat: no-repeat;
     background-position: center;
-*/
-
 }
 .goods_slider h6 {
     font-size: 14px;

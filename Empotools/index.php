@@ -270,38 +270,26 @@ get_header(); ?>
                         'category'        => '',
                         'orderby'         => 'ID',
                         'order'           => 'DESC',
-                        'include'         => '',
-                        'exclude'         => '',
-                        'meta_key'        => '',
-                        'meta_value'      => '',
                         'post_type'       => 'goods_list',
-                        'post_mime_type'  => '', // image, video, video/mp4
-                        'post_parent'     => '',
                         'post_status'     => 'publish'
-                                );
-                         $Thumb = array(
-                                'post_status' => null,
-                                'post_type' => 'attachment',
-                                'post_parent' => get_the_ID(),
-                                'post_mime_type' => 'image',
-                                'order' => 'ASC',
-                                'numberposts' => -1
                                 );
                          $posts = get_posts($args);
                          foreach($posts as $post) {
                                 setup_postdata($post);
-                                $price = get_post_meta($post->ID, 'price', true);
-                                $old_price = get_post_meta($post->ID, 'old_price', true);
-                                $good_name = get_post_meta($post->ID, 'good_name', true);
                                 $good_id   = $post->ID;
-                             
-                                echo '<li>' .
+                                $price = get_post_meta($good_id, 'price', true);
+                                $old_price = get_post_meta($good_id, 'old_price', true);
+                                $good_name = get_post_meta($good_id, 'good_name', true);
+                                $img_id  = get_post_meta($good_id, 'uploader_custom', true);
+                                $upload_dir = wp_get_upload_dir();
+                                $img_link = wp_get_attachment_image_url($img_id);
+                                                          
+                                echo '<li style="background-image:' . 'url('.  $img_link .  ')' . ' ">' .
                                     '<h6>' . $good_name . '</h6>' .
-                                     wp_get_attachment_image( 121, full, true ) .
                                     '<button value=' . $good_id . '> В КОРЗИНУ </button>' .
                                     '<div class="price">
                                        <p class="goods_old_price">' .
-                                           $old_price .
+                                            $old_price .
                                        '</p> 
                                        <p class="goods_price">' .
                                           $price .

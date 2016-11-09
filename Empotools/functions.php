@@ -170,12 +170,12 @@ $goods_meta_fields = array(
         'id'    => 'old_price',  
         'type'  => 'text'  
     ),
-//      array(  
-//        'label' => 'Изображение',  
-//        'desc'  => 'Фото или рисунок товара',  
-//        'id'    => 'goods_img',  
-//        'type'  => 'file',  
-//    ),
+      array(  
+        'label' => 'Изображение',  
+        'desc'  => 'Фото или рисунок товара',  
+        'id'    => 'goods_img',  
+        'type'  => 'file',  
+    ),
     array(  
         'label' => 'Описание товара',  
         'desc'  => 'текст с общим описанием товара',  
@@ -191,66 +191,18 @@ $goods_meta_fields = array(
     
 );
 
-function show_my_goods_metabox() {  
-global $goods_meta_fields; 
-global $post;  
-echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';  
-    echo '<table class="form-table">';  
-    foreach ($goods_meta_fields as $field) {  
-        $meta = get_post_meta($post->ID, $field['id'], true);  
-        echo '<tr>
-                <th><label for="'.$field['id'].'">'.$field['label'].'</label></th>
-                <td>';  
-                switch($field['type']) {  
-                    case 'text_name':  
-					    echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="90" />
-					        <br /><span class="description">'.$field['desc'].'</span>';  
-					break;
-					case 'text':  
-					    echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
-					        <br /><span class="description">'.$field['desc'].'</span>';  
-					break;
-                        
-//                    case 'file':  
-//					    echo '<input type="hidden" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" />
-//                        <a href="'.$meta.'" class="custom_file_prev">'.$meta.'</a><br />
-//                        <input id="goodsImgUpload" type="button" value="Выберите файл" />
-//                        <small> <a href="#" id="goodsImgClear">Убрать файл</a></small>
-//                        <br clear="all" /><span class="description">'.$field['desc'].'</span>';  
-//					break;
-                        
-                    case 'textarea':  
-					    echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" style="width:580px; height:320px;"></textarea>
-					        <br /><span class="description">'.$field['desc'].'</span>';  
-					break;
-				    case 'select':  
-					    echo '<select name="'.$field['id'].'" id="'.$field['id'].'">';  
-					    foreach ($field['options'] as $option) {  
-					        echo '<option', $meta == $option['value'] ? ' selected="selected"' : '', ' value="'.$option['value'].'">'.$option['label'].'</option>';  
-					    }  
-					    echo '</select><br /><span class="description">'.$field['desc'].'</span>';  
-					break;
-                }
-        echo '</td></tr>';  
-    }  
-    echo '</table>';
-}
-
 function goods_img_upload_script() {
-	// у вас в админке уже должен быть подключен jQuery, если нет - раскомментируйте следующую строку:
-	// wp_enqueue_script('jquery');
-	// дальше у нас идут скрипты и стили загрузчика изображений WordPress
+	wp_enqueue_script('jquery');
 	if ( ! did_action( 'wp_enqueue_media' ) ) {
 		wp_enqueue_media();
 	}
-	// само собой - меняем admin.js на название своего файла
  	wp_enqueue_script( 'myuploadscript', get_stylesheet_directory_uri() . '/js/upload.js', array('jquery'), null, false );
 }
  
 add_action( 'admin_enqueue_scripts', 'goods_img_upload_script' );
 
-function goods_img_upload_field( $name, $value = '', $w = 110, $h = 110) {
-	$default = get_stylesheet_directory_uri() . '/img/no-image.png';
+function goods_img_upload_field( $name, $value = '', $w = 120, $h = 110) {
+	$default = get_stylesheet_directory_uri() . '/img/no-image.jpg';
 	if( $value ) {
 		$image_attributes = wp_get_attachment_image_src( $value, array($w, $h) );
 		$src = $image_attributes[0];
@@ -268,13 +220,53 @@ function goods_img_upload_field( $name, $value = '', $w = 110, $h = 110) {
 	</div>
 	';
 }
+function goods_print_box($post) {
+	if( function_exists( 'goods_img_upload_field' ) ) {
+		goods_img_upload_field( 'uploader_custom', get_post_meta($post->ID, 'uploader_custom',true) );
+	}
+}
+
+
+function show_my_goods_metabox() {  
+global $goods_meta_fields; 
+global $post;  
+echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';  
+    echo '<table class="form-table">';  
+    foreach ($goods_meta_fields as $field) {  
+        $meta = get_post_meta($post->ID, $field['id'], true);  
+        echo '<tr>
+                <th><label for="'.$field['id'].'">'.$field['label'].'</label></th>
+                <td>';  
+                switch($field['type']) {  
+                    case 'text_name':  
+					    echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="90" />
+                        <br /><span class="description">'.$field['desc'].'</span>';  
+					break;
+					case 'text':  
+					    echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
+                        <br /><span class="description">'.$field['desc'].'</span>';  
+					break;
+                        
+                    case 'file':  
+                        goods_print_box($post);
+					break;
+                    case 'textarea':  
+					    echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'"  cols="120" rows="7">'.$meta.'</textarea>
+                        <br /><span class="description">'.$field['desc'].'</span>';  
+					break;
+                }
+        echo '</td></tr>';  
+    }  
+    echo '</table>';
+}
+
 
 function save_my_goods_meta_fields($post_id) {  
     global $goods_meta_fields;  
     if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))  
         return $post_id;  
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)  
-        return $post_id;  
+    if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
+		return $post_id;
     if ('goods_list' == $_POST['post_type']) {  
         if (!current_user_can('edit_page', $post_id))  
             return $post_id;  
@@ -290,8 +282,15 @@ function save_my_goods_meta_fields($post_id) {
             delete_post_meta($post_id, $field['id'], $old); 
         }  
     } 
-}  
+} 
+function goods_save_img_data( $post_id ) {
+	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
+		return $post_id;
+	update_post_meta( $post_id, 'uploader_custom', $_POST['uploader_custom']);
+	return $post_id;
+}
 add_action('save_post', 'save_my_goods_meta_fields'); 
+add_action('save_post', 'goods_save_img_data'); 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -355,6 +354,7 @@ add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'q
 add_post_type_support( 'page', 'post-formats' );
 
 add_action( 'wp_enqueue_scripts', 'empo_tools_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
