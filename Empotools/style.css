@@ -128,13 +128,14 @@ header {
     border-color: #1d1d1d #454545;
 }
 .nav a {
-    text-transform: uppercase;
     display: block;
     padding: 16px;
     text-decoration: none;
     color: #c9c9c9;
     font-size: 10px;
+    text-transform: uppercase;
     font-weight: bold;
+    font-family: "PT Sans Caption";
 }
 .nav a:hover {
     background-color: rgb( 29, 29, 29);
@@ -149,6 +150,7 @@ header {
     background-position: 433px 10px, 433px 95px, 235px 0;
     border-right: 1px solid #a2a2a2;
 }
+
 .logo {
     margin-left: 4px;
     width: 245px;
@@ -167,6 +169,7 @@ header {
     width: 253px;
     height: 240px;
     font-size: 16px;
+    font-family: "PT Sans Caption";
     background-image: url(img/catalog_background.png);
     background-repeat: no-repeat;
     background-position:  0 85px;
@@ -212,7 +215,7 @@ header {
     height: 10px;
 }
 .goods_catalog li:last-child {
-border: 0;
+    border: 0;
 }
 .goods_catalog a{
     text-transform: uppercase;
@@ -221,6 +224,7 @@ border: 0;
     width: 100%;
     height: 100%;
     font-size: 10px;
+    font-family: "PT Sans Caption";
     margin-right: 2px;
     color: lightgrey;
 }
@@ -294,6 +298,8 @@ border: 0;
 }
 .info_menu a {
     font-size: 11px;
+    font-family: "PT Sans Caption";
+    text-transform: uppercase;
     text-decoration: none;
     color: black;
 }
@@ -310,6 +316,7 @@ border: 0;
     height: 50%;
     padding: 12px 0 0 0;
     font-size: 14px;
+    font-family: "PT Sans Caption";
 }
 .contacts p {
     margin: 10px 10px;
@@ -321,12 +328,14 @@ border: 0;
     width: 110px;
     float: right;
     font-size: 10px;
+    font-family: "PT Sans Caption";
     color: #c90201;
 }
 .tell_about_us {
     clear: both;
     width: 100%;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     margin: auto 0;
 }
 .networks_ico_wrapper {
@@ -364,6 +373,7 @@ border: 0;
     margin: 10px 0 10px 10px;
     width: 150px;
     font-size: 10px;
+    font-family: "PT Sans Caption";
 }
 .call_us {
     float: right;
@@ -379,16 +389,19 @@ border: 0;
 .phone_number {
     margin-top: 10px;    
     font-size: 20px;
+    font-family: "PT Sans Caption";
     line-height: 28px;
     color: #a20201;
 }
 .about_number {
     font-size: 10px;
+    font-family: "PT Sans Caption";
     color: #999999;
 }
 .call_back {
     margin: 10px;
     font-size: 10px;
+    font-family: "PT Sans Caption";
     line-height: 43px;
     color: white;
     width: 182px;
@@ -409,6 +422,7 @@ border: 0;
     width: 630px;
     padding-left: 20px;
     font-size: 10px;
+    font-family: "PT Sans Caption";
     line-height: 34px;
     border-width: 0;
 }
@@ -420,12 +434,16 @@ border: 0;
     line-height: 34px;
     width: 90px;
     font-size: 10px;
+    font-family: "PT Sans Caption";
     text-align: center;
     background-color: #e60603;
     color: white;
     cursor: pointer;
 }
 .search_box button:hover {
+    background-color: #ebdb08;
+    color: red;
+    font-weight: bold;
 }
 
 
@@ -463,6 +481,7 @@ border: 0;
 .goods_name {
     display: inline-block;
     font-size: 36px;
+    font-family: "PT Sans Caption";
     padding: 35px 0 0 35px;
 }
 .discount {
@@ -476,6 +495,7 @@ border: 0;
     background-color: red;
     color: white;
     font-size: 33px;
+    font-family: "PT Sans Caption";
     text-align: center;
     border-radius: 96px;
 }
@@ -497,6 +517,7 @@ border: 0;
     text-align: right;
     padding-right: 40px;
     font-size: 36px;
+    font-family: "PT Sans Caption";
     color: white;
     font-weight: bold;
     background-color: rgba( 0, 0, 0, 0.5);
@@ -507,6 +528,7 @@ border: 0;
     text-decoration: line-through;
     color: grey;
     font-size: 24px;
+    font-family: "PT Sans Caption";
 }
 .rounds_wrapper {
     position: absolute;
@@ -538,19 +560,27 @@ border: 0;
     font-size: 0;
 }
 .sub_slider li {
-    position: relative;
+    position: absolute;
     display: inline-block;
     width: 199px;
     padding: 20px;
     border: 1px solid #cccccc;
     border-right: none;
     background-color: white;
-    transition: transform 1s;
+/*    transition: transform 1s;*/
+    transition: margin-top 1s;
 }
 .sub_slider li:hover {
     width: 198px;
     border: 1px solid #e60906;
-    transform: translateY(-145px);
+/*    transform: translateY(-145px);*/
+    margin-top: -145px;
+}
+.sub_slider li:nth-child(2) {
+    left: 240px;
+}
+.sub_slider li:nth-child(3) {
+    right: 0;
 }
 .stock {
     font-family: "PT Sans";
@@ -560,15 +590,18 @@ border: 0;
 }
 .stock_goods_name {
     font-size: 12px;
+    font-family: "PT Sans Caption";
     margin-top: 8px;
 }
 .goods_type {
     margin-top: 3px;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     color: #777777;
 }
 .stock_old_price {
     font-size: 12px;
+    font-family: "PT Sans Caption";
     margin-top: 15px;
     display: inline-block;
     float: left;
@@ -578,6 +611,7 @@ border: 0;
 .stock_new_price {
     margin: 10px 0 0 15px;
     font-size: 18px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
     display: inline-block;
     float: left;
@@ -591,6 +625,7 @@ border: 0;
     width: 100px;
     line-height: 15px;
     font-size: 11px;
+    font-family: "PT Sans Caption";
     color: #777777;
     height: 30px;
 }
@@ -605,6 +640,9 @@ border: 0;
     color: #6f6412;
     border-radius: 5px;
     background-image: linear-gradient(to bottom, #FFF767 0%, #F4E743 50%, #ebdb08 100%);
+}
+.sub_slider button:hover {
+    background-image: linear-gradient(to top, #FFF767 0%, #F4E743 50%, #ebdb08 100%);
 }
 
 
@@ -645,6 +683,7 @@ border: 0;
     background-color: rgba( 0, 0, 0, 0.3);
     width: 35px;
     font-size: 22px;
+    font-family: "PT Sans Caption";
     font-family:monospace;
 }
 .brand_wrapper h5 {
@@ -728,6 +767,7 @@ border: 0;
     background-color: rgba(215, 40, 40, 0.9);
     width: 35px;
     font-size: 22px;
+    font-family: "PT Sans Caption";
     font-family:monospace;
 }
 
@@ -744,6 +784,7 @@ border: 0;
     font-size: 0;
 }
 .goods_slider li {
+    text-align: center;
     display: inline-block;
     height: 210px;
     width: 219px;
@@ -754,10 +795,14 @@ border: 0;
     background-position: center;
 }
 .goods_slider h6 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: 14px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
     color: grey;
-    margin: 10px 0 140px 40px;
+    margin: 10px 0 140px 10px;
 }
 .price {
     width: 40%;
@@ -769,6 +814,7 @@ border: 0;
     margin-right: 10px;
     color: grey;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     text-decoration: line-through;
     
 }
@@ -777,6 +823,7 @@ border: 0;
     text-align: right;
     margin-right: 10px;
     font-size: 16px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
     color: red;
     
@@ -794,8 +841,9 @@ border: 0;
     background-image: linear-gradient(to bottom, #FFF767 0%, #F4E743 50%, #ebdb08 100%);
 }
 
-
-
+.goods_slider button:hover {
+    background-image: linear-gradient(to top, #FFF767 0%, #F4E743 50%, #ebdb08 100%);
+}
 /*------A B O U T   U S---------------*/
 
 
@@ -822,10 +870,12 @@ border: 0;
     padding: 0 40px;
     background-color: red;
     font-size: 18px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
 }
 .about_us h4 {
     font-size: 22px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
     color: red;
     margin-bottom: 30px;
@@ -851,12 +901,14 @@ border: 0;
 }
 .article_header {
     font-size: 15px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
     text-decoration: underline;
     margin: 0  10px;
 }
 .article_text {
     font-size: 12px;
+    font-family: "PT Sans Caption";
     margin: 10px;
     line-height: 24px;
     color: grey;
@@ -891,6 +943,7 @@ border: 0;
     color: grey;
     margin: 15px 5px;
     font-size: 11px;
+    font-family: "PT Sans Caption";
     line-height: 19px;
 }
 .twitter_answer {
@@ -898,6 +951,7 @@ border: 0;
     display: block;
     margin: 13px 5px 20px 5px;
     font-size: 11px;
+    font-family: "PT Sans Caption";
 }
 .our_video {
     display: inline-block;
@@ -927,13 +981,16 @@ border: 0;
 }
 .video_name {
     font-size: 13px;
+    font-family: "PT Sans Caption";
 }
 .video_viewers {
     color: #999999;
     font-size: 12px;
+    font-family: "PT Sans Caption";
 }
 .video_author {
     font-size: 13px;
+    font-family: "PT Sans Caption";
     line-height: 20px;
     color: #777777;
 }
@@ -944,6 +1001,7 @@ border: 0;
 .our_shops_header {
     display: inline-block;
     font-size: 22px;
+    font-family: "PT Sans Caption";
     margin: 15px 30px;
 }
 .shops_citys {
@@ -967,6 +1025,7 @@ border: 0;
 }
 .shops_citys li a {
     font-size: 12px;
+    font-family: "PT Sans Caption";
     flex-shrink: 0;
     color: black;
     text-decoration: none;
@@ -983,6 +1042,7 @@ border: 0;
     padding: 0 15px;
     font-weight: bold;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     cursor: pointer;
     background-color: white;
 }
@@ -1024,6 +1084,7 @@ footer {
 .nav_info a {
     color: white;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     text-decoration: underline;
 }
 .nav_info li {
@@ -1049,11 +1110,13 @@ footer {
     margin-top: 30px;
     color: lightgrey;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     line-height: 22px;
 }
 .if_mistake {
     color: lightgrey;
     font-size: 12px;
+    font-family: "PT Sans Caption";
     line-height: 22px;
 }
 
@@ -1070,7 +1133,8 @@ footer {
 .networks_links {
     height: 28px;
     width: auto;
-    font-size: 3px; 
+    font-size: 3px;
+    font-family: "PT Sans Caption";
 }
 .networks_links li {
     display: inline-block;
@@ -1102,6 +1166,7 @@ footer {
     color: white;
     margin: 40px 0 20px 0;
     font-size: 13px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
 }
 .connection_types input {
@@ -1110,6 +1175,7 @@ footer {
     width: 100%;
     border: 0;
     font-size: 10px;
+    font-family: "PT Sans Caption";
 }
 .connection_types button {
     line-height: 25px;
@@ -1118,17 +1184,20 @@ footer {
     border: 1px solid grey;
     background-color: yellow;
     font-size: 10px;
+    font-family: "PT Sans Caption";
 }
 .copyright_text {
     margin-top: 50px;
     color: lightgrey;
     line-height: 22px;
     font-size: 12px;
+    font-family: "PT Sans Caption";
 }
 .who_is_we {
     color: lightgrey;
     line-height: 22px;
     font-size: 12px;
+    font-family: "PT Sans Caption";
 }
 
 /*---------R I G H T   M E N U----------*/
@@ -1158,6 +1227,7 @@ footer {
     text-decoration: none;
     color: lightgray;
     font-size: 10px;
+    font-family: "PT Sans Caption";
     font-weight: bold;
 }
 .right_menu {

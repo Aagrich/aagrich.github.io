@@ -60,7 +60,8 @@
         }
         var goal = event.target;
         n = goal.value;
-        goal.style.backgroundColor = 'red';
+        //goal.style.backgroundColor = 'red';
+        Velocity( goal, {'background-color': '#ff0000'}, 1);
         var roundValue = -(goal.value * 720)+'px';
         Velocity( slider, {'margin-left': roundValue}, 1000);
     } ;
@@ -73,7 +74,8 @@
             for (var i =0; i < rounds.length;i ++) {
             rounds[i].style.backgroundColor = 'rgba( 0, 0, 0, 0.5)';
         };
-            el.style.backgroundColor = 'red';
+            //el.style.backgroundColor = 'red';
+            Velocity( el, {'background-color': '#ff0000'}, 1);
             var value = -(el.value * 720)+'px';
             Velocity( slider, {'margin-left': value}, time);
         n++;
@@ -171,9 +173,9 @@
     gt.addEventListener('click', scrollRight);
     
     };
-    makeSlider('liderViewer','sailsLider', 600, 6 );
-    makeSlider('electroViewer','electroGoods', 600, 6 );
-    makeSlider('gardenViewer','gardenGoods', 600, 6 );
+    makeSlider('liderViewer','sailsLider', 600, 4 );
+    makeSlider('electroViewer','electroGoods', 600, 4 );
+    makeSlider('gardenViewer','gardenGoods', 600, 4 );
 })();
 
 /* C I T Y S   A N I M A T I O N */

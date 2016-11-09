@@ -106,168 +106,11 @@ get_header(); ?>
                       <button class="goods_button_right">&gt;</button>    
                   </div>
                    <ul id='sailsLider' class="goods_slider">
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                   </ul>
-                  </div>
-               </section>
-                  <section class="goods_wrapper">
-                 <h5>Электротовары</h5>
-                  <div id="electroViewer" class="goods_viewer">
-                   <div class="wrapper_button_left">
-                      <button class="goods_button_left">&lt;</button>
-                  </div>
-                  <div class="wrapper_button_right">
-                      <button class="goods_button_right">&gt;</button>    
-                  </div>
-                   <ul id="electroGoods" class="goods_slider">
-                        <?php 
+                    <?php 
                             $args = array(
                         'numberposts'     => -1, 
                         'offset'          => 0,
-                        'category'        => '',
+                        'categoty_in'     => 23,
                         'orderby'         => 'ID',
                         'order'           => 'DESC',
                         'post_type'       => 'goods_list',
@@ -289,10 +132,58 @@ get_header(); ?>
                                     '<button value=' . $good_id . '> В КОРЗИНУ </button>' .
                                     '<div class="price">
                                        <p class="goods_old_price">' .
-                                            $old_price .
+                                            $old_price . ' р' .
                                        '</p> 
                                        <p class="goods_price">' .
-                                          $price .
+                                          $price . ' р' .
+                                       '</p>
+                                       </div>                      
+                                    </li>' ;
+                             }
+                            ?>
+                   </ul>
+                  </div>
+               </section>
+                  <section class="goods_wrapper">
+                 <h5>Электротовары</h5>
+                  <div id="electroViewer" class="goods_viewer">
+                   <div class="wrapper_button_left">
+                      <button class="goods_button_left">&lt;</button>
+                  </div>
+                  <div class="wrapper_button_right">
+                      <button class="goods_button_right">&gt;</button>    
+                  </div>
+                   <ul id="electroGoods" class="goods_slider">
+                        <?php 
+                            $args = array(
+                        'numberposts'     => -1, 
+                        'offset'          => 0,
+                        'categoty_in'     => 23,
+                        'orderby'         => 'ID',
+                        'order'           => 'DESC',
+                        'post_type'       => 'goods_list',
+                        'post_status'     => 'publish'
+                                );
+                         $posts = get_posts($args);
+                         foreach($posts as $post) {
+                                setup_postdata($post);
+                                $good_id   = $post->ID;
+                                $price = get_post_meta($good_id, 'price', true);
+                                $old_price = get_post_meta($good_id, 'old_price', true);
+                                $good_name = get_post_meta($good_id, 'good_name', true);
+                                $img_id  = get_post_meta($good_id, 'uploader_custom', true);
+                                $upload_dir = wp_get_upload_dir();
+                                $img_link = wp_get_attachment_image_url($img_id);
+                                                          
+                                echo '<li style="background-image:' . 'url('.  $img_link .  ')' . ' ">' .
+                                    '<h6>' . $good_name . '</h6>' .
+                                    '<button value=' . $good_id . '> В КОРЗИНУ </button>' .
+                                    '<div class="price">
+                                       <p class="goods_old_price">' .
+                                            $old_price . ' р' .
+                                       '</p> 
+                                       <p class="goods_price">' .
+                                          $price . ' р' .
                                        '</p>
                                        </div>                      
                                     </li>' ;
@@ -311,150 +202,41 @@ get_header(); ?>
                       <button class="goods_button_right">&gt;</button>    
                   </div>
                    <ul id="gardenGoods" class="goods_slider">
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
-                       <li>
-                           <h6>PHILIPS HD3033/00</h6>
-                           <button>В КОРЗИНУ</button>
-                           <div class="price">
-                           <p class="goods_old_price">
-                               5500 р
-                           </p>
-                           <p class="goods_price">
-                               3500 р
-                           </p>
-                           </div>
-                       </li>
+                    <?php 
+                            $args = array(
+                        'numberposts'     => -1, 
+                        'offset'          => 0,
+                        'categoty_in'     => 23,
+                        'orderby'         => 'ID',
+                        'order'           => 'DESC',
+                        'post_type'       => 'goods_list',
+                        'post_status'     => 'publish'
+                                );
+                         $posts = get_posts($args);
+                         foreach($posts as $post) {
+                                setup_postdata($post);
+                                $good_id   = $post->ID;
+                                $price = get_post_meta($good_id, 'price', true);
+                                $old_price = get_post_meta($good_id, 'old_price', true);
+                                $good_name = get_post_meta($good_id, 'good_name', true);
+                                $img_id  = get_post_meta($good_id, 'uploader_custom', true);
+                                $upload_dir = wp_get_upload_dir();
+                                $img_link = wp_get_attachment_image_url($img_id);
+                                                          
+                                echo '<li style="background-image:' . 'url('.  $img_link .  ')' . ' ">' .
+                                    '<h6>' . $good_name . '</h6>' .
+                                    '<button value=' . $good_id . '> В КОРЗИНУ </button>' .
+                                    '<div class="price">
+                                       <p class="goods_old_price">' .
+                                            $old_price . ' р' .
+                                       '</p> 
+                                       <p class="goods_price">' .
+                                          $price . ' р' .
+                                       '</p>
+                                       </div>                      
+                                    </li>' ;
+                             }
+                            ?>
                    </ul>
                   </div>
                </section>
