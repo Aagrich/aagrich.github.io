@@ -900,10 +900,11 @@ header {
     margin-bottom: 35px;
 }
 .article_header {
+    color: black;
+    text-decoration: underline;
     font-size: 15px;
     font-family: "PT Sans Caption";
     font-weight: bold;
-    text-decoration: underline;
     margin: 0  10px;
 }
 .article_text {
@@ -963,15 +964,26 @@ header {
 .our_video h4:before {
     background-position: 72px 0;
 }
-.video_info:before {
-    content: "";
+.video_thumbnail {
     display: inline-block;
     float: left;
     margin-right: 10px;
     width: 80px;
     height: 60px;
-    background-image: url(img/video_screen.jpg);
     background-size: cover;
+}
+.video_wrapper {
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.video_viewer {
+
 }
 .video_info {
     margin: 24px 0 24px 5px;

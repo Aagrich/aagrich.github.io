@@ -140,6 +140,7 @@ get_header(); ?>
                                        </div>                      
                                     </li>' ;
                              }
+                             wp_reset_postdata();
                             ?>
                    </ul>
                   </div>
@@ -188,6 +189,7 @@ get_header(); ?>
                                        </div>                      
                                     </li>' ;
                              }
+                            wp_reset_postdata();
                             ?>
                    </ul>
                   </div>
@@ -236,6 +238,7 @@ get_header(); ?>
                                        </div>                      
                                     </li>' ;
                              }
+                            wp_reset_postdata();
                             ?>
                    </ul>
                   </div>
@@ -248,22 +251,24 @@ get_header(); ?>
                     <section class="articles">
                     <h4>Статьи</h4>
                     <ul>
+                       <?php if(function_exists('fetch_feed')) {
+        
+                            //include_once(get_template_directory_uri() . 'theme-rss.php'); // the file to rss feed generator
+                            $feed = fetch_feed('http://test-site/feed/'); // specify the rss feed
+
+                            $limit = $feed->get_item_quantity(2); // specify number of items
+                            $items = $feed->get_items(0, $limit); // create an array of items
+
+                        }
+                        if ($limit == 0) echo '<div>Статьи временно отсутствуют</div>';
+                        else foreach ($items as $item) : ?>
                         <li>
-                            <p class="article_header">
-                                Как работать с подмотями
-                            </p>
-                            <p class="article_text">
-                                Чтобы понять, что такое подмости, достаточно вспомнить строительные леса. И то и другое - своего рода лестницы для...
-                            </p>
+                        <a class="article_header" href="<?php echo $item->get_permalink(); ?>" alt="<?php echo $item->get_title(); ?>">
+                        <?php echo $item->get_title(); ?> </a>
+                        <p class="article_text"><?php echo substr($item->get_description(), 0, 200); ?> ...</p>
                         </li>
-                        <li>  
-                            <p class="article_header">
-                                Как выбрать вышку тура
-                            </p>
-                            <p class="article_text">
-                                При ремонте потолка и отделке стен обычной лестницей-стремянкой не обойтись. ВО-первых, ее высота может оказаться...
-                            </p>
-                        </li>
+                        <?php endforeach; ?>
+
                     </ul>
                     </section>
                     <section class="twitter_messages">
@@ -308,17 +313,39 @@ get_header(); ?>
                     </ul>   
                     </section>
                     <section class="our_video">
-                    <h4>Наши видеообзоры</h4>  
-                    <div class="video_info">
-                        <p class="video_name">Уровень FIT 18420 "Модерн"</p>
-                        <p class="video_viewers">Просмотрено 23</p>
-                        <p class="video_author">220volt220</p>
-                    </div>
-                    <div class="video_info">
-                        <p class="video_name">Уровень FIT 18420 "Модерн"</p>
-                        <p class="video_viewers">Просмотрено 23</p>
-                        <p class="video_author">220volt220</p>
-                    </div>    
+                    <h4>Наши видеообзоры</h4> 
+                        <?php
+                            global $youtubevideo;
+                                 $args = array(
+                                'numberposts'     => 2, 
+                                'offset'          => 0,
+                                'categoty_in'     => 1,
+                                'orderby'         => 'ID',
+                                'order'           => 'DESC',
+                                'post_type'       => 'post',
+                                'post_status'     => 'publish'
+                                     );
+                            $myvideos = get_posts($args);
+                            foreach( $myvideos as $youtubevideo ){
+                                setup_postdata( $youtubevideo );
+                                $link = get_the_content() . "0";
+                                $id_position = strpos($link, '=') + 1;
+                                $video_id = substr($link, $id_position, -1);
+                                ?>
+                                <div class="video_info">
+                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id?>/mqdefault.jpg)" class="video_thumbnail">
+                                    <div class="video_wrapper"><div class="video_viewer"><?php the_content() ?></div></div>
+                                    </a>
+                                    <?php echo the_title('<p class="video_name">', '</p>') ?> 
+                                    <p class="video_viewers"></p>
+                                    <p class="video_viewers"><?php echo getPostViews(get_the_ID()); ?></p>
+                                    <p class="video_author"> <?php echo the_author() ?> </p>
+                                </div>
+                                <?php 
+                            }
+                            wp_reset_postdata();
+                            ?>
+<!--href="< echo get_the_content() ?>" target="_blank"-->
                     </section>
                     <section class="our_shops">
                     <p class="our_shops_header">

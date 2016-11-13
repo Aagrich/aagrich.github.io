@@ -60,8 +60,7 @@
         }
         var goal = event.target;
         n = goal.value;
-        //goal.style.backgroundColor = 'red';
-        Velocity( goal, {'background-color': '#ff0000'}, 1);
+        goal.style.backgroundColor = 'red';
         var roundValue = -(goal.value * 720)+'px';
         Velocity( slider, {'margin-left': roundValue}, 1000);
     } ;
@@ -74,8 +73,7 @@
             for (var i =0; i < rounds.length;i ++) {
             rounds[i].style.backgroundColor = 'rgba( 0, 0, 0, 0.5)';
         };
-            //el.style.backgroundColor = 'red';
-            Velocity( el, {'background-color': '#ff0000'}, 1);
+            el.style.backgroundColor = 'red';
             var value = -(el.value * 720)+'px';
             Velocity( slider, {'margin-left': value}, time);
         n++;
@@ -204,4 +202,76 @@
         setTimeout(function(){funcStatus = false;}, 1200);
     };
     el.addEventListener('click', showCitys);
+})();
+
+
+/*   S H O W    V I D E O  */
+
+(function(){
+    var firstVideo = document.getElementsByClassName('video_thumbnail')[0];
+    var secondVideo = document.getElementsByClassName('video_thumbnail')[1]
+    var videoWrapper;
+    var videoViewer;
+    
+    var stopVideo = function ( element ) {
+    var iframe = element.querySelector( 'iframe');
+    var video = element.querySelector( 'video' );
+    if ( iframe !== null ) {
+        var iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
+    }
+    if ( video !== null ) {
+        video.pause();
+    }
+    };
+    
+    
+    function hideVideo() {
+        event.stopPropagation();
+        videoWrapper.style.display = 'none';
+        stopVideo( videoViewer );
+        return;
+    }; 
+    function showVideo() {
+        var goal = event.target;
+        var video = goal.querySelectorAll('.video_wrapper')[0];
+        var viewer = goal.querySelectorAll('.video_viewer')[0];
+        console.log(video);
+        video.style.display = 'block';
+        videoWrapper = video;
+        videoViewer = viewer;
+        video.addEventListener('click', hideVideo);
+   };
+    
+    
+    firstVideo.addEventListener('click', showVideo);
+    secondVideo.addEventListener('click', showVideo);
+    
+    
+    
+//    var parent = document.querySelectorAll('body');
+//    var videoWrapper = createElement('div');
+//    videoWrapper.classList.add('video_wrapper');
+//    var videoViewer = createElement('div');
+//    videoViewer.classList.add('video_viewer');
+//    get
+//    
+//    var status = true;
+//    
+//    
+//    function showVideo() {
+//        parent.appendChild(videoWrapper);
+//        videoViewer.innerHTML = '<?php the_content(); setPostViews(get_the_ID()); ?>';
+//        videoWrapper.appendChild(videoViewer);
+//        status = false;
+//    };
+//    function hideVideo() {
+//        if (status) return;
+//        parent.removeChild(videoWrapper);
+//        status = true;
+//    };
+//    
+//     
+//    
+    
 })();

@@ -94,7 +94,7 @@ if ( ! function_exists( 'goods_list_cp' ) ) {
             'supports'            => array( 'title', 'excerpt', ),
             'taxonomies'          => array( 'goods_list_tax' ), 
             'public'              => true,
-            'menu_position'       => 5,
+            'menu_position'       => 3,
             'menu_icon'           => 'dashicons-cart',
         );
         register_post_type( 'goods_list', $args );
@@ -355,7 +355,43 @@ add_post_type_support( 'page', 'post-formats' );
 
 add_action( 'wp_enqueue_scripts', 'empo_tools_scripts' );
 
+// -------  RSS  -------//
 
+
+function my_categories_for_feed( $query ){  
+	if( ! $query->is_feed || ! $query->is_main_query() )
+		return;
+
+	$query->set( 'cat', '1' ); 
+}
+add_filter( 'pre_get_posts', 'my_categories_for_feed' );
+
+
+// ------ post/video views count--------//
+
+
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 просмотров";
+    }
+    return "Просмотрено " . $count;
+}
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
 /**
  * Implement the Custom Header feature.
  */
