@@ -973,17 +973,39 @@ header {
     background-size: cover;
 }
 .video_wrapper {
-  display: none;
-  top: 0;
-  left: 0;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .video_viewer {
-
+    margin: 0 auto;
+    position: relative;
+    top: 20%;
+}
+.close_button {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 15px;
+    top: -8px;
+    right: -8px;
+}
+.close_button:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 .video_info {
     margin: 24px 0 24px 5px;

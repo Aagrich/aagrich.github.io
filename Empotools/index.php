@@ -328,24 +328,24 @@ get_header(); ?>
                             $myvideos = get_posts($args);
                             foreach( $myvideos as $youtubevideo ){
                                 setup_postdata( $youtubevideo );
+                                $myvideo_id = $youtubevideo->ID;
                                 $link = get_the_content() . "0";
                                 $id_position = strpos($link, '=') + 1;
                                 $video_id = substr($link, $id_position, -1);
+                                $author = get_the_author();
                                 ?>
                                 <div class="video_info">
-                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id?>/mqdefault.jpg)" class="video_thumbnail">
+                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id?>/mqdefault.jpg)" class="video_thumbnail" <?php echo "onclick='countViews(" . $myvideo_id . ")'" ?> >
                                     <div class="video_wrapper"><div class="video_viewer"><?php the_content() ?></div></div>
                                     </a>
                                     <?php echo the_title('<p class="video_name">', '</p>') ?> 
-                                    <p class="video_viewers"></p>
-                                    <p class="video_viewers"><?php echo getPostViews(get_the_ID()); ?></p>
-                                    <p class="video_author"> <?php echo the_author() ?> </p>
+                                    <p class="video_viewers"><?php echo getPostViews($myvideo_id); ?></p>
+                                    <p class="video_author"> <?php echo $author ?> </p>
                                 </div>
-                                <?php 
+                              <?php 
                             }
                             wp_reset_postdata();
                             ?>
-<!--href="< echo get_the_content() ?>" target="_blank"-->
                     </section>
                     <section class="our_shops">
                     <p class="our_shops_header">

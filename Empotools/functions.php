@@ -367,31 +367,6 @@ function my_categories_for_feed( $query ){
 add_filter( 'pre_get_posts', 'my_categories_for_feed' );
 
 
-// ------ post/video views count--------//
-
-
-function getPostViews($postID){
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-        return "0 просмотров";
-    }
-    return "Просмотрено " . $count;
-}
-function setPostViews($postID) {
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
-        $count = 0;
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-    }else{
-        $count++;
-        update_post_meta($postID, $count_key, $count);
-    }
-}
 /**
  * Implement the Custom Header feature.
  */
@@ -416,3 +391,38 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// ------ post/video views count--------//
+
+
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 просмотров";
+    }
+    return "Просмотрено " . $count;
+}
+function setPostViews() {
+    $count_key = 'post_views_count';
+    $postID = $_GET['id'];
+    $count = get_post_meta($postID, $count_key, true);
+    $count++;
+      update_post_meta($postID, $count_key, $count);
+//    if($count==''){
+//        $count = 0;
+//        delete_post_meta($postID, $count_key);
+//        add_post_meta($postID, $count_key, '0');
+//    }else{
+//        $count++;
+//        update_post_meta($postID, $count_key, $count);
+//    }
+}
+
+
+add_action('wp_ajax_setPostViews', 'setPostViews');
+add_action('wp_ajax_nopriv_setPostViews', 'setPostViews');
+
+

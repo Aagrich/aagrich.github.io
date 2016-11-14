@@ -209,7 +209,8 @@
 
 (function(){
     var firstVideo = document.getElementsByClassName('video_thumbnail')[0];
-    var secondVideo = document.getElementsByClassName('video_thumbnail')[1]
+    var secondVideo = document.getElementsByClassName('video_thumbnail')[1];
+    var viewCounter = document.createElement('button');  //---- 'close' button
     var videoWrapper;
     var videoViewer;
     
@@ -236,7 +237,6 @@
         var goal = event.target;
         var video = goal.querySelectorAll('.video_wrapper')[0];
         var viewer = goal.querySelectorAll('.video_viewer')[0];
-        console.log(video);
         video.style.display = 'block';
         videoWrapper = video;
         videoViewer = viewer;
@@ -275,3 +275,29 @@
 //    
     
 })();
+
+/*      V I E W E R    C O U N T E R        */
+function getXmlHttp(){
+  var xmlhttp;
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    xmlhttp = new XMLHttpRequest();
+  }
+  return xmlhttp;
+}
+   function countViews(postID) {
+       console.log('start');
+       var req = getXmlHttp();
+       req.open('GET' , 'wp-admin/admin-ajax.php?action=setPostViews&id=' + postID, true);
+       console.log(req);
+       req.send(null);
+       console.log('end');
+   };
