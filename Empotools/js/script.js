@@ -294,10 +294,7 @@ function getXmlHttp(){
   return xmlhttp;
 }
    function countViews(postID) {
-       console.log('start');
        var req = getXmlHttp();
        req.open('GET' , 'wp-admin/admin-ajax.php?action=setPostViews&id=' + postID, true);
-       console.log(req);
        req.send(null);
-       console.log('end');
    };

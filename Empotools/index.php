@@ -108,15 +108,22 @@ get_header(); ?>
                    <ul id='sailsLider' class="goods_slider">
                     <?php 
                             $args = array(
-                        'numberposts'     => -1, 
-                        'offset'          => 0,
-                        'categoty_in'     => 23,
+                        'posts_per_page'  => -1,
+                        'offset'          =>  0,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'goods_list_tax',
+                                'field'    => 'id',
+                                'terms'    => array(5,4)
+                            )
+                        ),
                         'orderby'         => 'ID',
                         'order'           => 'DESC',
                         'post_type'       => 'goods_list',
                         'post_status'     => 'publish'
                                 );
-                         $posts = get_posts($args);
+                         $query = new WP_Query;
+                         $posts = $query->query($args);
                          foreach($posts as $post) {
                                 setup_postdata($post);
                                 $good_id   = $post->ID;
@@ -157,15 +164,22 @@ get_header(); ?>
                    <ul id="electroGoods" class="goods_slider">
                         <?php 
                             $args = array(
-                        'numberposts'     => -1, 
-                        'offset'          => 0,
-                        'categoty_in'     => 23,
+                        'posts_per_page'  => -1,
+                        'offset'          =>  0,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'goods_list_tax',
+                                'field'    => 'id',
+                                'terms'    => 4
+                            )
+                        ),
                         'orderby'         => 'ID',
                         'order'           => 'DESC',
                         'post_type'       => 'goods_list',
                         'post_status'     => 'publish'
                                 );
-                         $posts = get_posts($args);
+                        $query = new WP_Query;
+                        $posts = $query->query($args);
                          foreach($posts as $post) {
                                 setup_postdata($post);
                                 $good_id   = $post->ID;
@@ -205,16 +219,23 @@ get_header(); ?>
                   </div>
                    <ul id="gardenGoods" class="goods_slider">
                     <?php 
-                            $args = array(
-                        'numberposts'     => -1, 
-                        'offset'          => 0,
-                        'categoty_in'     => 23,
+                        $args = array(
+                        'posts_per_page'  => -1,
+                        'offset'          =>  0,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'goods_list_tax',
+                                'field'    => 'id',
+                                'terms'    => 5
+                            )
+                        ),
                         'orderby'         => 'ID',
                         'order'           => 'DESC',
                         'post_type'       => 'goods_list',
                         'post_status'     => 'publish'
                                 );
-                         $posts = get_posts($args);
+                        $query = new WP_Query;
+                        $posts = $query->query($args);
                          foreach($posts as $post) {
                                 setup_postdata($post);
                                 $good_id   = $post->ID;
@@ -253,8 +274,9 @@ get_header(); ?>
                     <ul>
                        <?php if(function_exists('fetch_feed')) {
         
-                            //include_once(get_template_directory_uri() . 'theme-rss.php'); // the file to rss feed generator
-                            $feed = fetch_feed('http://test-site/feed/'); // specify the rss feed
+                            include_once(ABSPATH . WPINC . '/feed.php'); // the file to rss feed generator
+                            $link = get_site_url() . '/feed';
+                            $feed = fetch_feed($link); // specify the rss feed 
 
                             $limit = $feed->get_item_quantity(2); // specify number of items
                             $items = $feed->get_items(0, $limit); // create an array of items
@@ -274,6 +296,11 @@ get_header(); ?>
                     <section class="twitter_messages">
                     <h4>Лента Twitter</h4> 
                     <ul>
+<!--
+                    <a class="twitter-timeline" href="https://twitter.com/220volt230">Tweets by 220volt230</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a href="https://twitter.com/messages/compose?recipient_id=798264605646684161" class="twitter-dm-button" data-screen-name="https://twitter.com/220volt230" data-show-count="false">Message @https://twitter.com/220volt230</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+<!--
                         <li>
                             <p class="twitter_name">@220_volt_ru</p>
                             <p class="twitter_date"> 7 Августа</p>
@@ -310,6 +337,7 @@ get_header(); ?>
                             </p>
                             <a class="twitter_answer">Ответить</a>
                         </li>
+-->
                     </ul>   
                     </section>
                     <section class="our_video">
@@ -319,7 +347,7 @@ get_header(); ?>
                                  $args = array(
                                 'numberposts'     => 2, 
                                 'offset'          => 0,
-                                'categoty_in'     => 1,
+                                'category'        => 23,
                                 'orderby'         => 'ID',
                                 'order'           => 'DESC',
                                 'post_type'       => 'post',
@@ -335,7 +363,7 @@ get_header(); ?>
                                 $author = get_the_author();
                                 ?>
                                 <div class="video_info">
-                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id?>/mqdefault.jpg)" class="video_thumbnail" <?php echo "onclick='countViews(" . $myvideo_id . ")'" ?> >
+                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id ?>/mqdefault.jpg)" class="video_thumbnail" <?php echo "onclick='countViews(" . $myvideo_id . ")'" ?> >
                                     <div class="video_wrapper"><div class="video_viewer"><?php the_content() ?></div></div>
                                     </a>
                                     <?php echo the_title('<p class="video_name">', '</p>') ?> 
