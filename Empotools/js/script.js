@@ -34,7 +34,6 @@
         setTimeout(function(){funcStatus = false;}, 800);
     };
 
-    
     el.addEventListener('click', showMenu);
 
 })();
@@ -42,11 +41,11 @@
 /* T O P    S L I D E R  */
 
 (function(){
-    // var viewer = document.getElementById('topSlider');
     var slider = document.getElementById('slider');
     var slides = slider.getElementsByTagName('section');
     var roundsBox = document.getElementById('navRounds');
     var n = 0;
+    var funcStatus = false;
     for (var i = 0; i < slides.length; i++ ) {
         var round = document.createElement('li');
         round.value = i;
@@ -65,6 +64,8 @@
         Velocity( slider, {'margin-left': roundValue}, 1000);
     } ;
     function demonstration(time) {
+        if(funcStatus) return;
+        funcStatus = true;
         var rounds = roundsBox.getElementsByTagName('li');
         if (n === slides.length) {
             n= 0;
@@ -77,8 +78,9 @@
             var value = -(el.value * 720)+'px';
             Velocity( slider, {'margin-left': value}, time);
         n++;
-
+        
         setTimeout(function() {demonstration(time)}, 5000);
+        funcStatus = false;
     };
 
     roundsBox.addEventListener('click', showSlide);
@@ -208,9 +210,9 @@
 /*   S H O W    V I D E O  */
 
 (function(){
-    var firstVideo = document.getElementsByClassName('video_thumbnail')[0];
-    var secondVideo = document.getElementsByClassName('video_thumbnail')[1];
-    var viewCounter = document.createElement('button');  //---- 'close' button
+    var firstVideo = document.getElementsByClassName('video_button')[0];
+    var secondVideo = document.getElementsByClassName('video_button')[1];
+    var viewCounter = document.createElement('button'); 
     var videoWrapper;
     var videoViewer;
     
@@ -247,32 +249,7 @@
     firstVideo.addEventListener('click', showVideo);
     secondVideo.addEventListener('click', showVideo);
     
-    
-    
-//    var parent = document.querySelectorAll('body');
-//    var videoWrapper = createElement('div');
-//    videoWrapper.classList.add('video_wrapper');
-//    var videoViewer = createElement('div');
-//    videoViewer.classList.add('video_viewer');
-//    get
-//    
-//    var status = true;
-//    
-//    
-//    function showVideo() {
-//        parent.appendChild(videoWrapper);
-//        videoViewer.innerHTML = '<?php the_content(); setPostViews(get_the_ID()); ?>';
-//        videoWrapper.appendChild(videoViewer);
-//        status = false;
-//    };
-//    function hideVideo() {
-//        if (status) return;
-//        parent.removeChild(videoWrapper);
-//        status = true;
-//    };
-//    
-//     
-//    
+ 
     
 })();
 

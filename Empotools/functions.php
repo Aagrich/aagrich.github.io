@@ -291,6 +291,49 @@ function goods_save_img_data( $post_id ) {
 }
 add_action('save_post', 'save_my_goods_meta_fields'); 
 add_action('save_post', 'goods_save_img_data'); 
+
+add_action('add_meta_boxes', 'my_banner_fields', 1);
+
+function my_banner_fields() {
+	add_meta_box( 'banner_fields', 'Акционная информация (указывается при размещении в рубрике слайд-банеров)', 'banner_fields_box_func', 'post', 'normal', 'high'  );
+}
+
+function banner_fields_box_func( $post ){
+	?>
+	<?php goods_print_box($post); ?>
+	<p><label><input type="text" name="banner[discount]" value="<?php echo get_post_meta($post->ID, 'discount', 1); ?>" style="width:120px" /> Размер скидки (в процентах). </label></p>
+	<p><label><input type="text" name="banner[discount_price]" value="<?php echo get_post_meta($post->ID, 'discount_price', 1); ?>" style="width:120px" /> Акционная цена. </label></p>
+	<p><label><input type="text" name="banner[old_price]" value="<?php echo get_post_meta($post->ID, 'old_price', 1); ?>" style="width:120px" /> Предыдущая цена. </label></p>
+	<p><label><input type="text" name="banner[goods_type]" value="<?php echo get_post_meta($post->ID, 'goods_type', 1); ?>" style="width:320px" /> Краткое описание. </label></p>
+	<p>Описание товара: 	</p>
+	<textarea type="text" name="banner[description]" style="width:500px;height:50px;"><?php echo get_post_meta($post->ID, 'description', 1); ?></textarea>
+
+
+	<input type="hidden" name="banner_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+	<?php
+}
+
+add_action('save_post', 'my_banner_fields_update', 0);
+
+function my_banner_fields_update( $post_id ){
+	if ( ! wp_verify_nonce($_POST['banner_fields_nonce'], __FILE__) ) return false; // проверка
+	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE  ) return false; // выходим если это автосохранение
+	if ( !current_user_can('edit_post', $post_id) ) return false; // выходим если юзер не имеет право редактировать запись
+
+	if( !isset($_POST['banner']) ) return false; // выходим если данных нет
+
+	// Все ОК! Теперь, нужно сохранить/удалить данные
+	$_POST['banner'] = array_map('trim', $_POST['banner']); // чистим все данные от пробелов по краям
+	foreach( $_POST['banner'] as $key=>$value ){
+		if( empty($value) ){
+			delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+			continue;
+		}
+
+		update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+	}
+	return $post_id;
+}
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

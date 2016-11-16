@@ -19,59 +19,80 @@ get_header(); ?>
         <div class="wrapper">    
             <article id="topSlider"  class="top_slider_viewer">
                <div id="slider"  class="top_slider">
-                <section class="top_slide">
-                    <p class="goods_name">БЕНЗОПИЛА ДРУЖБА</p>
-                    <div class="discount"> - 50%</div>
-                    <p class="new_price">3500 р</p>
-                    <p class="old_price">5500 р</p>
-                </section>
-                <section class="top_slide">
-                    <p class="goods_name">БЕНЗОПИЛА ДРУЖБА 2</p>
-                    <div class="discount"> - 50%</div>
-                    <p class="new_price">2500 р</p>
-                    <p class="old_price">4500 р</p>
-                </section>
-                <section class="top_slide">
-                    <p class="goods_name">БЕНЗОПИЛА ДРУЖБА 3</p>
-                    <div class="discount"> - 50%</div>
-                    <p class="new_price">3500 р</p>
-                    <p class="old_price">6500 р</p>
-                </section>
+                         <?php 
+                        $args = array(
+                        'numberposts'  => -1,
+                        'offset'          =>  0,
+                        'category'        =>  25,
+                        'orderby'         => 'ID',
+                        'order'           => 'DESC',
+                        'post_type'       => 'post',
+                        'post_status'     => 'publish'
+                                );
+                         $posts = get_posts($args);
+                         foreach($posts as $post) {
+                                setup_postdata($post);
+                                $good_id   = $post->ID;
+                                $discount = get_post_meta($good_id, 'discount', true);
+                                $price = get_post_meta($good_id, 'discount_price', true);
+                                $old_price = get_post_meta($good_id, 'old_price', true);
+                                $description = get_post_meta($good_id, 'description', true);
+                                $goods_type = get_post_meta($good_id, 'goods_type', true);
+                                $img_id  = get_post_meta($good_id, 'uploader_custom', true);
+                                $img_link = wp_get_attachment_image_url($img_id, full);
+                                ?>
+                                <section class="top_slide" style="background-image: url(<?php echo $img_link ?>)"> 
+                                    <?php echo the_title('<p class="goods_name">' , '</p>') ?> 
+                                    <div class="discount"> <?php echo '-' .  $discount . '%' ?> </div>
+                                    <p class="new_price"> <?php echo $price . ' р' ?> </p>
+                                    <p class="old_price"> <?php echo $old_price . ' р' ?> </p>
+                                </section>
+                                <?php
+                             }
+                             wp_reset_postdata();
+                            ?>
+
                 </div>
                 <ul id="navRounds" class="rounds_wrapper">
                 </ul>
                     <section class="sub_slider_viewer">
                 <ul class="sub_slider">
-                    <li>
-                        <p class="stock">Акция</p>
-                        <p class="stock_goods_name">DDE V500II ТРОЛЛЬ </p>
-                        <p class="goods_type">Бензиновый культиватор</p>
-                        <p class="stock_old_price">18169 р.</p>
-                        <p class="stock_new_price">14 715 р.</p>
-                        <img src='<?php echo get_template_directory_uri() . "/img/troll.jpg" ?>' alt="Бензиновый культиватор ТРОЛЛЬ">
-                        <p class="tech_info">5.5лс 190см3 B&S шир.захв.50см глуб.25см ск.1 42кг</p>
-                         <button>В КОРЗИНУ</button>
-                    </li>
-                    <li>
-                         <p class="stock">Акция</p>
-                        <p class="stock_goods_name">DDE V500II ТРОЛЛЬ </p>
-                        <p class="goods_type">Бензиновый культиватор</p>
-                        <p class="stock_old_price">18169 р.</p>
-                        <p class="stock_new_price">14 715 р.</p>
-                        <img src='<?php echo get_template_directory_uri() . "/img/troll.jpg" ?>' alt="Бензиновый культиватор ТРОЛЛЬ">
-                        <p class="tech_info">5.5лс 190см3 B&S шир.захв.50см глуб.25см ск.1 42кг</p>
-                         <button>В КОРЗИНУ</button>
-                    </li>
-                    <li>
-                         <p class="stock">Акция</p>
-                        <p class="stock_goods_name">DDE V500II ТРОЛЛЬ </p>
-                        <p class="goods_type">Бензиновый культиватор</p>
-                        <p class="stock_old_price">18169 р.</p>
-                        <p class="stock_new_price">14 715 р.</p>
-                        <img src='<?php echo get_template_directory_uri() . "/img/troll.jpg" ?>' alt="Бензиновый культиватор ТРОЛЛЬ">
-                        <p class="tech_info">5.5лс 190см3 B&S шир.захв.50см глуб.25см ск.1 42кг</p>
-                         <button>В КОРЗИНУ</button>
-                    </li>
+                       <?php 
+                        $args = array(
+                        'numberposts'  => 3,
+                        'offset'          =>  0,
+                        'category'        =>  27,
+                        'orderby'         => 'ID',
+                        'order'           => 'DESC',
+                        'post_type'       => 'post',
+                        'post_status'     => 'publish'
+                                );
+                         $posts = get_posts($args);
+                         foreach($posts as $post) {
+                                setup_postdata($post);
+                                $good_id   = $post->ID;
+                                $discount = get_post_meta($good_id, 'discount', true);
+                                $price = get_post_meta($good_id, 'discount_price', true);
+                                $old_price = get_post_meta($good_id, 'old_price', true);
+                                $description = get_post_meta($good_id, 'description', true);
+                                $goods_type = get_post_meta($good_id, 'goods_type', true);
+                                $img_id  = get_post_meta($good_id, 'uploader_custom', true);
+                                $img_link = wp_get_attachment_image_url($img_id, full);
+                                ?>
+                                    <li>
+                                        <p class="stock">Акция</p>
+                                        <?php echo the_title('<p class="stock_goods_name">' , '</p>') ?>
+                                        <p class="goods_type"><?php echo $goods_type ?> </p>
+                                        <p class="stock_old_price"><?php echo $old_price . ' р' ?></p>
+                                        <p class="stock_new_price"><?php echo $price . ' р' ?></p>
+                                        <img src="<?php echo $img_link ?>" alt="<?php echo $description ?>">
+                                        <p class="tech_info"><?php echo $description ?></p>
+                                        <button>В КОРЗИНУ</button>
+                                    </li>
+                                <?php
+                             }
+                             wp_reset_postdata();
+                            ?>
                 </ul>
             </article>
             <article class="main_sliders">
@@ -81,18 +102,29 @@ get_header(); ?>
                   <button id="brandLt" class="brand_button_left">&lt;</button>
                   <button id="brandGt" class="brand_button_right">&gt;</button>
                    <ul id='brandSlider' class="brand_slider">
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
-                       <li></li>
+                                              <?php 
+                        $args = array(
+                        'numberposts'  => -1,
+                        'offset'          =>  0,
+                        'category'        =>  28,
+                        'orderby'         => 'ID',
+                        'order'           => 'DESC',
+                        'post_type'       => 'post',
+                        'post_status'     => 'publish'
+                                );
+                         $posts = get_posts($args);
+                         foreach($posts as $post) {
+                                setup_postdata($post);
+                                $good_id   = $post->ID;
+                                $img_id  = get_post_meta($good_id, 'uploader_custom', true);
+                                $img_link = wp_get_attachment_image_url($img_id, full);
+                                ?>
+                                    <li style="background-image: url(<?php echo $img_link ?>)">
+                                    </li>
+                                <?php
+                             }
+                             wp_reset_postdata();
+                            ?>
                    </ul>
                   </div>
                </section>
@@ -131,7 +163,6 @@ get_header(); ?>
                                 $old_price = get_post_meta($good_id, 'old_price', true);
                                 $good_name = get_post_meta($good_id, 'good_name', true);
                                 $img_id  = get_post_meta($good_id, 'uploader_custom', true);
-                                $upload_dir = wp_get_upload_dir();
                                 $img_link = wp_get_attachment_image_url($img_id);
                                                           
                                 echo '<li style="background-image:' . 'url('.  $img_link .  ')' . ' ">' .
@@ -187,7 +218,6 @@ get_header(); ?>
                                 $old_price = get_post_meta($good_id, 'old_price', true);
                                 $good_name = get_post_meta($good_id, 'good_name', true);
                                 $img_id  = get_post_meta($good_id, 'uploader_custom', true);
-                                $upload_dir = wp_get_upload_dir();
                                 $img_link = wp_get_attachment_image_url($img_id);
                                                           
                                 echo '<li style="background-image:' . 'url('.  $img_link .  ')' . ' ">' .
@@ -243,7 +273,6 @@ get_header(); ?>
                                 $old_price = get_post_meta($good_id, 'old_price', true);
                                 $good_name = get_post_meta($good_id, 'good_name', true);
                                 $img_id  = get_post_meta($good_id, 'uploader_custom', true);
-                                $upload_dir = wp_get_upload_dir();
                                 $img_link = wp_get_attachment_image_url($img_id);
                                                           
                                 echo '<li style="background-image:' . 'url('.  $img_link .  ')' . ' ">' .
@@ -296,48 +325,7 @@ get_header(); ?>
                     <section class="twitter_messages">
                     <h4>Лента Twitter</h4> 
                     <ul>
-<!--
                     <a class="twitter-timeline" href="https://twitter.com/220volt230">Tweets by 220volt230</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <a href="https://twitter.com/messages/compose?recipient_id=798264605646684161" class="twitter-dm-button" data-screen-name="https://twitter.com/220volt230" data-show-count="false">Message @https://twitter.com/220volt230</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
--->
-<!--
-                        <li>
-                            <p class="twitter_name">@220_volt_ru</p>
-                            <p class="twitter_date"> 7 Августа</p>
-                            <p class="twitter_text">
-                                Ждём всех на #harleydays!
-                                Заряжаем фест музыкой! http://t...
-                            </p>
-                            <a class="twitter_answer">Ответить</a>
-                        </li>
-                        <li>
-                            <p class="twitter_name">@220_volt_ru</p>
-                            <p class="twitter_date"> 7 Августа</p>
-                            <p class="twitter_text">
-                                Ждём всех на #harleydays!
-                                Заряжаем фест музыкой! http://t...
-                            </p>
-                            <a class="twitter_answer">Ответить</a>
-                        </li>
-                        <li>
-                            <p class="twitter_name">@220_volt_ru</p>
-                            <p class="twitter_date"> 7 Августа</p>
-                            <p class="twitter_text">
-                                Ждём всех на #harleydays!
-                                Заряжаем фест музыкой! http://t...
-                            </p>
-                            <a class="twitter_answer">Ответить</a>
-                        </li>
-                        <li>
-                            <p class="twitter_name">@220_volt_ru</p>
-                            <p class="twitter_date"> 7 Августа</p>
-                            <p class="twitter_text">
-                                Ждём всех на #harleydays!
-                                Заряжаем фест музыкой! http://t...
-                            </p>
-                            <a class="twitter_answer">Ответить</a>
-                        </li>
--->
                     </ul>   
                     </section>
                     <section class="our_video">
@@ -363,8 +351,8 @@ get_header(); ?>
                                 $author = get_the_author();
                                 ?>
                                 <div class="video_info">
-                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id ?>/mqdefault.jpg)" class="video_thumbnail" <?php echo "onclick='countViews(" . $myvideo_id . ")'" ?> >
-                                    <div class="video_wrapper"><div class="video_viewer"><?php the_content() ?></div></div>
+                                    <a id="playVideo" style="background-image: url(http://img.youtube.com/vi/<?php echo $video_id ?>/mqdefault.jpg)" class="video_thumbnail" >
+                                    <div class="video_button" <?php echo "onclick='countViews(" . $myvideo_id . ")'" ?> ><div class="video_triangle"><div class="video_wrapper"><div class="video_viewer"><?php the_content() ?></div></div></div></div>
                                     </a>
                                     <?php echo the_title('<p class="video_name">', '</p>') ?> 
                                     <p class="video_viewers"><?php echo getPostViews($myvideo_id); ?></p>
