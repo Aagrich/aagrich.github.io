@@ -1,0 +1,20 @@
+header {
+    float: left;
+    width: 144px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 2px 1px 13px 3px #E9E9E9;
+    -webkit-box-shadow: 2px 1px 13px 3px #E9E9E9;
+    -moz-box-shadow: 2px 1px 13px 3px #E9E9E9;
+    -o-box-shadow: 2px 1px 13px 3px #E9E9E9;
+}
+.catalog_nav {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+.main_page__slider {
+    float: right;
+    text-align: center;
+    width: calc(100% - 145px);
+}
