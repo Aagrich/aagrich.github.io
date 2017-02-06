@@ -14,7 +14,48 @@ header {
     top: 50px;
 }
 .main_page__slider {
+    height: 100%;
     float: right;
     text-align: center;
     width: calc(100% - 145px);
+}
+.viewer {
+    position: fixed;
+    z-index: -2;
+    overflow: hidden;
+    font-size: 0;
+    text-align: left;
+    width: 100%;
+    bottom: 0;
+}
+.slide {
+    width: 100%;    
+}
+.text_wrapper {
+    margin-top: 5%;
+}
+.water_text {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    color: #eaeaea;
+}
+.water_text p{
+    margin-left: -10%;
+    font-size: 15vw;
+}
+.main_page__slider h1 {
+    font-size: 7vw;
+}
+.main_page__slider h4 {
+    font-size: 1vw;
+}
+.main_page__slider button {
+    margin-top: 4%;
+    padding: 10px 40px;
+    font-size: 18px;
+    color: white;
+    background-color: 0023ff;
+    border-radius: 28px;
+    border: 0;
 }
