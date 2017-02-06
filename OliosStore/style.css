@@ -3,15 +3,33 @@ header {
     width: 144px;
     height: 100%;
     text-align: center;
-    box-shadow: 2px 1px 13px 3px #E9E9E9;
-    -webkit-box-shadow: 2px 1px 13px 3px #E9E9E9;
-    -moz-box-shadow: 2px 1px 13px 3px #E9E9E9;
-    -o-box-shadow: 2px 1px 13px 3px #E9E9E9;
+    box-shadow: 2px 1px 13px 3px #e0e0e0;
+    -webkit-box-shadow: 2px 1px 13px 3px #e0e0e0;
+    -moz-box-shadow: 2px 1px 13px 3px #e0e0e0;
+    -o-box-shadow: 2px 1px 13px 3px #e0e0e0;
+}
+.show_menu_button {
+    position: absolute;
+    padding: 10px;
+    right: 50px;
+    top: 50px;
+    border-radius: 23px;
+    box-shadow: 0px 0px 13px 3px #e0e0e0;
+    -webkit-box-shadow: 0px 0px 13px 3px #e0e0e0;
+    -moz-box-shadow: 0px 0px 13px 3px #e0e0e0;
+    -o-box-shadow: 0px 0px 13px 3px #e0e0e0;
+    cursor: pointer;
+}
+.show_menu_button:hover {
+    box-shadow: 0px 0px 13px 3px #b0b0b0;
+    -webkit-box-shadow: 0px 0px 13px 3px #b0b0b0;
+    -moz-box-shadow: 0px 0px 13px 3px #b0b0b0;
+    -o-box-shadow: 0px 0px 13px 3px #b0b0b0;
 }
 .catalog_nav {
     position: absolute;
     right: 50px;
-    top: 50px;
+    top: 150px;
 }
 .main_page__slider {
     height: 100%;
@@ -58,4 +76,5 @@ header {
     background-color: 0023ff;
     border-radius: 28px;
     border: 0;
+    cursor: pointer;
 }
